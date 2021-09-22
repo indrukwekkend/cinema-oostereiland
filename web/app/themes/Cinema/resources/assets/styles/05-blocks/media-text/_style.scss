@@ -1,0 +1,126 @@
+.wp-block-media-text {
+  &.alignfull {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &.gs_reveal {
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0s;
+  }
+
+  a:focus img {
+    outline-offset: -1px;
+  }
+
+  .wp-block-media-text__content {
+    padding: var(--global--spacing-horizontal);
+
+    // @include media(tablet) {
+    // 	padding: var(--global--spacing-vertical);
+    // }
+
+    > * {
+      margin-top: calc(0.666 * var(--global--spacing-vertical));
+      margin-bottom: calc(0.666 * var(--global--spacing-vertical));
+
+      // @include media(mobile) {
+      // 	margin-top: var(--global--spacing-vertical);
+      // 	margin-bottom: var(--global--spacing-vertical);
+      // }
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  /**
+	 * Block Options
+	 */
+
+  &.is-stacked-on-mobile .wp-block-media-text__content {
+    @include media(mobile) {
+      padding-top: var(--global--spacing-vertical);
+      padding-bottom: var(--global--spacing-vertical);
+    }
+  }
+
+  // Block Styles
+  &.is-style-indrukwekkend-regisseur {
+    &.has-background {
+      margin-bottom: calc(-1 * var(--global--spacing-vertical));
+
+      //TODO: goed zetten van de media queries. Hoe werken deze???
+      @include media(laptop) {
+        padding-top: calc(2 * var(--global--spacing-vertical));
+        padding-bottom: calc(2 * var(--global--spacing-vertical));
+      }
+
+      @include media(desktop) {
+        padding-top: calc(4 * var(--global--spacing-vertical));
+        padding-bottom: calc(4 * var(--global--spacing-vertical));
+      }
+    }
+
+    .wp-block-media-text__content {
+      h2 {
+        font-size: $h5-font-size;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      p {
+        font-family: "IBM Plex Serif", Times, serif;
+        font-size: 2rem;
+        font-weight: 400;
+
+        &.has-large-font-size {
+          font-size: 3rem;
+          font-weight: 500;
+        }
+      }
+
+      @include media(laptop) {
+        max-width: 60%;
+        margin-left: 20%;
+      }
+    }
+  }
+
+  &.is-style-indrukwekkend-afbeelding {
+    margin-top: var(--global--spacing-vertical);
+    margin-bottom: calc(-1 * var(--global--spacing-vertical));
+
+    &.has-background {
+      @include media(laptop) {
+        padding-top: calc(2 * var(--global--spacing-vertical));
+        padding-bottom: calc(2 * var(--global--spacing-vertical));
+      }
+    }
+
+    .wp-block-media-text__content {
+      h2 {
+        font-size: $h5-font-size;
+        font-weight: 500;
+      }
+
+      p {
+        &.has-large-font-size {
+          font-size: 3rem;
+          font-weight: 800;
+        }
+      }
+
+      @include media(laptop) {
+        max-width: 60%;
+        margin-left: 20%;
+      }
+    }
+  }
+}

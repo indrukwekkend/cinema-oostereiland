@@ -1,0 +1,10 @@
+// Block Styles for the Editor
+// - These styles replace key Gutenberg Block styles for fonts, colors, and
+//   spacing with CSS-variables overrides in the Block Editor
+// - In the future the Block styles may get compiled to individual .css
+//   files and conditionally loaded
+
+@import "header-achtergrond/style";
+@import "kenmerken/style";
+@import "quote-slider/style";
+

@@ -1,0 +1,63 @@
+@import "01-common/variables";
+
+/** Import everything from autoload */
+@import "./autoload/**/*";
+
+/** import Responsive resise fonts */
+@import "01-common/rfs";
+@import "01-common/mixins";
+
+/**
+ * Import npm dependencies
+ *
+ * Prefix your imports with `~` to grab from node_modules/
+ * @see https://github.com/webpack-contrib/sass-loader#imports
+ */
+// @import "~some-node-module";
+$hamburger-padding-x           : 12px;
+$hamburger-padding-y           : 12px;
+$hamburger-layer-width         : 30px;
+$hamburger-layer-height        : 4px;
+$hamburger-layer-spacing       : 6px;
+$hamburger-layer-color         : #a8c816;
+$hamburger-layer-border-radius : 4px;
+$hamburger-hover-opacity       : 0.7;
+
+@import "~hamburgers/_sass/hamburgers/hamburgers.scss";
+@import "~hamburgers/_sass/hamburgers/_base.scss";
+
+/** Import theme styles, algemene thema instellingen */
+@import "01-common/reset";
+@import "01-common/global";
+@import "01-common/align";
+@import "01-common/accessibility";
+@import "01-common/blocks";
+
+// Generieke stijlen hierin staan de algemene onderdelen en resets, wordt nog niet gebruikt maar kan wel heel handig zijn. Ze komen uit 2021
+@import "03-generic/breakpoints";
+
+//overige onderdelen, componenten op de pagina's
+//@import "components/buttons";
+@import "components/comments";
+@import "components/forms";
+@import "components/quotes";
+@import "components/galleries";
+@import "components/wp-classes";
+
+//alle indelingen van de verschillende pagina's
+@import "02-layouts/header";
+@import "02-layouts/sidebar";
+@import "02-layouts/footer";
+@import "02-layouts/pages";
+@import "02-layouts/posts";
+@import "02-layouts/films";
+@import "02-layouts/agenda";
+@import "02-layouts/tinymce";
+
+// Importeer blok stijlen, deze moeten in de toekomst standaard aanpassingen krijgen voor het Thema
+// dit is nu gekopieerd van 2021 thema van Wordpress
+// Todo: doorlopen op mogelijkheden en alle mmogelijke blokken toevoegen.
+@import "05-blocks/blocks";
+
+// indrukwekkend blokken uit de plugins
+@import "06-ind-blocks/blocks";

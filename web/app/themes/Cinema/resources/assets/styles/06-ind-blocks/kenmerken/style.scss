@@ -1,0 +1,68 @@
+.wp-block-indrukwekkend-kenmerken {
+  grid-gap: 10px;
+}
+
+.wp-block-indrukwekkend-kenmerk-one {
+  &.card {
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.05);
+
+    &::after {
+      box-shadow: 8px 11px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    &:hover {
+      transform: translate3d(-4px, -6px, 0);
+    }
+
+    .card-content {
+      //   .thumbnail {
+      //     background-color: $brand-primary;
+
+      //     img {
+      //
+      //     }
+      //   }
+
+      &__post-title {
+        background-color: $brand-primary;
+        clip-path: polygon(0 12%, 100% 0, 100% 88%, 0% 100%);
+        margin-top: -20px;
+        margin-bottom: 20px;
+        padding-top: 32px;
+        padding-bottom: 28px;
+
+        p {
+          font-size: $h3-font-size;
+          color: $wit;
+          text-transform: uppercase;
+        }
+      }
+
+      &__post-excerpt {
+        p {
+          font-size: $base-font-size;
+        }
+      }
+    }
+
+    .footer {
+      .knop {
+        border: solid 1px $brand-primary;
+        font-weight: bold;
+        font-size: 1.1em;
+        color: $brand-primary;
+        margin-top: 0;
+        line-height: 2;
+        width: 70%;
+        justify-self: center;
+        padding: 5px;
+
+        &:hover {
+          cursor: pointer;
+          color: $wit;
+          background-color: $brand-primary;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+// Block Styles for the Editor
+// - These styles replace key Gutenberg Block styles for fonts, colors, and
+//   spacing with CSS-variables overrides in the Block Editor
+// - In the future the Block styles may get compiled to individual .css
+//   files and conditionally loaded
+
+@import "button/style";
+@import "lists/style";
+@import "group/style";
+@import "media-text/style";
+@import "table/style";
+@import "image/style";
+@import "columns/style";
+@import "separator/style";

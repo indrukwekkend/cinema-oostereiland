@@ -1,0 +1,114 @@
+/* Button block WP
+--------------------------------------------- */
+
+/* stylelint-disable no-descending-specificity */
+
+.wp-block-button__link,
+.wp-block-button__link:not(.has-background),
+.search-form-header .search-submit,
+.search-form .search-submit,
+.wp-block-file .wp-block-file__button,
+.gform_wrapper .gform_footer input.button,
+.gform_wrapper .gform_footer input[type="submit"],
+.button.gform_button {
+  // Extend button style
+  @include button-style();
+
+  &:not(.has-text-color) {
+    color: white;
+  }
+
+  // Automatisch invullen van de achtergrondkleur gebaseerd op het thema
+  // moet in het bovenstaande blok worden geplaatst
+  &:not(.has-background) {
+    $default: nth(nth($colors, 1), 2); // first color in $colors array
+
+    background-color: $default;
+
+    &:hover,
+    &:focus {
+      background-color: darken($brand-secondary, 10%);
+      border-color: $brand-secondary;
+    }
+  }
+
+  @each $name, $color in $colors {
+    &.has-#{$name}-color:hover,
+    &.has-#{$name}-color:focus {
+      color: $color;
+    }
+
+    &.has-#{$name}-background-color {
+      background-color: $color;
+      border-color: $color;
+    }
+
+    &.has-#{$name}-background-color:hover,
+    &.has-#{$name}-background-color:focus {
+      background-color: darken($color, 10%);
+      border-color: darken($color, 10%);
+    }
+  }
+
+  .is-style-outline & {
+    color: $brand-primary !important;
+    transition-duration: 0.2s;
+    font-weight: 600;
+    background: none;
+
+    &:hover {
+      color: #fff !important;
+      background-color: darken($brand-secondary, 10%);
+      border-color: $brand-secondary;
+    }
+  }
+
+  .is-style-indrukwekkend-button-secondary & {
+    transition-duration: 0.2s;
+    font-weight: 600;
+    background: $brand-secondary;
+    border-color: darken($brand-secondary, 5%);
+
+    &:hover,
+    &:focus {
+      background-color: darken($brand-primary, 10%);
+      border-color: $brand-primary;
+    }
+  }
+}
+
+.wp-block-file .wp-block-file__button {
+  margin-left: 15px;
+}
+
+.form-submit {
+  input {
+    position: relative;
+    padding: 0.6em 4em;
+    border: 2px solid $brand-primary;
+    background: $brand-primary;
+    border-radius: 27px;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    font-weight: 600;
+    font-family: $button-font;
+    font-size: 1.8rem;
+    margin: 1em 0;
+    margin-right: 30px;
+    text-decoration: none;
+    color: #fff !important;
+    transition-duration: 0.2s;
+  }
+}
+
+#search {
+  button {
+    background-color: transparent;
+  }
+}
+
+#search-open {
+  background-color: transparent;
+  max-height: 35px;
+}

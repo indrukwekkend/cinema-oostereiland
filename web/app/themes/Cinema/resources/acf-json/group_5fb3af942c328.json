@@ -1,0 +1,72 @@
+{
+    "key": "group_5fb3af942c328",
+    "title": "Header - Engelse vertaling",
+    "fields": [
+        {
+            "key": "field_5fb3af9e9efdd",
+            "label": "Publiceer Engels",
+            "name": "publiceer",
+            "type": "true_false",
+            "instructions": "laat de Engelse pagina zien",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5fb3afc99efde",
+            "label": "link",
+            "name": "link",
+            "type": "page_link",
+            "instructions": "Naar welke pagina verwijzen we de engelse onderdelen?",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5fb3af9e9efdd",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-header"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1605611557
+}

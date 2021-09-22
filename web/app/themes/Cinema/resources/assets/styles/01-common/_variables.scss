@@ -1,0 +1,215 @@
+/* Webpack voegt een regel toe na elke ; waardoor je font niet laadt.
+Dit ligt aan CSS2 van Google gecombineerd met Webpack. : @https://github.com/webpack/webpack/issues/10873
+laad daarom ook los de italic versies in. Of elk op een regel pllaatsten, of alles op de oude manier schrijven, controleer even in de main.css of de @import op een losse regel staat */
+// @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,600,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,400,600,700,800,400i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Serif:400,500&display=swap");
+
+/** Box Model, TODO uitzoeken: staat in wp_classes  */
+$spacer: 2rem;
+
+/** Widths  */
+$normal-width: 960px;
+$align-wide: 1200px;
+// boven (bijv.) 1500px   TODO: Koppelen aan XL width??
+$extra-wide: calc(8 * (100vw / 12) - 4rem);
+$align-extra-wide: calc(11 * (100vw / 12) - 4rem);
+
+//header width: opties: full: 100% / wide: $align-wide / normal: $normal
+$header-width: $align-wide;
+$header-extra-width: $align-extra-wide;
+//footer, (vaak) gelijk aan header
+$footer-width: $header-width;
+$footer-extra-width: $header-extra-width;
+
+//Top marge of padding voor als de navigatie transparant is ingesteld
+$top-marge-transparant: 140px;
+
+//TODO: Media breakpoints in stellen zodat het door de site heen goed gaat:
+$mobile-width: 375px;
+$ipad-width: 768px;
+$desktop-small-width: 1024px;
+$desktop-large-width: 1200px;
+$desktop-xl-width: 1900px;
+
+//custom colors:
+$dynamic-dark: #484848;
+$light-green: #f4f5f0;
+$bright-green: #a8c816;
+$background-green: #a8c8162e;
+$dark-green: #626844;
+$neutral-gray: #c7c7c7;
+
+//common
+$black1: #000;
+$dark-grey: $dynamic-dark;
+$grijs: $neutral-gray;
+$licht-grijs: lighten($grijs, 20);
+$wit: #fff;
+
+/** Colors */
+$brand-primary: $dark-green;
+$brand-secondary: $light-green;
+$base-color: $black1;
+$seperator-color: $brand-secondary;
+$navigation-background-color: $wit;
+$film-header-color: $wit;
+
+// Gutenberg kleur opties
+// -- zie editor-color-palette in app/colorscheme.php
+$colors: (
+  "zwart": $black1,
+  "wit": $wit,
+  "groen": $bright-green,
+  "licht-groen": $light-green,
+  "donker-groen": $dark-green,
+);
+
+@each $name, $color in $colors {
+  .has-#{$name}-color {
+    color: $color;
+  }
+
+  .has-#{$name}-background-color {
+    background-color: $color;
+  }
+}
+
+// Gutenberg kleur verloop opties
+// -- zie editor-color-palette in app/colorscheme.php
+// $verlopen: (
+//   "oranje-verloop" $orange-go $licht_oranje,
+//   "paars-verloop" $paars $licht_paars,
+//   "blauw-verloop" $light-green $licht_blauw,
+//   "donker-verloop" $black1 $licht-grijs,
+// );
+
+// @each $name, $verloop, $licht in $verlopen {
+//   .has-#{$name}-gradient-background {
+//     background: linear-gradient(90deg, $verloop 5%, $licht 100%);
+//   }
+// }
+
+// Gutenberg font opties
+// -- zie editor-color-palette in app/colorscheme.php
+// TODO: Uitzoekn hoe de fontgroottes precies werken en of ze in blokken passen
+$fontsizes: (
+  "extra-small": 16px,
+  "small": 18px,
+  "normal": 20px,
+  "large": 24px,
+  "extra-large": 36px,
+  "huge": 62px,
+);
+
+@each $name, $fontsize in $fontsizes {
+  .has-#{$name}-font-size {
+    font-size: $fontsize;
+  }
+}
+
+//font instellingen
+$primary-font: "Poppins", helvetica, sans-serif;
+$header-font: "Poppins", helvetica, sans-serif;
+$header-font-light: "Poppins", arial, helvetica, sans-serif;
+$button-font: "Poppins", arial, helvetica, sans-serif;
+$blockquote-font: "Poppins", arial, helvetica, sans-serif;
+$base-font-weight: 400;
+$base-line-height: 1.72;
+$base-letter-spacing: 0.01em;
+
+//fonts schaal methode
+$enable-rfs: true;
+$rfs-base-value: 2.2rem;
+
+//font sizes
+$base-font-size: 2.2rem;
+$h1-font-size: $base-font-size * 2.6;
+$h2-font-size: $base-font-size * 2;
+$h3-font-size: $base-font-size * 1.2;
+$h4-font-size: $base-font-size * 1.1;
+$h5-font-size: $base-font-size * 1;
+$blockquote-font-size: $base-font-size * 1;
+
+//font margin (alleen bottom, uit RFS mixins)
+$base-margin: 1rem;
+$h1-margin: $base-margin * 2.6;
+$h2-margin: $base-margin * 2;
+$h3-margin: $base-margin * 1;
+$h4-margin: $base-margin * 1;
+$h5-margin: $base-margin * 1;
+
+//fontsizes in de editor zijn anders ingesteld door WP:
+$editor-font-size: 0.67;
+$base-font-size-editor: $base-font-size * $editor-font-size;
+$h1-font-size-editor: $h1-font-size * $editor-font-size;
+$h2-font-size-editor: $h2-font-size * $editor-font-size;
+$h3-font-size-editor: $h3-font-size * $editor-font-size;
+$h4-font-size-editor: $h4-font-size * $editor-font-size;
+$h5-font-size-editor: $h5-font-size * $editor-font-size;
+$blockquote-font-size-editor: $blockquote-font-size * $editor-font-size;
+
+//font colors
+$h1-font-color: $brand-primary;
+$h2-font-color: $brand-primary;
+$h3-font-color: $brand-secondary;
+$h4-font-color: $brand-primary;
+$h5-font-color: $black1;
+
+//font weights
+$h1-font-weight: 800;
+$h2-font-weight: 400;
+$h3-font-weight: 600;
+$h4-font-weight: 600;
+$h5-font-weight: 300;
+
+// Vertical Rhythm Multiplier
+$baseline-unit: 10px;
+
+// Button instellingen
+$button--color-text: $black1;
+$button--color-text-hover: $wit;
+$button--color-text-arrow: $base-color;
+$button--color-outline: $base-color;
+$button--color-text-active: $brand-secondary;
+$button--color-background: $brand-primary;
+$button--color-background-hover: $bright-green;
+$button--color-background-active: $button--color-background-hover;
+
+// Footer instellingen
+$footer-background-color: $black1;
+$footer-font-size: 0.9em;
+$footer-font-weight: 600;
+$footer-font-color: $wit;
+$footer-font-hover-color: $bright-green;
+$footer-title-font-weight: 900;
+$footer-title-font-color: $wit;
+
+// root kan handig zijn om variabelen aan te passen in verschillende media breedte
+:root {
+  /* Colors */
+  --global--color-border: #303030;
+
+  /* Spacing */
+  --global--spacing-unit: #{2 * $baseline-unit}; // 20px
+  --global--spacing-measure: unset; // Use ch units here. ie: 60ch = 60 character max-width
+  --global--spacing-horizontal: #{2.5 * $baseline-unit}; // 25px
+  --global--spacing-vertical: #{3 * $baseline-unit}; // 30px.
+  --separator--height: 1px;
+
+  /* Buttons */
+  // Fonts
+  --button--font-weight: 500;
+  --button--line-height: 1.5;
+  // Borders
+  --button--border-width: 3px;
+  --button--border-radius: 0;
+  --button--radius: 0;
+  // Spacing
+  --button--padding-vertical: 10px;
+  --button--padding-horizontal: calc(3 * var(--button--padding-vertical));
+
+  /* Tables */
+  --table--stripes-background-color: #f2f2f2;
+  --table--stripes-border-color: #949393;
+}

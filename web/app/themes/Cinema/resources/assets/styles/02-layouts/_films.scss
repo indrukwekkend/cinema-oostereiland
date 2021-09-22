@@ -1,0 +1,132 @@
+.single-films {
+  p.film-intro {
+    font-weight: bold;
+  }
+
+  .film-info-kolom {
+    margin-top: 5px;
+  }
+
+  .block-festival {
+    background-color: $background-green;
+    padding-top: var(--global--spacing-vertical);
+    padding-bottom: var(--global--spacing-vertical);
+
+    h2 {
+      font-size: 4rem;
+      font-weight: bold;
+      display: block;
+      color: $base-color;
+      margin-top: calc(var(--global--spacing-vertical) * 1);
+      margin-bottom: calc(var(--global--spacing-vertical) * 1);
+
+      a {
+        color: $black1;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .festival-content {
+      margin-bottom: calc(var(--global--spacing-vertical) * 3);
+
+      .wp-block-column {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        justify-content: center;
+
+        > * {
+          margin-top: calc(var(--global--spacing-vertical) * 0.5);
+          margin-bottom: calc(var(--global--spacing-vertical) * 0.5);
+        }
+
+        .intro {
+          font-weight: bold;
+        }
+      }
+    }
+
+    &-lijst {
+      list-style-type: none;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+
+      li {
+        float: left;
+        margin-right: 10px;
+      }
+
+      h3 {
+        color: $base-color;
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .block-aangeraden-films {
+    display: flex;
+    overflow: hidden;
+    padding-top: var(--global--spacing-vertical);
+    padding-bottom: calc(var(--global--spacing-vertical) * 3);
+
+    .title-element {
+      width: 80px;
+      background: #fff;
+
+      h2 {
+        text-transform: uppercase;
+        color: $dark-green;
+        font-size: 80px;
+        font-weight: 100;
+        text-align: left;
+        direction: rtl;
+        white-space: nowrap;
+        transform: rotate(-90deg);
+      }
+    }
+
+    .content-element {
+      padding-left: 30px;
+      width: 100%;
+
+      .onderwerp {
+        font-size: 4rem;
+        font-weight: bold;
+        display: block;
+        color: $base-color;
+        margin-top: calc(var(--global--spacing-vertical) * 1);
+        margin-bottom: calc(var(--global--spacing-vertical) * 2);
+      }
+    }
+
+    &-lijst {
+      list-style-type: none;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+
+      h3 {
+        color: $base-color;
+        margin-top: 30px;
+        max-width: calc(100% - 1rem);
+      }
+
+      //vanaf hier de slider view
+      .slick-list > .slick-track {
+        margin-left: 0;
+
+        .slick-slide {
+          li {
+            max-width: calc(100% - 0.6rem);
+          }
+        }
+      }
+    }
+  }
+}

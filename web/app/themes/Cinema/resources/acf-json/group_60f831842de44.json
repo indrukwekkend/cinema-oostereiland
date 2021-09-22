@@ -1,0 +1,111 @@
+{
+    "key": "group_60f831842de44",
+    "title": "Festival instellingen",
+    "fields": [
+        {
+            "key": "field_60f8318c4e820",
+            "label": "Films",
+            "name": "festival_films",
+            "type": "post_object",
+            "instructions": "Selecteer hier de films die vallen onder dit festival",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "films"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_613f58652c97c",
+            "label": "Header Festival",
+            "name": "header_festival",
+            "type": "image_aspect_ratio_crop",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "crop_type": "aspect_ratio",
+            "aspect_ratio_width": 1600,
+            "aspect_ratio_height": 1200,
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_613f5c06bd5ee",
+            "label": "Reeks titel",
+            "name": "reeks_titel",
+            "type": "text",
+            "instructions": "De titel boven de films die bij dit festival horen",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Films in deze reeks",
+            "placeholder": "De titel boven de films die bij dit festival horen",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_614204d9741d5",
+            "label": "Intro tekst op de film pagina",
+            "name": "intro_tekst",
+            "type": "text",
+            "instructions": "Schrijf hier optioneel een tekstje. Deze wordt vóór de samenvatting van het festival, getoond op de fimlpagina's",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "festivals"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1631716915
+}

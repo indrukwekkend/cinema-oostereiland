@@ -1,0 +1,84 @@
+/**
+* Header Achtergrond.
+* Overkoepelend blok met content blokken er in.
+* In dit blok zit:
+*  "header-content-blok"
+* Nieuwe versie wordt alleen gebruikt om de blokken er in te laden met behulp van patronen.
+* Homepage wordt dus met eerste patroon ingesteld.
+* Landingspagina's worden dan op een zelfde manier voorzien van een patroon, met op maat instellingen.
+*
+* onderstaande scss is overgenomen uit de basis code van de plugin en wordt hier dus overschreven met thema specifieke regels
+* Elke klant krijgt (kan) zijn eigen "style" (krijgen) waardoor de die voor speciefieke klanten extra kunt aanpassen.
+*
+* Niet 100% van alle classes zijn hier overgenomen. Kijk ook in de plugin als je iets mist.
+*/
+.wp-block-indrukwekkend-header-achtergrond {
+  // Als het thema is ingesteld op "transparante navigatie"
+
+  .wp-block-cover__inner-container {
+    width: 100%;
+    z-index: 100;
+  }
+
+  &.is-style-indrukwekkend-klant {
+    border-top: 14px solid $brand-secondary;
+    //border-bottom: 0;
+
+    &::after {
+      display: block;
+      content: "";
+      background-color: #fff;
+      //mask-image: url("../images/heuvel.svg");
+      background-size: cover;
+      mask-size: 100% 128px;
+      height: 128px;
+      width: 100%;
+      z-index: 1;
+      position: absolute;
+      min-height: auto;
+      bottom: 0;
+    }
+  }
+
+  &.is-style-afbeelding-bodem {
+    padding-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 499px) {
+  .wp-block-indrukwekkend-header-achtergrond {
+    min-height: 100% !important;
+
+    &.is-style-indrukwekkend-klant {
+      &::after {
+        content: none;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .wp-block-indrukwekkend-header-achtergrond {
+    .content-container {
+      position: relative;
+      //deze hoogte instellen gelijk met de min margins hieronder, ander blok???
+      min-height: 200px;
+    }
+
+    img.mobile {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .wp-block-indrukwekkend-header-achtergrond {
+    .image-container {
+      max-height: 100%;
+    }
+
+    .transparant & {
+      padding-top: $top-marge-transparant;
+    }
+  }
+}

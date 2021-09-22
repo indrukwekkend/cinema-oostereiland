@@ -1,0 +1,467 @@
+{
+    "key": "group_60f8285d7e2fd",
+    "title": "Film instellingen",
+    "fields": [
+        {
+            "key": "field_61012cdfc6dce",
+            "label": "Algemeen",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_60f828d484d4d",
+            "label": "Verwacht",
+            "name": "verwacht",
+            "type": "true_false",
+            "instructions": "Dit veld wordt automatisch aan en uitgezet. Je hoeft het dus niet aan te passen. Het opnieuw aanzetten van de verwacht functie, plaatst de film wel weer opnieuw in de \"verwacht\" lijst op de homepage.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_60f8295584d4f",
+            "label": "Premiere Film",
+            "name": "premiere_ticket",
+            "type": "true_false",
+            "instructions": "Dit is een handmatig veld. De première films worden apart getoond op de voorpagina.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_610da4c66f869",
+            "label": "Actieve Film",
+            "name": "actief",
+            "type": "true_false",
+            "instructions": "Een actieve film wordt meegenomen in de Agenda. Als er geen voorstellingen meer zijn, wordt deze automatisch op \"nee\" gezet. \r\nJe gebruikt \"verwacht\" het beste om de film opnieuw te activeren.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_60f8290284d4e",
+            "label": "Extra tekst Label",
+            "name": "extra_tekst_label",
+            "type": "select",
+            "instructions": "Extra label voor bij de film. Deze lijst kun je aanpassen in de filminstellingen.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "0": "-- Selecteer een label --",
+                "special": "special",
+                "2e succesweek": "2e succesweek",
+                "3e succesweek": "3e succesweek",
+                "LHBTQ": "LHBTQ",
+                "": ""
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_60f83218fc496",
+            "label": "Deze film hoort bij festival",
+            "name": "festival_films",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "festivals"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_61012d41c6dd0",
+            "label": "Practische info \/ Afbeeldingen",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_61090b911eb6d",
+            "label": "Header afbeelding",
+            "name": "header_img",
+            "type": "image_aspect_ratio_crop",
+            "instructions": "Deze afbeelding wordt gebruikt aan de bovenkant van de film en voor alle liggende previews.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "75",
+                "class": "",
+                "id": ""
+            },
+            "crop_type": "aspect_ratio",
+            "aspect_ratio_width": 1600,
+            "aspect_ratio_height": 800,
+            "return_format": "array",
+            "preview_size": "medium_large",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_61090abfe9472",
+            "label": "Alternatieve afbeelding",
+            "name": "alternatieve_afbeelding",
+            "type": "image_aspect_ratio_crop",
+            "instructions": "Deze afbeelding wordt gebruikt als er een staand beeld nodig is voor de film",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "crop_type": "aspect_ratio",
+            "aspect_ratio_width": 300,
+            "aspect_ratio_height": 400,
+            "return_format": "array",
+            "preview_size": "full",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_6108eff247110",
+            "label": "Video",
+            "name": "video",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "youtube": "youtube",
+                "vimeo": "vimeo"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "youtube",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_60f828b584d4c",
+            "label": "YouTube",
+            "name": "youtube",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6108eff247110",
+                        "operator": "==",
+                        "value": "youtube"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "80",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6108efd84710f",
+            "label": "Vimeo",
+            "name": "vimeo",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6108eff247110",
+                        "operator": "==",
+                        "value": "vimeo"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "80",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_610145858f9f1",
+            "label": "Kijkwijzer",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_60f80280a5831",
+            "label": "Kijkwijzer soort",
+            "name": "kijkwijzer_soort",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Geweld": "Geweld",
+                "Eng": "Eng",
+                "Sex": "Sex",
+                "Discriminatie": "Discriminatie",
+                "Drugs": "Drugs",
+                "Grof": "Grof"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0
+        },
+        {
+            "key": "field_60f8124f4f7b5",
+            "label": "Kijkwijzer leeftijd",
+            "name": "kijkwijzer_leeftijd",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "alle": "Alle leeftijden",
+                "zes": "6",
+                "negen": "9",
+                "twaalf": "12",
+                "zestien": "16"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "array",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_610160f68d225",
+            "label": "Advanced",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_60f8289784d4b",
+            "label": "Ticketlab ID",
+            "name": "ticketlab_id",
+            "type": "text",
+            "instructions": "Alleen aanpassen als je het ZEKER weet!",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_61012d0fc6dcf",
+            "label": "Filmdepot Dataveld",
+            "name": "maccData",
+            "type": "number",
+            "instructions": "Dit is het Filmdepot nummer dat hoort bij deze film. <br>\r\nVeranderen van dit nummer zorgt voor het ophalen van <strong><u>andere film gegevens<\/u><\/strong>.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_610245c1d1644",
+            "label": "Filmdepot Opgehaald",
+            "name": "filmdepot_opgehaald",
+            "type": "true_false",
+            "instructions": "Als de filmdepot data is opgehaald staat dit vinkje aan. <br>\r\nZet uit (en sla op) om het volgende keer automatisch op te laten halen óf om de filmdata nu handmatig op te halen.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_61405aef397dd",
+            "label": "Filmdepot handmatig ophalen",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_610245c1d1644",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<a class=\"filmdepot button button-primary button-large\" href=\"#\" name=\"id\">Handmatig ophalen van de filmdata<\/a>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "films"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "field",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1631613458
+}

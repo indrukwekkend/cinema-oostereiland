@@ -1,0 +1,434 @@
+/* stylelint-disable no-descending-specificity */
+#footer-widget-area {
+  background: $footer-background-color;
+  position: relative;
+  font-size: $footer-font-size;
+  padding-bottom: 0.0005em;
+
+  .footer_titel {
+    font-weight: $footer-title-font-weight;
+    font-family: $header-font;
+    color: $footer-title-font-color;
+    line-height: 1em;
+    margin-bottom: 20px;
+  }
+
+  .footer_content {
+    margin-top: 20px;
+    line-height: 1.3em;
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .socials {
+      font-size: 1.3em;
+      margin-top: 15px;
+
+      a {
+        &:hover {
+          color: $footer-font-hover-color;
+        }
+      }
+    }
+  }
+
+  .container {
+    max-width: $footer-width;
+    padding: var(--global--spacing-vertical) 0 0 0;
+    margin-bottom: 0;
+
+    & > * {
+      color: $footer-font-color;
+    }
+
+    .widget-area {
+      li {
+        list-style: none;
+      }
+    }
+
+    ul {
+      text-indent: 0;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      & li {
+        margin: 0;
+        line-height: 1.7;
+
+        a {
+          color: $footer-font-color;
+          font-weight: $footer-font-weight;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    > ul > li > ul {
+      margin-top: 10px;
+
+      > li {
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+#mainfooter {
+  background: linear-gradient(180deg, #f9f8f7 0%, $licht-grijs 100%);
+  padding: 20px 0;
+  font-size: 0.8em;
+
+  .container {
+    text-align: center;
+  }
+
+  p {
+    margin-right: 20px;
+
+    &.powered_by {
+      margin: 0;
+
+      img {
+        display: inline;
+        width: 45px;
+      }
+    }
+  }
+
+  ul {
+    text-indent: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    & li {
+      margin: 0;
+      display: inline;
+      margin-right: 20px;
+
+      a {
+        color: $brand-primary;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+//back to top arrow, gekoppeld met JS common
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9;
+  cursor: pointer;
+  transition: opacity 0.2s ease-out;
+  opacity: 0;
+  display: block;
+  width: 30px;
+  height: 30px;
+
+  .fa-chevron-up {
+    color: $brand-primary;
+
+    &:hover {
+      color: $brand-secondary;
+    }
+  }
+}
+
+#back-to-top.show {
+  opacity: 1;
+}
+
+@media (max-width: 700px) {
+  /* CSS that should be displayed if width is equal to or less than 800px goes here */
+  #menufooter {
+    .container {
+      grid-template-columns: 1fr 1fr;
+      padding: 70px 0;
+
+      img {
+        max-width: 80%;
+      }
+    }
+  }
+
+  #mainfooter {
+    .container {
+      grid-template-columns: 1fr;
+
+      .footer-content-2 {
+        justify-self: auto;
+        margin: 10px 0;
+
+        ul {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+
+  .footer-banner {
+    &-container {
+      grid-template-columns: 80px 1fr;
+      grid-gap: 10px;
+
+      h2 {
+        font-size: 0.9em;
+      }
+    }
+
+    .haak {
+      display: none;
+    }
+  }
+}
+
+#mobilefootermenu,
+#mobilefootermenu ul,
+#mobilefootermenu ul li,
+#mobilefootermenu ul li a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#mobilefootermenu {
+  width: 100%;
+  color: #fff;
+  margin: 0 auto;
+  display: none;
+}
+
+@media only screen and (max-width: 528px) {
+  #mobilefootermenu {
+    display: block;
+  }
+
+  .menu-1,
+  .menu-2,
+  .menu-3 {
+    display: none;
+  }
+
+  #menufooter {
+    .container {
+      padding: 10px 0;
+    }
+  }
+}
+
+#mobilefootermenu ul ul {
+  display: none;
+}
+
+.align-right {
+  float: right;
+}
+
+#mobilefootermenu > ul > li {
+  > a {
+    padding: 15px 20px;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: $brand-secondary;
+    background: $licht-grijs;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+#mobilefootermenu > ul > li > a:hover,
+#mobilefootermenu > ul > li.active > a,
+#mobilefootermenu > ul > li.open > a {
+  color: $brand-primary;
+}
+
+#mobilefootermenu > ul > li.open > a {
+  // box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+#mobilefootermenu > ul > li:last-child > a,
+#mobilefootermenu > ul > li.last > a {
+  // border-bottom: 1px solid #1682ba;
+}
+
+@mixin plusMinus($width, $lineWidth, $color) {
+  box-sizing: border-box;
+  transition: transform 0.3s;
+  width: $width;
+  height: $width;
+  border-radius: 2px;
+  transform: rotate(180deg);
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: $width;
+    height: 0;
+    border-top: solid $lineWidth/2 $color;
+    border-bottom: solid $lineWidth/2 $color;
+    border-radius: 2px;
+    position: absolute;
+    bottom: $width /2 - $lineWidth/2;
+    transform: rotate(90deg);
+    transition: width 0.3s;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: $width;
+    border-radius: 2px;
+    height: 0;
+    border-top: solid $lineWidth/2 $color;
+    border-bottom: solid $lineWidth/2 $color;
+    position: absolute;
+    bottom: $width /2 - $lineWidth/2;
+  }
+
+  li.open & {
+    transform: rotate(0deg);
+
+    &::before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-bottom: solid $lineWidth $color;
+      position: absolute;
+      bottom: $width /2 - $lineWidth/2;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.holder {
+  @include plusMinus(16px, 4px, $brand-secondary);
+}
+
+#mobilefootermenu > ul > li > a:hover > span::after,
+#mobilefootermenu > ul > li.active > a > span::after,
+#mobilefootermenu > ul > li.open > a > span::after {
+  border-color: $brand-secondary;
+}
+
+#mobilefootermenu ul ul li a {
+  cursor: pointer;
+  padding: 14px 20px;
+  z-index: 1;
+  text-decoration: none;
+  font-size: 15px;
+  color: $brand-secondary;
+  background: transparent;
+}
+
+#mobilefootermenu ul ul li:hover > a,
+#mobilefootermenu ul ul li.open > a,
+#mobilefootermenu ul ul li.active > a {
+  //background: #424852;
+  color: $brand-primary;
+}
+
+#mobilefootermenu ul ul li:first-child > a {
+  box-shadow: none;
+}
+
+#mobilefootermenu ul ul ul li:first-child > a {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+#mobilefootermenu ul ul ul li a {
+  padding-left: 30px;
+}
+
+#mobilefootermenu > ul > li > ul > li:last-child > a,
+#mobilefootermenu > ul > li > ul > li.last > a {
+  //border-bottom: 1px solid #abd8fa;
+  margin-bottom: 20px;
+}
+
+#mobilefootermenu > ul > li > ul > li.open:last-child > a,
+#mobilefootermenu > ul > li > ul > li.last.open > a {
+  //border-bottom: 1px solid #32373e;
+}
+
+#mobilefootermenu > ul > li > ul > li.open:last-child > ul > li:last-child > a {
+  border-bottom: 0;
+}
+
+#mobilefootermenu ul ul li.has-sub > a::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  right: 20px;
+  z-index: 10;
+  top: 11.5px;
+  border-top: 2px solid #eee;
+  border-left: 2px solid #eee;
+  transform: rotate(-135deg);
+}
+
+#mobilefootermenu ul ul li.active > a::after,
+#mobilefootermenu ul ul li.open > a::after,
+#mobilefootermenu ul ul li > a:hover::after {
+  border-color: #fff;
+}
+
+@media only screen and (min-width: $ipad-width) {
+  #mainfooter {
+    padding: 20px 0 20px;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+}
+
+@media only screen and (min-width: $desktop-small-width) {
+  #menufooter {
+    .container {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+}
+
+@media only screen and (min-width: $desktop-xl-width) {
+  #menufooter {
+    .container {
+      max-width: $footer-extra-width;
+    }
+  }
+}

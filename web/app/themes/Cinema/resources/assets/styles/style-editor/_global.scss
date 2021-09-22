@@ -1,0 +1,140 @@
+/* stylelint-disable no-duplicate-selectors */
+
+/* Main column width */
+.wp-block {
+  max-width: $normal-width;
+}
+
+/* Width of "wide" blocks */
+.wp-block[data-align="wide"] {
+  max-width: $align-wide;
+}
+
+/* Width of "full-wide" blocks */
+.wp-block[data-align="full"] {
+  max-width: none;
+}
+
+.editor-post-title__block .editor-post-title__input {
+  font-family: $header-font;
+  color: $brand-primary;
+}
+
+> * {
+  font-family: $primary-font;
+  font-size: $base-font-size-editor;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $header-font;
+}
+
+h1 {
+  &.wp-block {
+    font-family: $header-font-light;
+    font-size: $h1-font-size-editor;
+    color: $h1-font-color;
+    font-weight: $h1-font-weight;
+  }
+}
+
+h2 {
+  &.wp-block {
+    font-family: $header-font-light;
+    font-size: $h2-font-size-editor;
+    color: $h2-font-color;
+    font-weight: $h2-font-weight;
+  }
+}
+
+h3 {
+  &.wp-block {
+    font-size: $h3-font-size-editor;
+    color: $h3-font-color;
+    font-weight: $h3-font-weight;
+  }
+}
+
+h4 {
+  &.wp-block {
+    font-size: $h4-font-size-editor;
+    color: $h4-font-color;
+    font-weight: $h4-font-weight;
+  }
+}
+
+h5 {
+  &.wp-block {
+    font-size: $h5-font-size-editor;
+    color: $h5-font-color;
+    font-weight: $h5-font-weight;
+  }
+}
+
+p {
+  &.wp-block {
+    font-weight: 300;
+    font-size: $base-font-size-editor;
+  }
+}
+
+blockquote {
+  font-size: $blockquote-font-size-editor;
+
+  p {
+    font-size: $blockquote-font-size-editor;
+  }
+}
+
+a {
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.acf-block-preview {
+  a {
+    pointer-events: none;
+    cursor: default;
+    color: $brand-primary;
+  }
+}
+
+.editor-block-list__layout a {
+  color: $brand-primary;
+  text-decoration: underline;
+}
+
+img {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+}
+
+.feature-img img {
+  width: 100%;
+}
+
+.intro {
+  font-weight: bold;
+  color: $brand-primary;
+}
+
+/* Gravity Form correctie ------------------------------------ */
+
+.gform_wrapper .gform_body {
+  font-size: 1em;
+}
+
+/* Block list correctie ------------------------------------ */
+
+.block-library-list ul,
+.block-library-list ol {
+  margin-left: 0;
+  padding-left: 0;
+  font-size: 1.25em;
+}

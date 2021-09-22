@@ -1,0 +1,161 @@
+{
+    "key": "group_61012f04693c8",
+    "title": "Film algemene opties",
+    "fields": [
+        {
+            "key": "field_610d9fa34d7d0",
+            "label": "Start",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_610d9fb74d7d1",
+            "label": "Algmene uitleg",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "De algemene werking van de Films hier kort uitgelegd:\r\n\r\n<b>Nieuwe Films<\/b>\r\nIedere ochtend worden de nieuwe films opgehaald van de ticketlab server.\r\nDe film wordt dan in \"concept\" geplaatst op de site. De film krijgt dan het label \"verwacht\" mee.\r\n\r\n<b>Film Gegevens<\/b>\r\nIedere film in \"concept\" met het label \"verwacht\" én met MackBox data wordt op het filmdepot gecontroleerd en hier worden automatisch films, foto's, data en beschrijvingen toegevoegd. Dat gebeurt éénmalig.\r\nBewerken van de gegevens kan nu gewoon, ze worden niet meer overschreven door filmdepot, tenzij je het vinkje in de film weer uitzet.\r\nhierna kun je de film publiceren. Hij komt nu in de lijst \"verwacht\" te staan, totdat er voorstellingen aan gekoppeld worden.\r\n\r\n<b>Voorstellingen<\/b>\r\nOok wordt iedere ochtend gecontroleerd of de films met het label \"verwacht\" inmiddels voorstellingen hebben. Als dat zo is, wordt de film automatisch op \"gepubliceerd\" gezet en het label \"verwacht\" wordt verwijdert. Dit gebeurt om te zorgen dat nooit per ongeluk tickets zijn zonder gekoppelde film. \r\nLET OP! de film moet dus compleet zijn voordat er voorstellingen worden gepland. \r\n\r\n<b>Oude films<\/b>\r\nOm ervoor te zorgen dat niet continue alle oude films gecontroleerd worden op het hebben van voorstellingen (te belastend voor het kassasysteem), krijgt elke film ook het label \"actief\" mee de eerste keer dat hij voorstellingen heeft. Zodra er geen voorstellingen meer zijn van de film, wordt het label automatisch verandert  in \"nee\".\r\nWil je nu een oude film opnieuw activeren? zet dan het label \"verwacht\" weer op \"aan\". Hierna wordt deze weer meegenomen in de cyclus van controles op tickets en actief op de site geplaatst. \r\n\r\n<b>LET OP! <\/b>Er zijn dus in elk geval 3 criteria voor het goed verschijnen van de films op de site:\r\nDe film is gepubliceerd (niet concept)\r\nDe film heeft het juiste label \"verwacht\" \r\nDe film heeft het juiste label \"actief\"\r\n\r\nIn deze instellingen staan een aantal onderdelen die handig zijn om te gebruiken:\r\nDe labels van Films kunnen worden aangepast middels de tekst velden op deze pagina",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_610daa06d3639",
+            "label": "Laad films, voorstellingen opnieuw",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<a href=\"\" id=\"render_events\" class=\"button button-primary button-large\">Laad films<\/a>\r\n\r\nAlle tickets worden opgeslagen in het tijdelijke geheugen. Klik hier om het geheugen te wissen, bijvoorbeeld na het aanpassen van een zaal\r\n<a href=\"\" id=\"render_tickets\" class=\"button button-primary button-large\">Ververs tickets<\/a>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_610d9f7a4d7cf",
+            "label": "Algemene film informatie",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_61012f167c2f2",
+            "label": "Film label teksten",
+            "name": "film_label_teksten",
+            "type": "textarea",
+            "instructions": "Vul hier op elke regel een optie toe om in de Film te kunnen kiezen voor een speciaal label dat wordt toegevoegd aan de film",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_61027c6446a26",
+            "label": "Nieuwe Films ophalen vanaf datum",
+            "name": "nieuwe_films_ophalen_vanaf_datum",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "Y-m-d",
+            "return_format": "Y-m-d",
+            "first_day": 1
+        },
+        {
+            "key": "field_610dadadbcb96",
+            "label": "Filmdepot",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_610dadc1bcb97",
+            "label": "Film Depot API Key",
+            "name": "film_depot_api_key",
+            "type": "text",
+            "instructions": "X-Volta-API key",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-film-pagina-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1628287514
+}
