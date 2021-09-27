@@ -13,6 +13,9 @@ web/.htaccess
 # Logs
 *.log
 
+# Database
+*.sql
+
 # Dotenv
 .env
 .env.*
