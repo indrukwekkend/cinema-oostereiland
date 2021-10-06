@@ -105,6 +105,34 @@
             "placeholder": ""
         },
         {
+            "key": "field_61547d5aba98a",
+            "label": "Extra tekst Label (kopie)",
+            "name": "extra_tekst_label_kopie",
+            "type": "select",
+            "instructions": "Extra label voor bij de film. Deze lijst kun je aanpassen in de filminstellingen.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "0": "-- Selecteer een label --",
+                "special": "special",
+                "2e succesweek": "2e succesweek",
+                "3e succesweek": "3e succesweek",
+                "LHBTQ": "LHBTQ"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_60f83218fc496",
             "label": "Deze film hoort bij festival",
             "name": "festival_films",
@@ -463,5 +491,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631613458
+    "modified": 1632927087
 }

@@ -61,10 +61,10 @@ export default {
     $( 'button.hamburger' ).click(function() {
       $( this ).toggleClass('is-active');
       $('.mobile-navigation-container').toggleClass('open');
-      $('.mobile-navigation-container').removeClass('closed');
+      $('.mobile-navigation-container').toggleClass('closed');
 
       $('.mobile-navigation-overlay').toggleClass('open');
-      $('.mobile-navigation-overlay').removeClass('closed');
+      $('.mobile-navigation-overlay').toggleClass('closed');
     });
 
 
