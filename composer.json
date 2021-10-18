@@ -36,7 +36,7 @@
       "type": "package",
       "package": {
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "5.9.9",
+        "version": "5.10.2",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
@@ -60,6 +60,10 @@
           }
       }
     },
+    "films": {
+      "type": "vcs",
+      "url": "git@github.com:indrukwekkend/Film-blokken.git"
+    },
     "GravityForms": {
       "type": "package",
       "package": {
@@ -80,14 +84,16 @@
   "require": {
     "php": ">=7.1",
     "advanced-custom-fields/advanced-custom-fields-pro": "^5.8",
+    "deliciousbrains-plugin/wp-migrate-db-pro": "^1.8",
     "composer/installers": "^1.11",
     "kinsta/kinsta-mu-plugins": "2.0.15",
     "gravityforms/gravityforms": "*",
     "vlucas/phpdotenv": "^5.3",
     "oscarotero/env": "^2.1",
+    "indrukwekkend/films": "dev-main",
     "roots/bedrock-autoloader": "^1.0",
     "roots/bedrock-disallow-indexing": "^2.0",
-    "roots/wordpress": "5.8",
+    "roots/wordpress": "^5.8",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "wpackagist-plugin/duracelltomi-google-tag-manager": "^1.11",

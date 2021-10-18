@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "../../../.."
+		},
+		{
+			"path": "../Cinema"
+		},
+		{
+			"path": "../Cinema/resources"
+		},
+		{
+			"path": "../Cinema/resources/assets/styles"
+		},
+		{
+			"path": "../../plugins/Films - Dev - Git"
+		}
+	],
+	"settings": {}
+}
