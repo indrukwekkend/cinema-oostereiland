@@ -13,8 +13,8 @@
     ]
   },
   "publicPath": "/app/themes/cinema",
-  "devUrl": "http://cinemaoostereiland-2021.local",
-  "proxyUrl": "http://localhost:3030",
+  "devUrl": "https://cinemabedrock.local",
+  "proxyUrl": "https://localhost:3030",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
     "app/**/*.php",

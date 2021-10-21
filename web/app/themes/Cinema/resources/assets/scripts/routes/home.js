@@ -3,7 +3,68 @@
 
 export default {
   init() {
+    
     // JavaScript to be fired on the home page
+
+    // 1. laden van de films van vandaag
+
+    // $(function() {
+        
+    //   var data = $('#film_number').serializeArray();
+
+    //   data.push({
+    //       name:   'action',
+    //       value:  'get_ajax_agenda_dag_tickets',
+    //   });
+
+    //   actionAjax(data);
+
+    // });
+
+      // pak alle sliders op de filmpagina op, in 1 array.
+      const sliders = document.querySelectorAll('.vandaag-slider')
+      //Met alle sliders:
+      sliders.forEach(slider => {
+        const slidesToShow = 6;
+        console.log(slidesToShow);
+
+        const slick = slider.querySelectorAll('.slider')
+        $(slick).slick( {
+
+        
+          // normal options...
+          infinite: true,
+          slidesToShow: slidesToShow,
+          slidesToScroll: 1,
+        
+          // the magic
+          responsive: [ {
+        
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: slidesToShow -1,
+            },
+        
+          // }, {
+        
+          // 	breakpoint: 600,
+          // 	settings: {
+          // 		slidesToShow: 2,
+          // 		dots: true,
+          // 	},
+        
+          // }, {
+        
+          // 	breakpoint: 300,
+          // 	settings: 'unslick', // destroys slick
+        
+          } ],
+        } );
+
+      });
+  
+
+
     
     // 2. Image tekst effect Experimenteel, testen in aparte branch voordat we dit implementeren
     // https://codepen.io/GreenSock/pen/pojzxwZ
@@ -93,4 +154,27 @@ export default {
 //     ease: 'expo', 
 //     overwrite: 'auto',
 //   });
+// }
+
+
+// Ophalen van de 
+// function actionAjax(data) {
+//   const ajax_url = window.my_ajax_object.ajax_url || false;
+//   if (ajax_url) {
+//       $.ajax({
+//           method: 'POST',
+//           url: ajax_url,
+//           data: data,
+//           //action: 'get_ajax_cursus', // in de data-call
+          
+//           beforeSend: function() {
+//               $('#loading').show();
+//           },
+//           success: function (result) {
+        
+//               $('.ajax-content').html(result);
+//               $('#loading').hide();
+//           },
+//       });
+//   }
 // }

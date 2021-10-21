@@ -58,7 +58,7 @@ $wrapper_classes  = 'banner site-header';
         {!! wp_nav_menu(['theme_location' => 'top_navigation', 'menu_class' => 'nav']) !!}
       @endif
     </nav>
-
+    
 </header>
 <div class="mobile-navigation-overlay closed"><div class="image"></div></div>
 

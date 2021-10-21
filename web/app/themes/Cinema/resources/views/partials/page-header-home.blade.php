@@ -55,3 +55,147 @@ endif;
   </div>
 
 </header>
+
+<header class="vandaag-slider alignfull">
+
+  <?php 
+  $output =  "";
+  //data settings
+    $today = strtotime('today');
+    $tomorrow = strtotime('tomorrow +3 hours');
+    $now = strtotime('now');
+    // Datetime in data zetten: Vandaag en morgen 
+    $data = array (
+        'datumvandaag' => date("Y-m-d", $today),
+        'datetime[strictly_after]' => date("Y-m-d\TH:i:s", $now),
+        'datetime[strictly_before]' => date("Y-m-d\TH:i:s", $tomorrow),
+        'order[datetime]' => 'asc',
+    );
+  $tickets = new TicketlabCurl();
+  $shows = $tickets->getShowstoday( $data );
+  ?>
+
+  <div class="container alignwide">
+  <h2>vandaag <span class='alles'><a href='/agenda'>toon alles</a><span></h2> 
+  </div>
+  
+  <div class="slider dagslider">
+    @php echo getTicketTable($shows); @endphp 
+  </div>
+
+</header>
+
+
+<?php
+// deze functie dan het liefte als methode in de getShowToday() methode. Dat nog ff uitzoeken... 
+function getTicketTable($shows) {
+  global $wp_query;
+
+  $output = '';
+  foreach($shows as $key => $show) {
+
+    if ($key === 'status') {
+      continue;
+    }
+
+    //vorm datum en tijd naar bruikbaar NL:
+    $format = 'Y-m-d\TH:i:s\+\0\0\:\0\0';
+    $date = DateTime::createFromFormat($format, $show['datetime'], new DateTimeZone('UTC'));
+
+    $nl_date = $date;
+    $nl_date->setTimeZone(new DateTimeZone('Europe/Amsterdam'));
+    setlocale(LC_ALL, 'nl_NL');
+
+    /* Output: vrijdag 22 december 1978 */
+    $datum = strftime("%a <span class='datum_notatie'>%e %b</span>", strtotime($show['datetime']));
+    $tijd = $nl_date->format('H:i');
+
+    // create ticketlab link
+    $shows_replace = array("shows", "/");
+    $shownumber = str_replace( $shows_replace, "", $show['@id'] );
+
+    // TODO: integreren in de site
+    $link = 'https://tickets.cinemaoostereiland.nl/shop/tickets.php?showid='. $shownumber;
+
+    $args = array(
+      'numberposts'	=> 1,
+      'post_type'		=> 'films',
+      'meta_key'		=> 'ticketlab_id',
+      'meta_value'	=> $show['eventid'],
+    );
+
+    $the_query = new WP_Query( $args );
+
+    $titel = 'nog geen titel';
+    $film_info = '';
+    $filmlink = '';
+    $thumbnail = "<img src='https://picsum.photos/200/150' />";
+
+    while ( $the_query->have_posts() ) : $the_query->the_post();
+      
+        $id = get_the_ID();
+        $titel = get_the_title();
+        $filmlink = get_the_permalink();
+
+        $regisseur = '';
+        $duur = '';
+        $land = '';
+
+        //metadata
+        $regisseur = get_post_meta( $id, 'regie', true );
+        $duur = get_post_meta( $id, 'duur', true );
+        $land = get_post_meta( $id, 'land', true );
+        $taal = get_post_meta( $id, 'taal', true );
+
+        $film_info .= $duur .' min. '.$taal.' '.$regisseur;
+
+        $size = 'filmsFeatImg';
+        $thumbnail = get_field( 'header_img', $id );
+
+        if ( $thumbnail ) { 
+
+          $url = $thumbnail['url'];
+          $alt = esc_attr($thumbnail['alt']);
+      
+          // Thumbnail size attributes.
+          $thumb = esc_url($thumbnail['sizes'][ $size ]);
+    
+          $thumbnail = "<img src='$thumb' alt='$alt' />";
+    
+        }
+    endwhile;
+
+
+        ///////////////////////////////////
+        //
+        // Output naar de site begint hier:
+        //
+        //////////////////////////////////
+
+    $output .= '<li class="ticket">';
+                //TODO: Specials
+            // Titel met URL
+            $output .= '<div class="card">';
+              $output .= sprintf('<picture class="thumbnail">%1$s</picture>', $thumbnail);
+              $output .= '<div class="text">';
+              $output .= '<a class="overlay" href="'.$filmlink.'" title="'.$titel.'"></a>';
+                  $output .= '<h3>'.$titel.'</h3>';
+                  // $output .= '<p class="film-info">'.$film_info.'</p>';
+            
+              $output .= '</div>';
+              $output .= '<div class="knoppen">';
+                $output .= '<a class="btn bestellen" href="'.$link.'">'.$tijd.'</a>';
+              $output .= '</div>';
+            $output .= '</div>';
+
+            // Tijd:
+            // Zaal:
+
+    $output .= '</li>';
+
+
+  }
+  wp_reset_postdata();
+  return $output;
+}
+?>

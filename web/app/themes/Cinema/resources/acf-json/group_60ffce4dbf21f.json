@@ -1,0 +1,79 @@
+{
+    "key": "group_60ffce4dbf21f",
+    "title": "Special instellingen",
+    "fields": [
+        {
+            "key": "field_60ffd06e1e6eb",
+            "label": "Film",
+            "name": "special_films",
+            "type": "select",
+            "instructions": "Selecteer eerst de Film waar de special voor is",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "": "-- Selecteer Film --",
+                "444": "LUIZENMOEDER - DE FILM",
+                "149": "THE MAURITANIAN"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_60ffe0a07cf28",
+            "label": "Ticket",
+            "name": "ticket",
+            "type": "select",
+            "instructions": "Selecteer het ticket waarvoor deze special geldig is",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60ffd06e1e6eb",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": [],
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "specials"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Code in de plugin: ajax-ticket-lader.js",
+    "modified": 1634735127
+}

@@ -68,7 +68,7 @@ if( $featured_post ):
   $image = get_field('header_festival');
   $backgroundImage = esc_url($image['url']); ?>
 
-  <div class="block-festival alignfull">
+  <div class="block-festival alignfull block-slider">
     <div class="alignwide content-container">
         
         <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
@@ -98,9 +98,9 @@ if( $featured_post ):
           
             if( $films ): 
               global $post; ?>
-              <div class="specials-block-films">
+              <div class="specials-block-films sliderlijst">
                   
-                  <ul class="block-festival-lijst sliderlijst">
+                 
                   <?php foreach( $films as $post ): 
 
                       // Setup this post for WP functions (variable must be named $post).
@@ -127,7 +127,7 @@ if( $featured_post ):
                     </li>
 
                   <?php endforeach; ?>
-                  </ul>
+
                 </div>
                 <?php 
                 // Reset the global post object so that the rest of the page works correctly.
@@ -187,14 +187,16 @@ if( !empty( $custom_terms ) ):
     $loop = new WP_Query($args);
 
     if( $loop->have_posts() ) : ?>
-      <div class="alignwide block-aangeraden-films">
+      <div class="alignwide block-aangeraden-films block-slider">
         <div class="title-element">
           <h2>Interessant</h2>
         </div>
         <div class="content-element">
           <span class="onderwerp h2">Voor jou </span>
           <!-- lijst met aangeraden films -->
-          <div class="block-aangeraden-films-lijst slider">
+          <div class="specials-block-films sliderlijst">
+                  
+                
             <?php
             while( $loop->have_posts() ) : $loop->the_post(); ?>
 
@@ -219,6 +221,7 @@ if( !empty( $custom_terms ) ):
               </li> 
                         
             <?php endwhile;?>
+
         </div>
         </div>
       </div>
