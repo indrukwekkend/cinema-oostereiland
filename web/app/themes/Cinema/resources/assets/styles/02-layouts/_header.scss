@@ -3,6 +3,15 @@
 header#masthead {
   position: absolute;
   width: 100%;
+  transition: background 0.7s ease-in-out;
+
+  .home & {
+    position: fixed;
+  }
+
+  &.active {
+    background-color: rgba(0, 0, 0, 0.897);
+  }
 }
 
 #site-content {
@@ -500,7 +509,8 @@ header.site-header {
     bottom: 0;
     position: absolute;
     margin: 0;
-    transition: all 0.5s ease-in-out;
+    transition: background 0.5s ease-in-out;
+    max-height: 180px;
 
     &__content {
       display: flex;
@@ -530,7 +540,6 @@ header.site-header {
       .wp-block-button__link {
         color: $dark-green;
         background-color: $wit;
-        border-radius: 9999px;
         font-size: 1.125em;
         padding: calc(0.467em + 2px) calc(1.333em + 2px);
         transition: all 0.5s ease-in-out;
@@ -538,14 +547,17 @@ header.site-header {
     }
 
     &.active {
-      background-color: $brand-secondary;
-      border-bottom: 1px solid darken($brand-secondary, 10);
+      background-color: $navigation-background;
+      border-bottom: 1px solid darken($navigation-background, 30);
       // TODO: beter uitzoeken van deze hoogte.. Wordt eert berekend en dan toegevoegd aan het element
       // Maar deze verkleint, door het veranderen van de grootte van de fonts
+      z-index: 100;
       max-height: 150px !important;
+      margin-top: 30px !important;
 
       .cta-bar__content {
         color: $brand-primary;
+        margin-bottom: 0;
 
         h1 {
           color: $brand-primary;
@@ -556,6 +568,10 @@ header.site-header {
           background-color: $dark-green;
           color: $wit;
         }
+      }
+
+      &.smaller {
+        margin-top: 0 !important;
       }
     }
   }
@@ -578,7 +594,7 @@ header.site-header {
     }
   }
 
-  li {
+  li.ticket {
     // Extend button style
     @include card-in-slider();
   }

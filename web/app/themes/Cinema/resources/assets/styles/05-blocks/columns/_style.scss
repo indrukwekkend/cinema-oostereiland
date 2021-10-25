@@ -61,7 +61,7 @@
       .wp-block-column {
         &:nth-child(2n) {
           margin-left: 0;
-          z-index: 2;
+          z-index: 1;
 
           // Provide text-based child blocks with a default background color to ensure they're readable.
           > p,

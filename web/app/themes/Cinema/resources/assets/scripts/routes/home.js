@@ -1,25 +1,23 @@
-//import { gsap } from 'gsap';
-//import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export default {
   init() {
     
     // JavaScript to be fired on the home page
 
-    // 1. laden van de films van vandaag
+    // GSAP voor animaties. Hiermee zetten we elementen vast onscrolltrigger:
+    gsap.registerPlugin(ScrollTrigger);
 
-    // $(function() {
-        
-    //   var data = $('#film_number').serializeArray();
+    // scroll trigger pin CTA element
 
-    //   data.push({
-    //       name:   'action',
-    //       value:  'get_ajax_agenda_dag_tickets',
-    //   });
 
-    //   actionAjax(data);
-
-    // });
+    ScrollTrigger.create({
+      trigger: '#masthead',
+      start: '50px top', 
+      end: '+=15000',
+      toggleClass: {targets: '#masthead', className: 'active'}, 
+    });
 
       // pak alle sliders op de filmpagina op, in 1 array.
       const sliders = document.querySelectorAll('.vandaag-slider')
@@ -178,3 +176,20 @@ export default {
 //       });
 //   }
 // }
+
+// Verwijdert en vervangen voor de lijst met films onder de hoofdafbeelidgne
+
+    // 1. laden van de films van vandaag
+
+    // $(function() {
+        
+    //   var data = $('#film_number').serializeArray();
+
+    //   data.push({
+    //       name:   'action',
+    //       value:  'get_ajax_agenda_dag_tickets',
+    //   });
+
+    //   actionAjax(data);
+
+    // });

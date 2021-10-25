@@ -49,9 +49,10 @@ $wit: #fff;
 
 /** Colors */
 $brand-primary: $dark-green;
-$brand-secondary: $light-green;
+$brand-secondary: $bright-green;
 $base-color: $black1;
-$seperator-color: $brand-secondary;
+$seperator-color: $light-green;
+$navigation-background:$light-green;
 $navigation-background-color: $wit;
 $film-header-color: $wit;
 
@@ -158,7 +159,7 @@ $h5-font-color: $black1;
 
 //font weights
 $h1-font-weight: 800;
-$h2-font-weight: 400;
+$h2-font-weight: 800;
 $h3-font-weight: 600;
 $h4-font-weight: 600;
 $h5-font-weight: 300;
@@ -181,9 +182,11 @@ $footer-background-color: $black1;
 $footer-font-size: 0.9em;
 $footer-font-weight: 600;
 $footer-font-color: $wit;
-$footer-font-hover-color: $bright-green;
+$footer-link-color: $bright-green;
+$footer-font-hover-color: darken ($bright-green, 10);
 $footer-title-font-weight: 900;
 $footer-title-font-color: $wit;
+$footer-socials-color: $light-green;
 
 // root kan handig zijn om variabelen aan te passen in verschillende media breedte
 :root {

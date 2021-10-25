@@ -32,11 +32,16 @@ export default {
 
       // scroll trigger pin CTA element
       ScrollTrigger.create({
-        trigger: '#cta-barxxxx',
         start: 'top top', 
-        pin: '#cta-barxxx',
-        end: '+=15000',
         toggleClass: {targets: '#cta-bar', className: 'active'}, 
+      });
+
+      ScrollTrigger.create({
+        trigger: '#cta-bar',
+        start: 'top top', 
+        pin: '#cta-bar',
+        end: '+=15000',
+        toggleClass: {targets: '#cta-bar', className: 'smaller'}, 
       });
 
       // pak alle sliders op de filmpagina op, in 1 array.

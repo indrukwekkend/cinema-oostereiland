@@ -3,6 +3,52 @@
     "title": "Special instellingen",
     "fields": [
         {
+            "key": "field_617659bd7358b",
+            "label": "Header Special",
+            "name": "header_special",
+            "type": "image_aspect_ratio_crop",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "crop_type": "aspect_ratio",
+            "aspect_ratio_width": 1600,
+            "aspect_ratio_height": 1200,
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_6172c75f9bf8e",
+            "label": "intro_tekst",
+            "name": "intro_tekst",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_60ffd06e1e6eb",
             "label": "Film",
             "name": "special_films",
@@ -17,6 +63,7 @@
             },
             "choices": {
                 "": "-- Selecteer Film --",
+                "231": "BENEDETTA",
                 "444": "LUIZENMOEDER - DE FILM",
                 "149": "THE MAURITANIAN"
             },
@@ -68,12 +115,12 @@
         ]
     ],
     "menu_order": 0,
-    "position": "normal",
+    "position": "side",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
     "description": "Code in de plugin: ajax-ticket-lader.js",
-    "modified": 1634735127
+    "modified": 1635146353
 }

@@ -1,0 +1,25 @@
+.wp-block-cover {
+  &.binnenkort {
+    p {
+      margin: 0;
+
+      &.intro {
+        background: $black1;
+        color: $bright-green;
+        padding: 0 10px;
+        display: inline-block;
+        text-transform: uppercase;
+      }
+
+      &.film-titel {
+        font-size: $h2-font-size;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &.has-custom-content-position.has-custom-content-position .wp-block-cover__inner-container {
+    width: 100%;
+  }
+}

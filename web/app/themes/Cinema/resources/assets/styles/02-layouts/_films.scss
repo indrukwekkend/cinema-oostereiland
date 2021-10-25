@@ -102,30 +102,9 @@
         margin-top: calc(var(--global--spacing-vertical) * 1);
         margin-bottom: calc(var(--global--spacing-vertical) * 2);
       }
-    }
 
-    &-lijst {
-      list-style-type: none;
-      display: inline-block;
-      margin: 0;
-      padding: 0;
-      width: 100%;
-
-      h3 {
-        color: $base-color;
-        margin-top: 30px;
-        max-width: calc(100% - 1rem);
-      }
-
-      //vanaf hier de slider view
-      .slick-list > .slick-track {
-        margin-left: 0;
-
-        .slick-slide {
-          li {
-            max-width: calc(100% - 0.6rem);
-          }
-        }
+      li.film {
+        @include card-in-slider();
       }
     }
   }

@@ -37,7 +37,7 @@ $foot_nav3 = array(
 if ( is_active_sidebar( 'sidebar-footer' ) ) : ?>
   <footer  id="footer-widget-area" class="content-info site-footer" role="contentinfo">
       <div class="content-holder container alignwide">
-        <div class="col menu-0">
+        <div class="col footer_titel">
           <a href="/" title="home">
             <img src="@asset('images/logo.svg')" alt="Logo: Cinemaoostereiland" class="logoduurzaam">
           </a>

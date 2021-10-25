@@ -11,7 +11,7 @@
 input[type="submit"],
 input[type="reset"],
 .wp-block-search__button,
-.wp-block-button .wp-block-button__link {
+.wp-block-button__link {
   // Extend button style
   @include button-style();
 }

@@ -1,0 +1,83 @@
+.wp-block-indrukwekkend-all-films-grid {
+  //@debug
+  li.film {
+    @include card-in-slider();
+  }
+}
+
+.wp-block-indrukwekkend-festival {
+  padding: 8rem 0 9rem;
+
+  h3 {
+    color: $dark-green;
+  }
+
+  .intro-text {
+    font-weight: bold;
+  }
+
+  .festival-films {
+    margin-top: 9rem;
+
+    li.film {
+      @include card-in-slider();
+    }
+  }
+}
+
+.wp-block-indrukwekkend-special {
+  padding: 4rem;
+  background-color: #000;
+
+  .wp-block-columns .wp-block-column:not(:first-child) {
+    margin-left: calc(2 * var(--global--spacing-horizontal));
+  }
+
+  a {
+    color: $bright-green;
+  }
+
+  h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 3.2rem;
+
+    a {
+      color: #fff;
+    }
+  }
+
+  .image {
+    position: relative;
+
+    img {
+      position: absolute;
+    }
+
+    .movie_title {
+      position: absolute;
+      bottom: 0;
+      margin-top: 0;
+      margin-left: 2rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 2.8rem;
+      color: #fff;
+    }
+  }
+
+  .intro-text {
+    font-weight: bold;
+    color: $bright-green;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    color: #fff;
+    font-size: 0.9em;
+  }
+
+  .btn {
+    display: inline-block;
+  }
+}

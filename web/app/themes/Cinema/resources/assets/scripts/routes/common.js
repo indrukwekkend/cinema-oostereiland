@@ -203,6 +203,47 @@ export default {
       //   pinSpacing: false,
       // });
 
+            // pak alle sliders op de filmpagina op, in 1 array.
+            const sliders = document.querySelectorAll('.festival-films')
+            //Met alle sliders:
+            sliders.forEach(slider => {
+              const slidesToShow = 4;
+              console.log(slidesToShow);
+      
+              const slick = slider.querySelectorAll('.slider')
+              $(slick).slick( {
+      
+              
+                // normal options...
+                infinite: true,
+                slidesToShow: slidesToShow,
+                slidesToScroll: 1,
+              
+                // the magic
+                responsive: [ {
+              
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: slidesToShow -1,
+                  },
+              
+                // }, {
+              
+                // 	breakpoint: 600,
+                // 	settings: {
+                // 		slidesToShow: 2,
+                // 		dots: true,
+                // 	},
+              
+                // }, {
+              
+                // 	breakpoint: 300,
+                // 	settings: 'unslick', // destroys slick
+              
+                } ],
+              } );
+      
+            });
 
   },
   finalize() {

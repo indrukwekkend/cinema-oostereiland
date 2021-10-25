@@ -123,4 +123,42 @@
       }
     }
   }
+
+  &.is-style-indrukwekkend-vriend {
+    margin-top: calc(2 * var(--global--spacing-vertical));
+    margin-bottom: calc(2 * var(--global--spacing-vertical));
+
+    &.has-background {
+      @include media(laptop) {
+        padding-top: calc(2 * var(--global--spacing-vertical));
+        padding-bottom: calc(2 * var(--global--spacing-vertical));
+      }
+    }
+
+    .wp-block-media-text__content {
+      h2 {
+        font-size: $h3-font-size;
+        font-weight: 800;
+        color: $black1;
+      }
+
+      p {
+        &.has-large-font-size {
+          font-size: 3rem;
+          font-weight: 800;
+        }
+
+        &.intro {
+          color: $dark-green;
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 1.8rem;
+        }
+      }
+
+      @include media(laptop) {
+        // media include zie hierboven voor optie
+      }
+    }
+  }
 }

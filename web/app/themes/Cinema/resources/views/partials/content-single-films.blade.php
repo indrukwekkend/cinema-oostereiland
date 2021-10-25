@@ -200,24 +200,32 @@ if( !empty( $custom_terms ) ):
             <?php
             while( $loop->have_posts() ) : $loop->the_post(); ?>
 
-              <li>
+              <li class='film'>
                 <?php
-                $image = get_field('header_img');
+                  $image = get_field('header_img');
 
-                $url = $image['url'];
-                $title = $image['title'];
-                $alt = $image['alt'];
-                $caption = $image['caption'];
-            
-                // Thumbnail size attributes.
-                $size = 'filmsFeatImg';
-                $thumb = $image['sizes'][ $size ];
+                  $url = $image['url'];
+                  $title = $image['title'];
+                  $alt = $image['alt'];
+                  $caption = $image['caption'];
+              
+                  // Thumbnail size attributes.
+                  $size = 'filmsFeatImg';
+                  $thumb = $image['sizes'][ $size ];
+
+                  $thumbnail = "<img src='$thumb' alt='$alt' />";
                 ?>
-                    <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($title); ?>">
-                        <img src="<?php echo esc_url($thumb); ?>" alt="<?php echo esc_attr($alt); ?>" />
-                    </a>
-                    <h3><?php the_title(); ?></h3>
-                    <p>Extra informatie</p>
+
+                <div class="card filmsFeatImg">
+
+                    <?php echo sprintf('<picture class="thumbnail">%1$s</picture>', $thumbnail); ?>
+
+                    <div class="text">
+                      <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($title); ?>" class="overlay"></a>
+                      <h3><?php the_title(); ?></h3>
+                      <p class='extra'>Extra informatie</p>
+                    </div>
+                </div>
               </li> 
                         
             <?php endwhile;?>

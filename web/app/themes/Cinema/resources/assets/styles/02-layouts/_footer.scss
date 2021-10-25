@@ -6,30 +6,42 @@
   padding-bottom: 0.0005em;
 
   .footer_titel {
-    font-weight: $footer-title-font-weight;
-    font-family: $header-font;
-    color: $footer-title-font-color;
-    line-height: 1em;
-    margin-bottom: 20px;
+    max-width: 250px;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
   }
 
-  .footer_content {
+  .content-holder {
     margin-top: 20px;
     line-height: 1.3em;
 
     a {
       text-decoration: none;
+      color: $footer-link-color;
 
       &:hover {
         text-decoration: underline;
       }
     }
 
+    h3 {
+      font-size: $h4-font-size;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-top: 0;
+    }
+
     .socials {
       font-size: 1.3em;
-      margin-top: 15px;
+      margin-top: var(--global--spacing-vertical);
+      margin-bottom: var(--global--spacing-vertical);
 
       a {
+        color: $footer-socials-color;
+        text-decoration: none;
+
         &:hover {
           color: $footer-font-hover-color;
         }
