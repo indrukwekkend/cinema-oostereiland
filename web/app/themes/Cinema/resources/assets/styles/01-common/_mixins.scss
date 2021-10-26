@@ -53,6 +53,27 @@
   }
 }
 
+@mixin label_style() {
+  background-color: $wit;
+  font-size: 0.8em;
+  padding: 0 5px;
+  margin-left: 10px;
+  color: $dark-green;
+}
+
+@mixin slash() {
+  content: "";
+  width: 10px;
+  height: 100%;
+  border-right: 2px solid $dark-green;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: rotate(10deg);
+  margin-right: 30px;
+  opacity: 0.3;
+}
+
 @mixin card-in-slider() {
   border: none;
   padding: 0;

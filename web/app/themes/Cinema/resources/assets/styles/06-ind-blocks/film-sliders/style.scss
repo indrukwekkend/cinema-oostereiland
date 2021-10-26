@@ -19,6 +19,10 @@
   .festival-films {
     margin-top: 9rem;
 
+    .slick-track {
+      margin-left: 0;
+    }
+
     li.film {
       @include card-in-slider();
     }

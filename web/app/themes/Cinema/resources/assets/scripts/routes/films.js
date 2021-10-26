@@ -41,7 +41,7 @@ export default {
         start: 'top top', 
         pin: '#cta-bar',
         end: '+=15000',
-        toggleClass: {targets: '#cta-bar', className: 'smaller'}, 
+        toggleClass: {targets: '#cta-bar', className: 'smaller'},
       });
 
       // pak alle sliders op de filmpagina op, in 1 array.

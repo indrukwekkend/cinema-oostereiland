@@ -14,6 +14,15 @@ header#masthead {
   }
 }
 
+//vreemd dat dit moet maar ja. Is de spacer van de GSOC
+.pin-spacer {
+  pointer-events: none;
+
+  #cta-bar {
+    pointer-events: initial;
+  }
+}
+
 #site-content {
   margin-top: $top-marge-transparant;
 }
@@ -530,6 +539,10 @@ header.site-header {
       .film-info {
         display: flex;
         text-transform: uppercase;
+
+        .label {
+          @include label_style();
+        }
       }
 
       &__right {
@@ -541,7 +554,6 @@ header.site-header {
         color: $dark-green;
         background-color: $wit;
         font-size: 1.125em;
-        padding: calc(0.467em + 2px) calc(1.333em + 2px);
         transition: all 0.5s ease-in-out;
       }
     }

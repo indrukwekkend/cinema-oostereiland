@@ -36,7 +36,8 @@ $desktop-xl-width: 1900px;
 $dynamic-dark: #484848;
 $light-green: #f4f5f0;
 $bright-green: #a8c816;
-$background-green: #a8c8162e;
+$background-green: #a7c81638;
+$festival-green: #e6eebf7d;
 $dark-green: #626844;
 $neutral-gray: #c7c7c7;
 
@@ -64,6 +65,7 @@ $colors: (
   "groen": $bright-green,
   "licht-groen": $light-green,
   "donker-groen": $dark-green,
+  "festival-groen": $festival-green,
 );
 
 @each $name, $color in $colors {
@@ -209,8 +211,8 @@ $footer-socials-color: $light-green;
   --button--border-radius: 0;
   --button--radius: 0;
   // Spacing
-  --button--padding-vertical: 10px;
-  --button--padding-horizontal: calc(3 * var(--button--padding-vertical));
+  --button--padding-vertical: 5px;
+  --button--padding-horizontal: calc(4 * var(--button--padding-vertical));
 
   /* Tables */
   --table--stripes-background-color: #f2f2f2;
