@@ -4265,10 +4265,10 @@ graceful-fs@^4.0.0, graceful-fs@^4.1.10, graceful-fs@^4.1.11, graceful-fs@^4.1.1
   resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
   integrity sha1-TK+tdrxi8C+gObL5Tpo906ORpyU=
 
-gsap@^3.5.1:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/gsap/-/gsap-3.5.1.tgz#36cf76787d1758e749469d5e9cbe365c186544c4"
-  integrity sha512-EMV0RSUKZNeTUzLKAizGlwxVOUyif3/g8I3S1aA/hf3gbqwBvmQ02x1RdTBQNQMOpHCVBv9y/vaHwfctoAg8zw==
+gsap@^3.8.0:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/gsap/-/gsap-3.8.0.tgz#a404dd6ebbaabc92605539aea9d98e3098688064"
+  integrity sha512-cvpzKkWFePDZCycwXwJnDSpTR3j+a4QLQF/t0c+pXqzRESgAYx5hieaoshzZFjbwsARqr0+5c3GKE7wI273w/g==
 
 gulp-decompress@^1.2.0:
   version "1.2.0"
@@ -9043,6 +9043,11 @@ specificity@^0.3.1:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/specificity/-/specificity-0.3.2.tgz#99e6511eceef0f8d9b57924937aac2cb13d13c42"
   integrity sha512-Nc/QN/A425Qog7j9aHmwOrlwX2e7pNI47ciwxwy4jOlvbbMHkNNJchit+FX+UjF3IAdiaaV5BKeWuDUnws6G1A==
+
+spinkit@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/spinkit/-/spinkit-2.0.1.tgz#aefcd0acfdf15a90aa8e1f069d7e618515891f74"
+  integrity sha512-oYBGY0GV1H1dX+ZdKnB6JVsYC1w/Xl20H111eb+WSS8nUYmlHgGb4y5buFSkzzceEeYYh5kMhXoAmoTpiQauiA==
 
 split-string@^3.0.1, split-string@^3.0.2:
   version "3.1.0"

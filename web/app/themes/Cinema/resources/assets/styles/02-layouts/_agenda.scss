@@ -21,8 +21,30 @@
     }
   }
 
-  .list {
-    display: flex;
+  .filters {
+    .list {
+      display: flex;
+      align-items: center;
+
+      .option {
+        margin-right: 30px;
+        text-decoration: none;
+
+        &.active {
+          font-weight: bold;
+          text-decoration: underline;
+        }
+
+        &:hover {
+          color: $bright-green;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .wp-block-indrukwekkend-film-card {
+    margin-right: 0;
   }
 }
 /* stylelint-disable no-descending-specificity */
@@ -34,14 +56,19 @@ ul.tickets {
 
   li.ticket {
     justify-content: space-between;
+    padding: 10px 0 10px 25px;
+    margin-top: 10px;
     font-weight: 400;
     color: #0e0e0e;
-    margin-top: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     position: relative;
     text-decoration: none;
     text-transform: uppercase;
+
+    &:nth-child(2n-1) {
+      background-color: darken($light-green, 3);
+    }
 
     &::after {
       content: "";
@@ -165,6 +192,41 @@ ul.tickets {
   }
 }
 
+ul.films {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+
+  li.film {
+    display: grid;
+    padding: 30px;
+    position: relative;
+
+    &:nth-child(2n-1) {
+      background-color: darken($light-green, 3);
+    }
+
+    a.bestellen {
+      @include button_style();
+
+      background-color: $wit;
+    }
+
+    a.overlay {
+      text-decoration: none;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: $ipad-width) { //768
   .template-agenda {
     .page-holder {
@@ -253,6 +315,14 @@ ul.tickets {
         justify-self: end;
         grid-row: 1;
       }
+    }
+  }
+
+  ul.films {
+    li.film {
+      display: grid;
+      grid-template-columns: 4fr 5fr;
+      grid-gap: 30px;
     }
   }
 }

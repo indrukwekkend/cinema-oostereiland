@@ -74,6 +74,10 @@ header.site-header {
       &.small {
         height: 50px;
       }
+
+      .template-agenda & {
+        background-image: url("../images/logo_oud.png");
+      }
     }
 
     .hamburger {

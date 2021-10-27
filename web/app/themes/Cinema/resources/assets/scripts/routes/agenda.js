@@ -2,6 +2,7 @@ export default {
   init() {
     // JavaScript to be fired on the agenda page
 
+    // bij openen gelijk deze funvtie uitvoeren ("Vandaag")
     $(function() {
         
       var data = $('#film_number').serializeArray();
@@ -33,6 +34,84 @@ export default {
 
     });
 
+    // Onclick events
+    document.getElementById('vandaag').onclick = function(e){
+      e.preventDefault();
+      removeActiveClass();
+      this.classList.add('active');
+
+      var data = Array();
+
+      data.push({
+        name:   'action',
+        value:  'get_ajax_agenda_tickets',
+      });
+
+      actionAjax(data);
+    }
+
+    document.getElementById('az').onclick = function(e){
+      e.preventDefault();
+      removeActiveClass();
+      this.classList.add('active');
+
+      var data = Array();
+
+      data.push({
+        name:   'action',
+        value:  'get_ajax_agenda_tickets',
+      });
+
+      data.push({
+        name:   'order',
+        value:  'az',
+      });
+
+      actionAjax(data);
+    }
+
+    document.getElementById('programma').onclick = function(e){
+      e.preventDefault();
+      // controleren en toevoegen en verwijderen van action class!!!
+      removeActiveClass();
+      this.classList.add('active');
+
+      var data = Array();
+
+      data.push({
+        name:   'action',
+        value:  'get_ajax_agenda_tickets',
+      });
+
+      data.push({
+        name:   'programma',
+        value:  'programma',
+      });
+
+      actionAjax(data);
+    }
+
+    // onchange event
+    document.getElementById('start').onchange = function(e){
+      e.preventDefault();
+      removeActiveClass();
+
+      console.log(this.value);
+      
+      var data = Array();
+      data.push({
+        name:   'action',
+        value:  'get_ajax_agenda_tickets',
+      });
+
+      data.push({
+        name:   'date',
+        value:  this.value,
+      });
+
+      actionAjax(data);
+    };
+
   },
 };
 
@@ -47,12 +126,20 @@ function actionAjax(data) {
             
             beforeSend: function() {
                 $('#loading').show();
+                $('.ajax-content').html('');
             },
             success: function (result) {
-          
                 $('.ajax-content').html(result);
                 $('#loading').hide();
             },
         });
     }
+}
+
+function removeActiveClass() {
+  const elems = document.querySelectorAll('a.option');
+
+  elems.forEach((elem) => {
+    elem.classList.remove('active');
+  });
 }
