@@ -1,0 +1,47 @@
+.single-specials {
+  background: $black1;
+  color: $wit;
+  background-image: url("../images/plusPatroon.svg");
+  background-size: 95%;
+  background-position: 95%, -170px;
+  background-position-y: -170px;
+
+  h1 {
+    color: $wit;
+  }
+
+  h2 {
+    color: $wit;
+    font-size: $h3-font-size;
+  }
+
+  p.film-intro {
+    font-weight: bold;
+  }
+
+  .film-details {
+    background-color: $wit;
+    color: $base-color;
+    padding: 6rem 0;
+  }
+
+  .image {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+    }
+
+    .movie_title {
+      position: absolute;
+      bottom: 0;
+      margin-top: 0;
+      margin-left: 2rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 2.8rem;
+      color: #fff;
+    }
+  }
+}

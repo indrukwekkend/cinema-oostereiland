@@ -76,7 +76,7 @@ header.site-header {
       }
 
       .template-agenda & {
-        background-image: url("../images/logo_oud.png");
+        background-image: url("../images/logo_diap.svg");
       }
     }
 
@@ -483,6 +483,7 @@ header.site-header {
   padding: 0;
   height: 100vh;
   background-size: cover;
+  position: relative;
 
   .home & {
     height: 87vh;
@@ -490,6 +491,9 @@ header.site-header {
 
   .video-button {
     //hier de css voor de videoknop
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
   }
 
   &.contrast {

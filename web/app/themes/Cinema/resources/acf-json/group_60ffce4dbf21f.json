@@ -100,7 +100,7 @@
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
-            "return_format": "value",
+            "return_format": "array",
             "ajax": 0,
             "placeholder": ""
         }
@@ -122,5 +122,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Code in de plugin: ajax-ticket-lader.js",
-    "modified": 1635146353
+    "modified": 1635336376
 }

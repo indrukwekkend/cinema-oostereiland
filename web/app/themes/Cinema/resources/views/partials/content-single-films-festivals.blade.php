@@ -1,40 +1,47 @@
-<div @php post_class() @endphp>
+<?php
+// Festivals.
+//
+// onverdeel van single content Films
 
-  <?php
+$featured_post = get_field('festival_films');
+
+if( $featured_post ): 
+  global $post; 
+  $post = $featured_post;
+	setup_postdata( $post );
+  
   $image = get_field('header_festival');
   $backgroundImage = esc_url($image['url']); 
-  // overige meta:
+  // Festival Blok hieronder
   ?>
 
-  <header class="page-header-film alignfull" style="background-image: url(<?=$backgroundImage?>); ">
-
-
-    <div class="header-content-wrapper">
-        
-
-        <div id="cta-bar" class="cta-bar alignfull">
-          <div class="cta-bar__content alignwide">
-            
-            <div class="cta-bar__content__left">
-              <h1 class="entry-title">{!! get_the_title() !!}</h1>
-              <div class="film-info">
-                Hier nog de informatie van de Drama reeks? Datum tijd groepje.. Als het een start en einddatum heeft.
-              </div>
+  <div class="wp-block-group alignfull has-festival-groen-background-color has-background">
+    <div class="wp-block-group__inner-container">
+      <div class="wp-block-indrukwekkend-festival alignwide">
+        <div class="festival-content">
+          
+          <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+          <div class="wp-block-columns">
+            <div class="wp-block-column" style="flex-basis:55%">
+              <img class="" src="<?=$backgroundImage?>">
+            </div>
+            <div class="wp-block-column" style="flex-basis:45%">
+              <div class="text">
+                <?php 
+                    $intro = get_field( 'intro_tekst' ); 
+                    if ($intro != '') {
+                      echo "<p class='intro-text'>$intro</p>";
+                    }
+                ?>
+                  <?php the_excerpt(); ?>
+                  <a href="<?php the_permalink(); ?>">Lees alles over <?php the_title();?></a>
+              </div>  
             </div>
           </div>
         </div>
-    </div>
-  
-  </header>
-
-
-  <div class="entry-content">
-    @php the_content() @endphp
-  </div>
-
-
-<div class="festival-films alignwide">
-          <h2><?php the_field( 'reeks_titel' ); ?></h2>
+        
+        <div class="festival-films">
+          <h3><?php the_field( 'reeks_titel' ); ?></h3>
           
           <?php
             // Hier de lijst met de films in het Festival
@@ -85,11 +92,11 @@
             <?php endif; ?> 
 
         </div>
+      </div>
+    </div>
+  </div>
+  <?php 
+  // Reset the global post object so that the rest of the page works correctly.
+  wp_reset_postdata(); ?>
 
-
-
-  <footer>
-    {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
-  </footer>
-  @php comments_template('/partials/comments.blade.php') @endphp
-</div>
+<?php endif; ?>

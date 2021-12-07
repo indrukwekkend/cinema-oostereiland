@@ -20,7 +20,6 @@ if( $hero ):
   $linktekst = $hero['Teksten']['linktekst'];
   $link = $hero['Teksten']['link'];
 
- 
   $wrapper_classes  = ''; 
   $wrapper_classes .= true === $contrast ? ' contrast' : '';
 
@@ -39,16 +38,11 @@ endif;
           <div class="cta-bar__content__left">
             <h1 class="entry-title">{{$titel}}</h1>
             <p><span>{{$label}}</span>{{$subheader}}</p>
-            <div class="film-info">
-                <div class="ticketDates"></div>
-            </div>
-          
+              <?php if ($knop): ?>
+                    <a class="btn wp-block-button__link" id="toon_tickets" href="{{$link}}">Info</a>
+                    <a class="btn wp-block-button__link" id="toon_tickets" href="{{$link}}">{{$linktekst}}</a>
+              <?php endif; ?>
           </div>
-        <?php if ($knop): ?>
-          <div class="cta-bar__content__right">
-            <a class="btn wp-block-button__link" id="toon_tickets" href="{{$link}}">{{$linktekst}}</a>
-          </div>
-        <?php endif; ?>
 
         </div>
       </div>

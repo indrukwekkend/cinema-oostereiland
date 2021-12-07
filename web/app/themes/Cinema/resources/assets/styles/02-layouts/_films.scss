@@ -48,3 +48,73 @@
     }
   }
 }
+
+.fitVids-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.film_media {
+  background: #000;
+  z-index: 999;
+  display: none;
+  height: 100%;
+  width: 100%;
+
+  iframe {
+    z-index: 10;
+    bottom: 0;
+  }
+}
+
+.film_media_mob {
+  background: #000;
+  display: none;
+  z-index: 1;
+}
+
+.youtube_btn,
+.youtube_btn_mob {
+  cursor: pointer;
+  background: none;
+  color: #fff;
+}
+
+.youtube_btn_mob {
+  z-index: 0 !important;
+}
+
+.play_btn {
+  max-width: 50%;
+  margin-bottom: 90px;
+  z-index: 9;
+  transition: all 0.4s ease-in-out;
+  background: transparent;
+  color: $wit;
+}
+
+.play_btn:hover {
+  color: $brand-secondary;
+  transform: scale(1.4);
+}
+
+.youtube_btn:focus,
+.youtube_btn_mob:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.kill_btn {
+  right: 15px;
+  top: 15px;
+  z-index: 999999;
+}

@@ -3,6 +3,25 @@
     "title": "Festival instellingen",
     "fields": [
         {
+            "key": "field_614204d9741d5",
+            "label": "Intro tekst op de film pagina",
+            "name": "intro_tekst",
+            "type": "text",
+            "instructions": "Schrijf hier optioneel een tekstje. Deze wordt vóór de samenvatting van het festival, getoond op de fimlpagina's en de Homepage.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_60f8318c4e820",
             "label": "Films",
             "name": "festival_films",
@@ -33,7 +52,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -41,7 +60,7 @@
             "aspect_ratio_width": 1600,
             "aspect_ratio_height": 1200,
             "return_format": "array",
-            "preview_size": "medium",
+            "preview_size": "filmsFeatImg",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -60,7 +79,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -71,23 +90,73 @@
             "maxlength": ""
         },
         {
-            "key": "field_614204d9741d5",
-            "label": "Intro tekst op de film pagina",
-            "name": "intro_tekst",
-            "type": "text",
-            "instructions": "Schrijf hier optioneel een tekstje. Deze wordt vóór de samenvatting van het festival, getoond op de fimlpagina's",
+            "key": "field_6179380fce148",
+            "label": "Datum",
+            "name": "heeftDatum",
+            "type": "true_false",
+            "instructions": "Geef data op als dit festival een begin en een einddatum heeft<br>\r\n<strong>Let op! Zonder (start-)datum staat dit item NIET in de agenda.<\/strong>",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_61793622646c6",
+            "label": "Van",
+            "name": "ticketDatum",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6179380fce148",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d\/m\/Y",
+            "return_format": "Ymd",
+            "first_day": 1
+        },
+        {
+            "key": "field_617937f6274eb",
+            "label": "Tot",
+            "name": "tot",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6179380fce148",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d\/m\/Y",
+            "return_format": "Ymd",
+            "first_day": 1
         }
     ],
     "location": [
@@ -100,12 +169,12 @@
         ]
     ],
     "menu_order": 0,
-    "position": "side",
+    "position": "normal",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1635146202
+    "modified": 1635334509
 }
