@@ -1,0 +1,461 @@
+.stop-scroll {
+  overflow: hidden;
+}
+
+.close-btn {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  cursor: pointer;
+
+  svg {
+    fill: #3b3530;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.6s cubic-bezier(0, 0, 0.37, 0.99);
+  }
+
+  &:hover {
+    svg {
+      transform: translate(-50%, -50%) rotate(-180deg);
+    }
+  }
+}
+
+.time-tickets-holder {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+
+  .with-top-navbar {
+    padding-top: 150px;
+  }
+
+  .time-tickets {
+    background-color: #fff;
+    padding: 18px 15px 0;
+
+    h3 {
+      font-weight: bold;
+      font-size: 1.25em;
+    }
+
+    h4 {
+      font-weight: bold;
+      font-size: 1.125em;
+      margin-bottom: 10px;
+      margin-top: 15px;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    .expected-on {
+      display: inline-block;
+      padding: 11px 12px;
+      margin-left: 0;
+      background-color: $base-color;
+      color: #fff;
+      font-size: 0.875em;
+      text-align: center;
+      font-weight: bold;
+      box-sizing: border-box;
+      line-height: 1;
+    }
+
+    .item {
+      display: block;
+      position: relative;
+      min-height: 45px;
+      width: 100%;
+      box-sizing: border-box;
+      border-bottom: 1px solid #ebeae8;
+      padding: 5px 0 0;
+
+      .date {
+        width: 70px;
+        height: 35px;
+        float: left;
+        font-size: 0.875em;
+        font-weight: bold;
+        padding-top: 10px;
+        white-space: nowrap;
+        box-sizing: border-box;
+      }
+
+      .time-slots {
+        float: right;
+        width: 175px;
+      }
+
+      .time {
+        width: 55px;
+        height: 35px;
+        float: left;
+        margin-left: 5px;
+        // background-color: #fff;
+        color: #fff;
+        font-size: 0.875em;
+        text-align: center;
+        font-weight: bold;
+        padding-top: 10px;
+        box-sizing: border-box;
+        margin-bottom: 5px;
+
+        &:nth-child(1),
+        &:nth-child(4),
+        &:nth-child(7) {
+          margin-left: 0;
+        }
+      }
+
+      &.no-shows {
+        min-height: 0;
+      }
+    }
+
+    .bottom {
+      display: none;
+
+      &.visible {
+        display: block;
+      }
+    }
+
+    /* stylelint-disable no-descending-specificity */
+    a.full-programme {
+      color: #fff;
+      // background-color: $color1;
+      font-weight: bold;
+      font-size: 1.25em;
+      padding: 13px 15px 0;
+      height: 50px;
+      box-sizing: border-box;
+      display: block;
+      transition: background 0.3s ease;
+      margin-top: 10px;
+
+      svg {
+        position: absolute;
+        right: 37px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 9px;
+        height: 14px;
+      }
+    }
+
+    .buffer {
+      height: 50px;
+      color: #d4d0c7;
+      font-weight: bold;
+      font-size: 1.25em;
+      padding-top: 13px;
+      box-sizing: border-box;
+      position: relative;
+      cursor: pointer;
+
+      svg {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 14px;
+        height: 9px;
+      }
+
+      &.active {
+        svg {
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
+
+      &.hidden {
+        visibility: hidden;
+        height: 0;
+      }
+    }
+  }
+}
+
+.no-touchevents a.time:hover::after {
+  content: "ticket";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #cc4e3d;
+  color: #fff;
+  box-sizing: border-box;
+  padding-top: 10px;
+}
+
+.no-touchevents a.time.info:hover::after {
+  content: "info";
+  background-color: #62a6af;
+}
+
+@media only screen and (min-width: 768px) {
+  .time-tickets-holder {
+    margin-top: -38px;
+
+    .time-tickets {
+      h3 {
+        font-size: 1.5em;
+        margin-bottom: em(16px);
+      }
+
+      h4 {
+        font-size: 1.3em;
+        margin-bottom: 10px;
+      }
+
+      .expected-on {
+        font-size: 1em;
+      }
+
+      .item {
+        min-height: 51px;
+
+        &.no-shows {
+          min-height: 0;
+        }
+
+        .date {
+          font-size: 1em;
+          width: 70px;
+        }
+
+        .time-slots {
+          width: 191px;
+        }
+
+        .time {
+          font-size: 1em;
+          width: 60px;
+          height: 40px;
+        }
+      }
+
+      .buffer {
+        height: 60px;
+        font-size: 1.5em;
+        padding-top: 17px;
+
+        svg {
+          width: 18px;
+          height: 12px;
+        }
+      }
+    }
+
+    a.full-programme {
+      font-size: 1.5em;
+      padding: 17px 20px 0;
+      height: 60px;
+
+      svg {
+        right: 37px;
+        width: 12px;
+        height: 18px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .time-tickets-holder {
+    margin-top: -44px;
+
+    .time-tickets {
+      padding-left: 30px;
+      padding-right: 30px;
+
+      h3 {
+        font-size: 1.875em;
+      }
+
+      .expected-on {
+        font-size: 1.125em;
+      }
+
+      .item {
+        .date {
+          font-size: 1.125em;
+        }
+
+        .time {
+          font-size: 1.125em;
+        }
+      }
+    }
+
+    a.full-programme {
+      padding-left: 30px;
+      padding-right: 30px;
+
+      svg {
+        right: 51px;
+      }
+    }
+  }
+}
+
+#lumiere-pas-iframe {
+  border: none;
+  width: 100%;
+}
+
+#tickets-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(250, 247, 237, 0.97);
+  z-index: 10000;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  #tickets-iframe-holder {
+    width: 100%;
+    max-width: 895px;
+    margin: 0 auto;
+    border-top: 1px solid #d7d3ca;
+    border-bottom: 1px solid #d7d3ca;
+  }
+
+  iframe {
+    border: none;
+    width: 100%;
+  }
+
+  .continue-holder {
+    text-align: center;
+    margin-top: 30px;
+
+    .button {
+      margin-bottom: 15px;
+    }
+
+    span {
+      display: block;
+      color: #9da9b0;
+    }
+  }
+
+  .inner {
+    position: relative;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 55px;
+
+    .close-btn {
+      position: absolute;
+      margin: 0 auto 40px;
+      top: 0;
+      right: 0;
+      width: 50px;
+      height: 50px;
+    }
+
+    h3 {
+      font-weight: 600;
+      font-style: normal;
+      font-size: em(24px);
+      margin-bottom: 35px;
+      text-align: center;
+    }
+
+    ul {
+      list-style: none;
+      text-align: center;
+      padding: 0;
+
+      li {
+        margin: 15px 0;
+
+        a {
+          font-size: 1.4375em;
+          font-weight: bold;
+          position: relative;
+          display: inline-block;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            // background-color: $color1;
+            display: none;
+          }
+
+          &:hover::after {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+.cart-info {
+  color: #9da9b0;
+  text-align: center;
+  padding: 0 25px;
+  line-height: 1;
+
+  &.left {
+    padding: 0;
+    text-align: left;
+  }
+}
+
+#cart #content {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  #tickets-overlay .inner ul li a {
+    font-size: 2.25em;
+  }
+
+  #tickets-overlay {
+    .inner {
+      padding-top: 45px;
+      padding-bottom: 45px;
+
+      .close-btn {
+        position: relative;
+        margin: 0 auto 40px;
+        width: 60px;
+        height: 60px;
+      }
+
+      h3 {
+        font-size: em(42px);
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #tickets-overlay {
+    .inner {
+      padding-top: 95px;
+      padding-bottom: 95px;
+    }
+  }
+}

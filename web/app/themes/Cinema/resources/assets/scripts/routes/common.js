@@ -51,6 +51,8 @@ export default {
     //   });
     // }
 
+
+
     $('#search-open').click( function(){
       $('#search').addClass('active');
     }),
@@ -145,7 +147,7 @@ export default {
     * */ 
 
     // 1. Overlappende afbeeldingen met tekst.
-    // ToDo moet nog een "For Each" worden. Nu gaan 2 dezelfde elementen tegelijk. Zie mogelijk het volgende effect.
+    // ToDo moet nog een 'For Each' worden. Nu gaan 2 dezelfde elementen tegelijk. Zie mogelijk het volgende effect.
     // gsap.to('.is-style-indrukwekkend-columns-overlap .has-goud-background-color', {
     //   yPercent: -100,
     //   ease: 'none',
@@ -189,7 +191,7 @@ export default {
       //   });
       // });
 
-      // //3. trigger voor de "pinned sidebar"
+      // //3. trigger voor de 'pinned sidebar'
       // ScrollTrigger.create({
       //   trigger: '.indrukwekkend-content',
       //   start: 'top 150px',
@@ -198,7 +200,7 @@ export default {
       //   end: self => '+=' + (document.querySelector('.indrukwekkend-content').offsetHeight -  self.pin.offsetHeight),
       //  // end: document.querySelector('.indrukwekkend-content').offsetHeight,
       //   pin: '.indrukwekkend-pin',
-      //   // before version 3.4.1, the "float" property wasn't copied to the pin-spacer, so we manually do it here. Could do it in a style sheet instead if you prefer. 
+      //   // before version 3.4.1, the 'float' property wasn't copied to the pin-spacer, so we manually do it here. Could do it in a style sheet instead if you prefer. 
       //  //onRefresh: self => self.pin.parentNode.style.float = 'left',
       //   pinSpacing: false,
       // });
@@ -245,8 +247,49 @@ export default {
       
             });
 
+
+    const buttons = document.querySelectorAll('.bestellen');
+   
+      //Met alle buttons:
+      buttons.forEach(button => {  
+        button.addEventListener('click', openOverlay);
+      });
+
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
   },
 };
+
+const ticketOverlay = document.querySelector('#tickets-overlay');
+const closeButton = document.querySelector('.close-btn');
+const body = document.querySelector('body');
+const getRef = document.getElementById('tickets-iframe-holder');
+
+
+closeButton.addEventListener('click', () => {
+  ticketOverlay.classList.remove('active');
+  body.classList.remove('stop-scroll');
+});
+
+function openOverlay(e) {
+  //stop klikken en toevoegen classes
+  e.preventDefault;
+  ticketOverlay.classList.add('active');
+  body.classList.add('stop-scroll');
+
+  // Haal de informatie op om de juiste Target toe te voegen aan de iframe:
+  var el = e.target;
+  var index = el.dataset.nummer;
+
+  var makeIframe = document.createElement('iframe');
+  makeIframe.setAttribute('src', 'https://tickets.cinemaoostereiland.nl/shop/tickets.php?showid='+index);
+  makeIframe.setAttribute('scrolling', 'yes');
+  makeIframe.style.border = 'none';
+  makeIframe.style.maxWidth = '865px';
+  makeIframe.style.height = '1529px';
+
+  getRef.innerHTML = '';
+  getRef.appendChild(makeIframe);
+
+}

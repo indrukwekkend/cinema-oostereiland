@@ -483,10 +483,11 @@ header.site-header {
   padding: 0;
   height: 100vh;
   background-size: cover;
+  background-position: center center;
   position: relative;
 
   .home & {
-    height: 87vh;
+    height: 81vh;
   }
 
   .video-button {

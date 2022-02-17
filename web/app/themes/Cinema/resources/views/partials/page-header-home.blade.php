@@ -178,7 +178,7 @@ function getTicketTable($shows) {
             
               $output .= '</div>';
               $output .= '<div class="knoppen">';
-                $output .= '<a class="btn bestellen" href="'.$link.'">'.$tijd.'</a>';
+                $output .= '<a class="btn bestellen" data-nummer="'.$shownumber.'" href="#">'.$tijd.'</a>';
               $output .= '</div>';
             $output .= '</div>';
 
