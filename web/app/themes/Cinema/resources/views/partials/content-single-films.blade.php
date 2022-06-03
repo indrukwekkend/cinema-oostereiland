@@ -60,11 +60,14 @@
 		var playButton = document.getElementById("open-youtube");
 		playButton.addEventListener("click", function() {
 			headerplayer.playVideo();
+			jQuery('.film_media').slideToggle(800);
+			jQuery('#masthead').slideToggle("slow");
 		});
 	  
 		var pauseButton = document.getElementById("close-youtube");
 		pauseButton.addEventListener("click", function() {
 			headerplayer.pauseVideo();
+
 		});
 	}
 	function onPlayerReadyHeaderMobile(event) {
@@ -73,12 +76,16 @@
 			headerplayermobile.playVideo();
 		});
 	}
-	jQuery('.youtube_btn').click(function () {
-        jQuery('.film_media').slideToggle(600);
-    });
-    jQuery('.youtube_btn_mob').click(function () {
-        jQuery('.film_media_mob').slideToggle(600);
-    });
+
+	jQuery('.kill_btn').click(function () {
+			jQuery('.film_media').slideToggle(800);
+			jQuery('#masthead').slideToggle("slow");
+	});
+
+	jQuery('.youtube_btn_mob').click(function () {
+			jQuery('.film_media_mob').slideToggle(600);
+	});
+
 	(function(window, document, undefined) {
 	  "use strict";
 	  var players = ['iframe[src*="youtube.com"]', 'iframe[src*="vimeo.com"]'];

@@ -3,7 +3,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export default {
   init() {
-    
     // JavaScript to be fired on the home page
 
     // GSAP voor animaties. Hiermee zetten we elementen vast onscrolltrigger:
@@ -11,72 +10,63 @@ export default {
 
     // scroll trigger pin CTA element
 
-
     ScrollTrigger.create({
       trigger: '#masthead',
-      start: '50px top', 
+      start: '50px top',
       end: '+=15000',
-      toggleClass: {targets: '#masthead', className: 'active'}, 
+      toggleClass: { targets: '#masthead', className: 'active' },
     });
 
-      // pak alle sliders op de filmpagina op, in 1 array.
-      const sliders = document.querySelectorAll('.vandaag-slider')
-      //Met alle sliders:
-      sliders.forEach(slider => {
-        const slidesToShow = 6;
-        console.log(slidesToShow);
+    // pak alle sliders op de filmpagina op, in 1 array.
+    const sliders = document.querySelectorAll('.vandaag-slider');
+    //Met alle sliders:
+    sliders.forEach((slider) => {
+      const slidesToShow = 6;
+      // console.log(slidesToShow);
 
-        const slick = slider.querySelectorAll('.slider')
-        $(slick).slick( {
+      const slick = slider.querySelectorAll('.slider');
+      $(slick).slick({
+        // normal options...
+        infinite: true,
+        slidesToShow: slidesToShow,
+        slidesToScroll: 1,
 
-        
-          // normal options...
-          infinite: true,
-          slidesToShow: slidesToShow,
-          slidesToScroll: 1,
-        
-          // the magic
-          responsive: [ {
-        
+        // the magic
+        responsive: [
+          {
             breakpoint: 1024,
             settings: {
-              slidesToShow: slidesToShow -1,
+              slidesToShow: slidesToShow - 1,
             },
-        
-          // }, {
-        
-          // 	breakpoint: 600,
-          // 	settings: {
-          // 		slidesToShow: 2,
-          // 		dots: true,
-          // 	},
-        
-          // }, {
-        
-          // 	breakpoint: 300,
-          // 	settings: 'unslick', // destroys slick
-        
-          } ],
-        } );
-
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              dots: true,
+            },
+          },
+          {
+            breakpoint: 415,
+            settings: 'unslick', // destroys slick
+          },
+        ],
       });
-  
+    });
 
-
-    
     // 2. Image tekst effect Experimenteel, testen in aparte branch voordat we dit implementeren
     // https://codepen.io/GreenSock/pen/pojzxwZ
     // Todo: /normaal/patronen/
-      
+
     // gsap.utils.toArray('.gs_reveal').forEach(function(elem) {
     //   hide(elem); // assure that the element is hidden when scrolled into view, ?
-      
+
     //   ScrollTrigger.create({
     //     trigger: elem,
     //     start: 'top center',
     //     end: 'bottom 200',
     //     markers: true,
-    //     onEnter: function() { animateFrom(elem) }, 
+    //     onEnter: function() { animateFrom(elem) },
     //     onEnterBack: function() { animateFrom(elem, -1) },
 
     //     // deze moet weer terug :
@@ -85,7 +75,7 @@ export default {
     //   });
     // });
 
-    //3. trigger voor de "pinned sidebar"
+    //3. trigger voor de 'pinned sidebar'
     // ScrollTrigger.create({
     //   trigger: '.indrukwekkend-content',
     //   start: 'top 150px',
@@ -94,11 +84,10 @@ export default {
     //   end: self => '+=' + (document.querySelector('.indrukwekkend-content').offsetHeight -  self.pin.offsetHeight),
     //  // end: document.querySelector('.indrukwekkend-content').offsetHeight,
     //   pin: '.indrukwekkend-pin',
-    //   // before version 3.4.1, the "float" property wasn't copied to the pin-spacer, so we manually do it here. Could do it in a style sheet instead if you prefer. 
+    //   // before version 3.4.1, the 'float' property wasn't copied to the pin-spacer, so we manually do it here. Could do it in a style sheet instead if you prefer.
     //  //onRefresh: self => self.pin.parentNode.style.float = 'left',
     //   pinSpacing: false,
     // });
-
   },
   finalize() {
     // JavaScript to be fired on the home page, after the init JS
@@ -113,7 +102,7 @@ export default {
 // function animateFrom(elem, direction) {
 //   direction = direction | 1;
 //   console.log('ik start nu');
-  
+
 //   // dit is voor de tekst:
 //   var x = 0,
 //       y = direction * 100;
@@ -125,37 +114,36 @@ export default {
 //       x = -100;
 //   }
 
-//   // Childnode 0 is 
+//   // Childnode 0 is
 //   gsap.fromTo(elem.childNodes[0], {x: x, y: 0, autoAlpha: 0}, {
-//     duration: 1.25, 
+//     duration: 1.25,
 //     x: 0,
-//     y: 0, 
-//     autoAlpha: 1, 
-//     ease: 'expo', 
+//     y: 0,
+//     autoAlpha: 1,
+//     ease: 'expo',
 //     overwrite: 'auto',
 //   });
 
 //   // Childnode 1 is het tekst onderdeel van Media Text
 //   gsap.fromTo(elem.childNodes[1], {x: 0, y: y, autoAlpha: 0}, {
-//     duration: 1.25, 
+//     duration: 1.25,
 //     x: 0,
 //     y: 0,
-//     autoAlpha: 1, 
-//     ease: 'expo', 
+//     autoAlpha: 1,
+//     ease: 'expo',
 //     overwrite: 'auto',
 //   });
 
 //   // dit is het hele element
 //   gsap.fromTo(elem, {autoAlpha: 0}, {
-//     duration: 1.25, 
-//     autoAlpha: 1, 
-//     ease: 'expo', 
+//     duration: 1.25,
+//     autoAlpha: 1,
+//     ease: 'expo',
 //     overwrite: 'auto',
 //   });
 // }
 
-
-// Ophalen van de 
+// Ophalen van de
 // function actionAjax(data) {
 //   const ajax_url = window.my_ajax_object.ajax_url || false;
 //   if (ajax_url) {
@@ -164,12 +152,12 @@ export default {
 //           url: ajax_url,
 //           data: data,
 //           //action: 'get_ajax_cursus', // in de data-call
-          
+
 //           beforeSend: function() {
 //               $('#loading').show();
 //           },
 //           success: function (result) {
-        
+
 //               $('.ajax-content').html(result);
 //               $('#loading').hide();
 //           },
@@ -179,17 +167,17 @@ export default {
 
 // Verwijdert en vervangen voor de lijst met films onder de hoofdafbeelidgne
 
-    // 1. laden van de films van vandaag
+// 1. laden van de films van vandaag
 
-    // $(function() {
-        
-    //   var data = $('#film_number').serializeArray();
+// $(function() {
 
-    //   data.push({
-    //       name:   'action',
-    //       value:  'get_ajax_agenda_dag_tickets',
-    //   });
+//   var data = $('#film_number').serializeArray();
 
-    //   actionAjax(data);
+//   data.push({
+//       name:   'action',
+//       value:  'get_ajax_agenda_dag_tickets',
+//   });
 
-    // });
+//   actionAjax(data);
+
+// });

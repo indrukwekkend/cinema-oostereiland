@@ -13,26 +13,7 @@
     padding-top: var(--global--spacing-vertical);
     padding-bottom: calc(var(--global--spacing-vertical) * 3);
 
-    .title-element {
-      width: 80px;
-      background: #fff;
-
-      h2 {
-        text-transform: uppercase;
-        color: $dark-green;
-        font-size: 80px;
-        font-weight: 100;
-        text-align: left;
-        direction: rtl;
-        white-space: nowrap;
-        transform: rotate(-90deg);
-      }
-    }
-
     .content-element {
-      padding-left: 30px;
-      width: 100%;
-
       .onderwerp {
         font-size: 4rem;
         font-weight: bold;
@@ -66,9 +47,10 @@
 .film_media {
   background: #000;
   z-index: 999;
-  display: none;
   height: 100%;
   width: 100%;
+  display: none;
+  position: absolute;
 
   iframe {
     z-index: 10;

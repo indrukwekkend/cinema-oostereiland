@@ -1,6 +1,6 @@
 <div class="entry-content entry-content-agenda">
   <div class="filters">
-    <h2>Wat wilt u zien?</h2>
+
 
 
     <div class="list">

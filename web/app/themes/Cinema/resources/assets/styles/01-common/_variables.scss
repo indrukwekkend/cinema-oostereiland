@@ -9,6 +9,7 @@ laad daarom ook los de italic versies in. Of elk op een regel pllaatsten, of all
 @import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Assistant:400,600,700&display=swap");
 
 /** Box Model, TODO uitzoeken: staat in wp_classes  */
 $spacer: 2rem;
@@ -31,20 +32,19 @@ $footer-extra-width: $header-extra-width;
 $top-marge-transparant: 140px;
 
 //TODO: Media breakpoints in stellen zodat het door de site heen goed gaat:
-$mobile-width: 375px;
+$mobile-width: 414px;
 $ipad-width: 768px;
 $desktop-small-width: 1024px;
 $desktop-large-width: 1200px;
 $desktop-xl-width: 1900px;
 
 //custom colors:
-$dynamic-dark: #484848;
-$light-green: #f4f5f0;
-$bright-green: #a8c816;
-$background-green: #a7c81638;
-$festival-green: #e6eebf7d;
-$dark-green: #626844;
-$neutral-gray: #c7c7c7;
+$dynamic-dark: #7d7c7c;
+
+$festival-grijs: #f3f3f1;
+$neutral-gray: #eaeae8;
+$special-gray: #eee8e2;
+$button-gray: #bcaba2;
 
 //common
 $black1: #000;
@@ -54,11 +54,11 @@ $licht-grijs: lighten($grijs, 20);
 $wit: #fff;
 
 /** Colors */
-$brand-primary: $dark-green;
-$brand-secondary: $bright-green;
+$brand-primary: $black1;
+$brand-secondary: $button-gray;
 $base-color: $black1;
-$seperator-color: $light-green;
-$navigation-background:$light-green;
+$seperator-color: $grijs;
+$navigation-background:$special-gray;
 $navigation-background-color: $wit;
 $film-header-color: $wit;
 
@@ -67,10 +67,10 @@ $film-header-color: $wit;
 $colors: (
   "zwart": $black1,
   "wit": $wit,
-  "groen": $bright-green,
-  "licht-groen": $light-green,
-  "donker-groen": $dark-green,
-  "festival-groen": $festival-green,
+  "festival-grijs": $festival-grijs,
+  "neutraal-grijs": $neutral-gray,
+  "button-grijs" : $button-gray,
+  "special-grijs" : $special_gray,
 );
 
 @each $name, $color in $colors {
@@ -117,11 +117,11 @@ $fontsizes: (
 }
 
 //font instellingen
-$primary-font: "Poppins", helvetica, sans-serif;
-$header-font: "Poppins", helvetica, sans-serif;
-$header-font-light: "Poppins", arial, helvetica, sans-serif;
-$button-font: "Poppins", arial, helvetica, sans-serif;
-$blockquote-font: "Poppins", arial, helvetica, sans-serif;
+$primary-font: "Assistant", helvetica, sans-serif;
+$header-font: "Assistant", sans-serif;
+$header-font-light: "Assistant", arial, helvetica, sans-serif;
+$button-font: "Assistant", sans-serif;
+$blockquote-font: "Assistant", sans-serif;
 $base-font-weight: 400;
 $base-line-height: 1.72;
 $base-letter-spacing: 0.01em;
@@ -158,15 +158,15 @@ $h5-font-size-editor: $h5-font-size * $editor-font-size;
 $blockquote-font-size-editor: $blockquote-font-size * $editor-font-size;
 
 //font colors
-$h1-font-color: $brand-primary;
-$h2-font-color: $brand-primary;
-$h3-font-color: $brand-secondary;
+$h1-font-color: $black1;
+$h2-font-color: $black1;
+$h3-font-color: $black1;
 $h4-font-color: $brand-primary;
 $h5-font-color: $black1;
 
 //font weights
-$h1-font-weight: 800;
-$h2-font-weight: 800;
+$h1-font-weight: 600;
+$h2-font-weight: 600;
 $h3-font-weight: 600;
 $h4-font-weight: 600;
 $h5-font-weight: 300;
@@ -181,19 +181,19 @@ $button--color-text-arrow: $base-color;
 $button--color-outline: $base-color;
 $button--color-text-active: $brand-secondary;
 $button--color-background: $brand-primary;
-$button--color-background-hover: $bright-green;
+$button--color-background-hover: $grijs;
 $button--color-background-active: $button--color-background-hover;
 
 // Footer instellingen
-$footer-background-color: $black1;
+$footer-background-color: $grijs;
 $footer-font-size: 0.9em;
 $footer-font-weight: 600;
-$footer-font-color: $wit;
-$footer-link-color: $bright-green;
-$footer-font-hover-color: darken ($bright-green, 10);
+$footer-font-color: $black1;
+$footer-link-color: $black1;
+$footer-font-hover-color: darken ($brand-secondary, 10);
 $footer-title-font-weight: 900;
 $footer-title-font-color: $wit;
-$footer-socials-color: $light-green;
+$footer-socials-color: $black1;
 
 // root kan handig zijn om variabelen aan te passen in verschillende media breedte
 :root {

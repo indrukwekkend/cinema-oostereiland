@@ -36,7 +36,7 @@
     }
 
     &.afbeelding-kolom > :first-child {
-      border-left: $dark-green dashed 1px;
+      border-left: $black1 dashed 1px;
       padding-left: calc(3 * var(--global--spacing-horizontal));
       margin-top: 10px;
     }

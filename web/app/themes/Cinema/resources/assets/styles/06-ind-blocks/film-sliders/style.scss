@@ -9,7 +9,7 @@
   padding: 8rem 0 9rem;
 
   h3 {
-    color: $dark-green;
+    color: $black1;
   }
 
   .intro-text {
@@ -31,28 +31,39 @@
 
 .wp-block-indrukwekkend-special {
   padding: 4rem;
-  background-color: #000;
-  background-image: url("../images/plusPatroon.svg");
-  background-size: 95%;
-  background-position: 95%, -170px;
-  background-position-y: -170px;
+  background-color: $special-gray;
+  position: relative;
 
   .wp-block-columns .wp-block-column:not(:first-child) {
     margin-left: calc(2 * var(--global--spacing-horizontal));
   }
 
   a {
-    color: $bright-green;
+    color: $black1;
   }
 
   h2 {
     font-weight: bold;
-    text-transform: uppercase;
     font-size: 3.2rem;
+    display: inline-block;
+    background: $black1;
+    padding: 2px 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
 
     a {
-      color: #fff;
+      color: $wit;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
+  }
+
+  .wp-block-columns {
+    margin-top: 35px;
   }
 
   .image {
@@ -68,29 +79,28 @@
       bottom: 0;
       margin-top: 0;
       margin-left: 2rem;
-      text-transform: uppercase;
       font-weight: bold;
       font-size: 2.8rem;
-      color: #fff;
+      color: $black1;
     }
   }
 
   .intro-text {
     font-weight: bold;
     font-size: 0.9em;
-    color: $bright-green;
+    color: $black1;
     margin-bottom: 2rem;
   }
 
   p {
-    color: #fff;
+    color: $black1;
     font-size: 0.9em;
   }
 
   .btn {
     display: inline-block;
     background-color: #fff;
-    color: $dark-green;
+    color: $black1;
   }
 
   .verder {

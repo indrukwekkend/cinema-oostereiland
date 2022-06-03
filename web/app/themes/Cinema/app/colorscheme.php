@@ -3,21 +3,13 @@
 	// Editor color palette.
 	// let op dat dezelfde kleuren ook in de variables van de SCSS bestanden staan: resources/assets/styles/common/variables
 	// namen kleuren aanpassen
-	
 
-// $blue= "#34b6b5";
-// $licht_blauw= "#d4f8f8";
+$dark_gray = "#7d7c7c";
+$neutral_gray = "#eaeae8";
 
-// $paars= "#662483";
-// $licht_paars= "#e1d2e8";
-
-// $oranje= "#f39200";
-// $licht_oranje= "#f3e2c9";
-
-$light_green = '#f4f5f0';
-$bright_green = "#a8c816";
-$dark_green = "#626844";
-$neutral_gray = "#c7c7c7";
+$festival_grijs = "#f3f3f1";
+$special_gray = "#eee8e2";
+$button_gray =  "#bcaba2";
 	
 //basis kleuren
 $black1  = '#000';
@@ -26,22 +18,6 @@ $wit  = '#fff';
 // ToDo groottes fonts hier invullen
 
 add_theme_support( 'editor-color-palette', array(
-
-	array(
-		'name'	=> __( 'groen', 'indrukwekkend' ),
-		'slug'	=> 'groen',
-		'color'	=> $bright_green,
-	),
-	array(
-		'name'	=> __( 'licht-groen', 'indrukwekkend' ),
-		'slug'	=> 'licht-groen',
-		'color'	=> $light_green,
-	),
-	array(
-		'name'	=> __( 'donker-groen', 'indrukwekkend' ),
-		'slug'	=> 'donker-groen',
-		'color'	=> $dark_green,
-	),
 	array(
 		'name'	=> __( 'Wit', 'indrukwekkend' ),
 		'slug'	=> 'wit',
@@ -52,7 +28,32 @@ add_theme_support( 'editor-color-palette', array(
 		'slug'	=> 'zwart',
 		'color'	=> $black1,
 	),
-) );
+	array(
+		'name'	=> __( 'donker grijs', 'indrukwekkend' ),
+		'slug'	=> 'donker-grijs',
+		'color'	=> $dark_gray,
+	),
+	array(
+		'name'	=> __( 'neutraal grijs', 'indrukwekkend' ),
+		'slug'	=> 'neutraal-grijs',
+		'color'	=> $neutral_gray,
+	),
+	array(
+		'name'	=> __( 'Oud roze', 'indrukwekkend' ),
+		'slug'	=> 'button-grijs',
+		'color'	=> $button_gray,
+	),
+	array(
+		'name'	=> __( 'special grijs', 'indrukwekkend' ),
+		'slug'	=> 'special-grijs',
+		'color'	=> $special_gray,
+	),
+	array(
+		'name'	=> __( 'festival grijs', 'indrukwekkend' ),
+		'slug'	=> 'festival-grijs',
+		'color'	=> $festival_grijs,
+	),
+));
 
 // -- Disable Custom Colors
 add_theme_support( 'disable-custom-colors' );

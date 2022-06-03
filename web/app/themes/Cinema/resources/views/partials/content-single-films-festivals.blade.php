@@ -15,7 +15,7 @@ if( $featured_post ):
   // Festival Blok hieronder
   ?>
 
-  <div class="wp-block-group alignfull has-festival-groen-background-color has-background">
+  <div class="wp-block-group alignfull has-festival-grijs-background-color has-background">
     <div class="wp-block-group__inner-container">
       <div class="wp-block-indrukwekkend-festival alignwide">
         <div class="festival-content">

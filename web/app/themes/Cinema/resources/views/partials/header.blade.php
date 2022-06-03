@@ -39,7 +39,7 @@ $wrapper_classes  = 'banner site-header';
 </header>
 
 <!-- mobile or hidden navigation -->
-<header class="mobile-navigation-container closed">
+<header class="mobile-navigation-container start">
 
     <nav class="nav-mobile">
       <div class="search">
@@ -60,7 +60,7 @@ $wrapper_classes  = 'banner site-header';
     </nav>
     
 </header>
-<div class="mobile-navigation-overlay closed"><div class="image"></div></div>
+<div class="mobile-navigation-overlay start"><div class="image"></div></div>
 
 
 <!-- Search hidden area -->

@@ -36,11 +36,12 @@ endif;
         <div class="cta-bar__content alignwide">
           
           <div class="cta-bar__content__left">
-            <h1 class="entry-title">{{$titel}}</h1>
+            <h2 class="entry-title">{{$titel}}</h2>
             <p><span>{{$label}}</span>{{$subheader}}</p>
               <?php if ($knop): ?>
-                    <a class="btn wp-block-button__link" id="toon_tickets" href="{{$link}}">Info</a>
-                    <a class="btn wp-block-button__link" id="toon_tickets" href="{{$link}}">{{$linktekst}}</a>
+                <a class="btn wp-block-button__link tickets" id="toon_tickets" href="{{$link}}#tickets">{{$linktekst}}</a>
+                <a class="btn wp-block-button__link info" id="toon_info" href="{{$link}}">Informatie</a>
+                    
               <?php endif; ?>
           </div>
 
@@ -70,11 +71,13 @@ endif;
   ?>
 
   <div class="container alignwide">
-  <h2>vandaag <span class='alles'><a href='/agenda'>toon alles</a><span></h2> 
-  </div>
+  <h2>Vandaag <span class='alles'><a href='/agenda'>toon alles</a><span></h2> 
+
   
   <div class="slider dagslider">
     @php echo getTicketTable($shows); @endphp 
+  </div>
+
   </div>
 
 </header>
@@ -123,7 +126,7 @@ function getTicketTable($shows) {
     $titel = 'nog geen titel';
     $film_info = '';
     $filmlink = '';
-    $thumbnail = "<img src='https://picsum.photos/200/150' />";
+    $thumbnail = "<img src='https://picsum.photos/150/200' />";
 
     while ( $the_query->have_posts() ) : $the_query->the_post();
       
@@ -143,8 +146,8 @@ function getTicketTable($shows) {
 
         $film_info .= $duur .' min. '.$taal.' '.$regisseur;
 
-        $size = 'filmsFeatImg';
-        $thumbnail = get_field( 'header_img', $id );
+        $size = 'medium';
+        $thumbnail = get_field( 'alternatieve_afbeelding', $id );
 
         if ( $thumbnail ) { 
 
@@ -169,7 +172,7 @@ function getTicketTable($shows) {
     $output .= '<li class="ticket">';
                 //TODO: Specials
             // Titel met URL
-            $output .= '<div class="card">';
+            $output .= '<div class="card filmsFeatImg">';
               $output .= sprintf('<picture class="thumbnail">%1$s</picture>', $thumbnail);
               $output .= '<div class="text">';
               $output .= '<a class="overlay" href="'.$filmlink.'" title="'.$titel.'"></a>';

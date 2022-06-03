@@ -5,15 +5,16 @@
 
       &.intro {
         background: $black1;
-        color: $bright-green;
-        padding: 0 10px;
-        display: inline-block;
+        color: $wit;
+        font-weight: bold;
         text-transform: uppercase;
+        padding: 3px 40px;
+        display: inline-block;
+        letter-spacing: 0.025em;
       }
 
       &.film-titel {
         font-size: $h2-font-size;
-        text-transform: uppercase;
         font-weight: bold;
       }
     }

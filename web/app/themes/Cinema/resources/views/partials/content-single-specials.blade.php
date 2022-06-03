@@ -74,7 +74,7 @@
 				$list_items_markup .= '<div class="wp-block-column" style="flex-basis:50%">';
 
 					$list_items_markup .= sprintf(
-						'<div class="text"><p class="intro-text">%1$s</p> <p>%2$s</p> <a class="btn wp-block-button__link" href="%3$s">Kaarten</a></div>',
+						'<div class="text"><p class="intro-text">%1$s</p> <p>%2$s</p> <a class="btn wp-block-button__link" href="%3$s">Tickets</a></div>',
 						$ticketDatum,
 						$content,
 						$ticket

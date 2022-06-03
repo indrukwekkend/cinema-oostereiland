@@ -45,7 +45,9 @@ $hamburger-hover-opacity       : 0.7;
 @import "components/wp-classes";
 
 //alle indelingen van de verschillende pagina's
+@import "02-layouts/header_navigatie";
 @import "02-layouts/header";
+@import "02-layouts/vandaag-slider";
 @import "02-layouts/footer";
 @import "02-layouts/festivals";
 @import "02-layouts/pages";

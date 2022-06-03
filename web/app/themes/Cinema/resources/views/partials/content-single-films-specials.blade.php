@@ -60,7 +60,7 @@ if ($the_query->have_posts()):
 				$list_items_markup .= '<div class="wp-block-column" style="flex-basis:35%">';
 
 					$list_items_markup .= sprintf(
-						'<div class="text"><p class="intro-text">%1$s</p> <p>%2$s</p><a class="btn wp-block-button__link" href="%3$s">Kaarten</a><a class="btn" href="%4$s">Meer info over %5$s</a></div>',
+						'<div class="text"><p class="intro-text">%1$s</p> <p>%2$s</p><a class="btn wp-block-button__link" href="%3$s">Tickets</a><a class="btn" href="%4$s">Meer info over %5$s</a></div>',
 						$intro_tekst,
 						$content,
 						$ticket,

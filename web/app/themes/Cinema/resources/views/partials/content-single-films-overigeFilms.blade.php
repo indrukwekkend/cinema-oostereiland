@@ -34,9 +34,6 @@ if( !empty( $custom_terms ) ):
 
     if( $loop->have_posts() ) : ?>
       <div class="alignwide block-aangeraden-films block-slider">
-        <div class="title-element">
-          <h2>Interessant</h2>
-        </div>
         <div class="content-element">
           <span class="onderwerp h2">Voor jou </span>
           <!-- lijst met aangeraden films -->
@@ -68,6 +65,10 @@ if( !empty( $custom_terms ) ):
 
                     <div class="text">
                       <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($title); ?>" class="overlay"></a>
+                      <p class='extra'>Extra informatie</p>
+                    </div>
+
+                    <div class="title">
                       <h3><?php the_title(); ?></h3>
                       <p class='extra'>Extra informatie</p>
                     </div>

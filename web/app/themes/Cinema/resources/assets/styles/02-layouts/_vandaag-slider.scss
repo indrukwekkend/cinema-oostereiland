@@ -1,0 +1,46 @@
+// home page slider vandaag..
+.vandaag-slider {
+  background: linear-gradient(0deg, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
+  padding-top: 1px;
+
+  h2 {
+    font-weight: normal;
+    font-size: 3rem;
+    text-transform: none;
+    color: $wit;
+
+    .alles {
+      font-size: 0.6em;
+      font-weight: normal;
+    }
+  }
+
+  .dagslider {
+    list-style: none;
+  }
+
+  li.ticket {
+    // Extend button style
+    @include card-outside-slider();
+  }
+
+  a.bestellen {
+    background-color: $brand-primary;
+    color: #fff;
+  }
+}
+
+@media only screen and (min-width: $mobile-width) { //768
+
+  .vandaag-slider {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 1px;
+    margin-top: -250px;
+
+    li.ticket {
+      // Extend button style
+      @include card-in-slider();
+    }
+  }
+}

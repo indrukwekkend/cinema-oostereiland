@@ -1,5 +1,5 @@
 .template-agenda {
-  background-color: $light-green;
+  background-color: $special-gray;
 
   .page-holder {
     display: block;
@@ -7,7 +7,6 @@
 
     .page-header-agenda {
       h1 {
-        color: $bright-green;
         font-size: 80px;
         font-weight: 100;
         letter-spacing: 0;
@@ -40,15 +39,11 @@
         }
 
         &:hover {
-          color: $bright-green;
+          color: $black1;
           text-decoration: underline;
         }
       }
     }
-  }
-
-  .wp-block-indrukwekkend-film-card {
-    margin-right: 0;
   }
 }
 /* stylelint-disable no-descending-specificity */
@@ -69,9 +64,10 @@ ul.tickets {
     position: relative;
     text-decoration: none;
     text-transform: uppercase;
+    border-bottom: 2px dotted gray;
 
-    &:nth-child(2n-1) {
-      background-color: darken($light-green, 3);
+    &:last-child {
+      border-bottom: none;
     }
 
     &::after {
@@ -101,8 +97,8 @@ ul.tickets {
 
     .datum {
       grid-column: 1 /  span 2;
-      border-bottom: 1px solid $bright-green;
-      color: $dark-green;
+      border-bottom: 1px solid $special-gray;
+      color: $black1;
       margin-bottom: 10px;
       padding-bottom: 0;
 
@@ -113,7 +109,7 @@ ul.tickets {
 
     .titel {
       grid-column: 1 /  span 2;
-      color: $dark-green;
+      color: $black1;
 
       h2 {
         margin: 0;
@@ -148,7 +144,7 @@ ul.tickets {
           border: none;
 
           &:hover {
-            background-color: $dark-green;
+            background-color: $black1;
             color: $wit;
           }
         }
@@ -159,13 +155,13 @@ ul.tickets {
         font-size: 0.7em;
         padding: 0 5px;
         margin-left: 10px;
-        color: $dark-green;
+        color: $black1;
       }
     }
 
     .zaal {
       grid-column: 1;
-      color: $dark-green;
+      color: $black1;
       align-self: end;
 
       .tijd {
@@ -188,7 +184,7 @@ ul.tickets {
         font-weight: bold;
 
         &:hover {
-          background-color: $dark-green;
+          background-color: $black1;
           color: $wit;
         }
       }
@@ -207,7 +203,7 @@ ul.films {
     position: relative;
 
     &:nth-child(2n-1) {
-      background-color: darken($light-green, 3);
+      background-color: darken($special-gray, 3);
     }
 
     a.bestellen {
@@ -234,27 +230,20 @@ ul.films {
 @media only screen and (min-width: $ipad-width) { //768
   .template-agenda {
     .page-holder {
-      display: flex;
-
       .page-header-agenda {
-        width: 13%;
-
         h1 {
-          font-size: 180px;
-          line-height: 180px;
-          margin: 0;
-          text-align: left;
-          direction: rtl;
-          width: 100%;
-          white-space: nowrap;
-          transform: rotate(-90deg);
+          font-size: 80px;
+          line-height: 80px;
+          margin: 0 auto;
+          margin-bottom: 6rem;
+          max-width: 960px;
         }
       }
 
       .entry-content {
-        width: 87%;
         min-height: 800px;
-        margin-left: 50px;
+        margin-left: 30px;
+        margin-right: 30px;
       }
     }
   }
@@ -281,7 +270,7 @@ ul.films {
 
       .titel {
         grid-column: 3 /  span 2;
-        color: $dark-green;
+        color: $black1;
 
         h2 {
           margin: 0;
@@ -303,7 +292,7 @@ ul.films {
       .zaal {
         grid-column: 2;
         grid-row: 1;
-        color: $dark-green;
+        color: $black1;
         align-self: center;
 
         .tijd {
