@@ -16,7 +16,7 @@
   .video-button {
     //hier de css voor de videoknop
     position: absolute;
-    bottom: 50%;
+    top: 45%;
     left: 50%;
   }
 
@@ -65,10 +65,9 @@
     position: absolute;
     margin: 0;
     transition: background 0.5s ease-in-out;
+    border-bottom: 1px solid transparent;
 
     &__content {
-      display: flex;
-      justify-content: space-between;
       color: $film-header-color;
       font-weight: 500;
       text-shadow: 2px 2px 7px rgba(10, 4, 3, 1);
@@ -88,6 +87,7 @@
       .film-info {
         display: flex;
         text-transform: uppercase;
+        transition: all 0.5s ease-in-out;
 
         .label {
           @include label_style();
@@ -106,6 +106,8 @@
         transition: all 0.5s ease-in-out;
         text-shadow: none;
         font-weight: 600;
+        margin-bottom: 0;
+        margin-top: 5px;
 
         &.info {
           background-color: rgba(207, 205, 205, 0.6);
@@ -118,11 +120,7 @@
     &.active {
       background-color: $navigation-background;
       border-bottom: 1px solid darken($navigation-background, 30);
-      // TODO: beter uitzoeken van deze hoogte.. Wordt eert berekend en dan toegevoegd aan het element
-      // Maar deze verkleint, door het veranderen van de grootte van de fonts
       z-index: 100;
-      max-height: 150px !important;
-      margin-top: 17px !important;
 
       .cta-bar__content {
         color: $brand-primary;
@@ -131,24 +129,75 @@
 
         h1 {
           color: $brand-primary;
-          font-size: 4rem;
-        }
-
-        .wp-block-button__link {
-          background-color: $black1;
-          color: $wit;
         }
       }
 
       &.smaller {
         margin-top: 0 !important;
+        max-height: 150px !important;
+
+        // .cta-bar__content {
+        //   h1 {
+        //     font-size: 2em;
+        //   }
+
+        //   .film-info {
+        //     font-size: 1em;
+        //   }
+        // }
       }
     }
   }
 }
 
-@media only screen and (min-width: $desktop-small-width) { //1024
-  // hier de verandereringen boven laptop
+@media only screen and (min-width: $ipad-width) { //1024
+  // hier de verandereringen boven ipad
+  .cta-bar {
+    &__content {
+      display: flex;
+      justify-content: space-between;
+
+      .home & {
+        margin-bottom: 6rem;
+      }
+    }
+
+    &.active {
+      .cta-bar__content {
+        h1 {
+          color: $brand-primary;
+          font-size: 2em;
+        }
+      }
+
+      &.smaller {
+        max-height: 200px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $ipad-width) { //1024
+  // hier de verandereringen beneden ipad
+  .cta-bar {
+    .cta-bar__content {
+      .film-info {
+        font-size: 18px;
+      }
+    }
+
+    &.smaller {
+      .cta-bar__content {
+        h1 {
+          font-size: 28px;
+        }
+
+        .film-info {
+          font-size: 1px;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: $desktop-xl-width) {

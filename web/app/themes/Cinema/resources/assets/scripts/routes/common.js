@@ -110,93 +110,50 @@ export default {
   
     $('#mobilefootermenu>ul>li.has-sub>a').append('<span class="holder"></span>');  
 
+    // pak alle sliders op de filmpagina op, in 1 array.
+    const sliders = document.querySelectorAll('.festival-films')
+    //Met alle sliders:
+    sliders.forEach(slider => {
+      const slidesToShow = 4;
+      console.log(slidesToShow);
 
+      const slick = slider.querySelectorAll('.slider')
+      $(slick).slick( {
 
-            // pak alle sliders op de filmpagina op, in 1 array.
-            const sliders = document.querySelectorAll('.festival-films')
-            //Met alle sliders:
-            sliders.forEach(slider => {
-              const slidesToShow = 4;
-              console.log(slidesToShow);
       
-              const slick = slider.querySelectorAll('.slider')
-              $(slick).slick( {
+        // normal options...
+        infinite: true,
+        slidesToShow: slidesToShow,
+        slidesToScroll: 1,
       
-              
-                // normal options...
-                infinite: true,
-                slidesToShow: slidesToShow,
-                slidesToScroll: 1,
-              
-                // the magic
-                responsive: [ {
-              
-                  breakpoint: 1024,
-                  settings: {
-                    slidesToShow: slidesToShow -1,
-                  },
-              
-                // }, {
-              
-                // 	breakpoint: 600,
-                // 	settings: {
-                // 		slidesToShow: 2,
-                // 		dots: true,
-                // 	},
-              
-                // }, {
-              
-                // 	breakpoint: 300,
-                // 	settings: 'unslick', // destroys slick
-              
-                } ],
-              } );
+        // the magic
+        responsive: [ {
       
-            });
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: slidesToShow -1,
+          },
+      
+        // }, {
+      
+        // 	breakpoint: 600,
+        // 	settings: {
+        // 		slidesToShow: 2,
+        // 		dots: true,
+        // 	},
+      
+        // }, {
+      
+        // 	breakpoint: 300,
+        // 	settings: 'unslick', // destroys slick
+      
+        } ],
+      } );
 
-
-    const buttons = document.querySelectorAll('.bestellen');
-   
-      //Met alle buttons:
-      buttons.forEach(button => {  
-        button.addEventListener('click', openOverlay);
-      });
+    });
 
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
   },
 };
-
-const ticketOverlay = document.querySelector('#tickets-overlay');
-const closeButton = document.querySelector('.close-btn');
-const body = document.querySelector('body');
-const getRef = document.getElementById('tickets-iframe-holder');
-
-
-closeButton.addEventListener('click', () => {
-  ticketOverlay.classList.remove('active');
-  body.classList.remove('stop-scroll');
-});
-
-function openOverlay(e) {
-  //stop klikken en toevoegen classes
-  e.preventDefault;
-  ticketOverlay.classList.add('active');
-  body.classList.add('stop-scroll');
-
-  // Haal de informatie op om de juiste Target toe te voegen aan de iframe:
-  var el = e.target;
-  var index = el.dataset.nummer;
-
-  var makeIframe = document.createElement('iframe');
-  makeIframe.setAttribute('src', 'https://tickets.cinemaoostereiland.nl/shop/tickets.php?showid='+index);
-  makeIframe.setAttribute('scrolling', 'yes');
-  makeIframe.style.border = 'none';
-  makeIframe.style.maxWidth = '865px';
-  makeIframe.style.height = '1529px';
-
-  getRef.innerHTML = '';
-  getRef.appendChild(makeIframe);
-
-}

@@ -8,7 +8,7 @@
   }
 
   .block-aangeraden-films {
-    display: flex;
+    // display: flex;
     overflow: hidden;
     padding-top: var(--global--spacing-vertical);
     padding-bottom: calc(var(--global--spacing-vertical) * 3);
@@ -85,8 +85,7 @@
 }
 
 .play_btn:hover {
-  color: $brand-secondary;
-  transform: scale(1.4);
+  transform: scale(1.5);
 }
 
 .youtube_btn:focus,

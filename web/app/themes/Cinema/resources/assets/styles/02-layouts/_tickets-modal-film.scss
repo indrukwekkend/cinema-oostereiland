@@ -1,0 +1,249 @@
+.ticket-modal {
+  transition: opacity 0.6s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+  display: none;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  padding-right: 0 !important;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-top: 0 !important;
+  z-index: 9999;
+
+  &.show {
+    display: block;
+    opacity: 1;
+  }
+
+  &__wrapper-container {
+    position: absolute;
+    -webkit-overflow-scrolling: touch;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+    overflow-x: scroll;
+    overflow-x: hidden;
+  }
+
+  &__wrapper {
+    margin: 20px 0 0 0;
+    width: 100%;
+    background: #fff;
+    position: relative;
+  }
+
+  &__close {
+    font-weight: 400;
+    font-size: 19px;
+    position: absolute;
+    right: 12px;
+    text-decoration: none;
+    top: 12px;
+    z-index: 30;
+  }
+
+  .ticket-overlay {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+
+    &__info {
+      font-weight: 400;
+      background-color: #fff;
+      color: #626844;
+      margin-top: 160px;
+      padding: 70px 20px 20px;
+      position: relative;
+      text-transform: uppercase;
+      width: 80%;
+    }
+
+    &__image {
+      left: 0;
+      height: 305px;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 0;
+      background-size: cover;
+
+      img {
+        width: 100%;
+        display: none;
+      }
+    }
+
+    &__content {
+      background-color: $special-gray;
+      padding: 20px;
+    }
+  }
+
+  ul.tickets {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+
+    .ticket {
+      justify-content: space-between;
+      font-weight: 400;
+      color: $brand-primary;
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &:hover {
+        &::after {
+          box-shadow: 0 7px 13px rgba(0, 0, 0, 0.12);
+          background-color: #fff;
+        }
+      }
+
+      .special {
+        small {
+          font-size: 1.6rem;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .ticket-modal {
+    -webkit-transition: opacity 0.6s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    transition: opacity 0.6s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    height: 100%;
+    left: 0;
+    padding-right: 0 !important;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+
+    &__wrapper-container {
+      position: absolute;
+      -webkit-overflow-scrolling: touch;
+      background: rgba(0, 0, 0, 0.6);
+      width: 100%;
+      height: 100vh;
+      overflow: scroll;
+      overflow-x: scroll;
+      overflow-x: hidden;
+    }
+
+    &__wrapper {
+      margin: 150px 120px 50px;
+      width: calc(100% - 240px);
+      background: #fff;
+      position: relative;
+    }
+
+    &__close {
+      font-weight: 400;
+      font-size: 19px;
+      position: absolute;
+      right: 12px;
+      text-decoration: none;
+      top: 12px;
+      z-index: 30;
+    }
+
+    .ticket-overlay {
+      display: flex;
+      justify-content: space-between;
+
+      &__content {
+        padding: 20px 80px;
+      }
+
+      &__info {
+        margin-top: 0;
+        min-height: 250px;
+        padding: 100px 50px 40px;
+        width: 45%;
+      }
+
+      &__image {
+        left: auto;
+        height: 290px;
+        position: relative;
+        right: 0;
+        width: 55%;
+
+        img {
+          // display: none;
+        }
+      }
+    }
+
+    ul.tickets {
+      list-style-type: none;
+      margin-left: 0;
+      padding-left: 0;
+
+      .ticket {
+        grid-template-columns: 1fr 1fr 1fr 150px 1fr;
+        margin-bottom: 20px;
+
+        .text {
+          .aanhef {
+            display: block;
+          }
+
+          .datum_notatie {
+            font-weight: bold;
+            font-size: 2.8rem;
+          }
+        }
+
+        .datum {
+          margin-bottom: 0;
+        }
+
+        .aanvang {
+          grid-column: 2;
+          position: relative;
+
+          &::after {
+            @include slash();
+          }
+        }
+
+        .zaal {
+          grid-column: 3;
+          position: relative;
+          text-align: left;
+          align-self: left;
+          line-height: inherit;
+        }
+
+        .cta {
+          z-index: 1;
+
+          a {
+            //test
+          }
+        }
+
+        .titel {
+          grid-column: 4 / span 1;
+        }
+
+        &:hover {
+          .cta {
+            a {
+              background-color: $brand-primary;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

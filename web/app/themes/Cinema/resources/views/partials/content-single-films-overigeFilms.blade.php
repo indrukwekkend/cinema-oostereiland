@@ -37,14 +37,43 @@ if( !empty( $custom_terms ) ):
         <div class="content-element">
           <span class="onderwerp h2">Voor jou </span>
           <!-- lijst met aangeraden films -->
-          <div class="specials-block-films sliderlijst">
+          <div class="slider">
                   
                 
             <?php
-            while( $loop->have_posts() ) : $loop->the_post(); ?>
+            while( $loop->have_posts() ) : $loop->the_post(); 
+            
+            $id = get_the_ID();
+            $meta = '';
+
+            // Load leeftijd settings and values.
+            $soorten = get_field('kijkwijzer_soort', $id);
+            $leeftijd = get_field('kijkwijzer_leeftijd', $id);
+
+            // Display labels. 
+            // PLUGIN_URL is een defined constant.
+
+            if( $soorten ): 
+                $meta .= '<ul class="kijkwijzer">';
+
+                    //leeftijd eerst
+                    $meta .= "<li><img src='". PLUGIN_URL ."dist/images/B_".$leeftijd['label'].".png' alt='".$leeftijd['value']." jaar' /></li>";
+                    
+                    //soorten daarna:
+                    foreach( $soorten as $soort ):
+                        $meta .=  '<li><img src="'. PLUGIN_URL .'dist/images/'. strtolower($soort) .'.png" alt="'.$soort.'" /></li>';
+                    endforeach;
+
+                $meta .= '</ul>';
+            endif;
+            ?>
+
+              
 
               <li class='film'>
                 <?php
+
+
                   $image = get_field('header_img');
 
                   $url = $image['url'];
@@ -57,6 +86,9 @@ if( !empty( $custom_terms ) ):
                   $thumb = $image['sizes'][ $size ];
 
                   $thumbnail = "<img src='$thumb' alt='$alt' />";
+
+                  $regisseur = get_post_meta( $id, 'regie', true );
+                  $regisseur = "<div class='col content_row__content'>Regie: $regisseur</div>";
                 ?>
 
                 <div class="card filmsFeatImg">
@@ -65,12 +97,12 @@ if( !empty( $custom_terms ) ):
 
                     <div class="text">
                       <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($title); ?>" class="overlay"></a>
-                      <p class='extra'>Extra informatie</p>
+                      <div class='extra'><?= $meta ?></div>
                     </div>
 
                     <div class="title">
                       <h3><?php the_title(); ?></h3>
-                      <p class='extra'>Extra informatie</p>
+                      <p class='extra'><?= $regisseur ?></p>
                     </div>
                 </div>
               </li> 

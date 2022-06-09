@@ -55,8 +55,7 @@ ul.tickets {
 
   li.ticket {
     justify-content: space-between;
-    padding: 10px 0 10px 25px;
-    margin-top: 10px;
+    padding: 15px 0 15px 25px;
     font-weight: 400;
     color: #0e0e0e;
     display: grid;
@@ -99,7 +98,6 @@ ul.tickets {
       grid-column: 1 /  span 2;
       border-bottom: 1px solid $special-gray;
       color: $black1;
-      margin-bottom: 10px;
       padding-bottom: 0;
 
       .datum_notatie {

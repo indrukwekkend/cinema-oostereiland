@@ -53,6 +53,23 @@
             "esc_html": 0
         },
         {
+            "key": "field_61027c6446a26",
+            "label": "Nieuwe Films ophalen vanaf datum",
+            "name": "nieuwe_films_ophalen_vanaf_datum",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "Y-m-d",
+            "return_format": "Y-m-d",
+            "first_day": 1
+        },
+        {
             "key": "field_610d9f7a4d7cf",
             "label": "Algemene film informatie",
             "name": "",
@@ -86,23 +103,6 @@
             "maxlength": "",
             "rows": "",
             "new_lines": ""
-        },
-        {
-            "key": "field_61027c6446a26",
-            "label": "Nieuwe Films ophalen vanaf datum",
-            "name": "nieuwe_films_ophalen_vanaf_datum",
-            "type": "date_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "display_format": "Y-m-d",
-            "return_format": "Y-m-d",
-            "first_day": 1
         },
         {
             "key": "field_610dadadbcb96",
@@ -157,5 +157,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1628287514
+    "modified": 1654688111
 }

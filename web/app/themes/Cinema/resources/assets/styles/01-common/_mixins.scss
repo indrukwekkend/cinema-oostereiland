@@ -65,11 +65,11 @@
   content: "";
   width: 10px;
   height: 100%;
-  border-right: 2px solid $black1;
+  border-right: 2px dotted $black1;
   position: absolute;
   top: 0;
   right: 0;
-  transform: rotate(10deg);
+  transform: none;
   margin-right: 30px;
   opacity: 0.3;
 }
@@ -167,11 +167,34 @@
         transition: all 0.2s ease-in-out;
         opacity: 0;
         pointer-events: none;
+
+        ul.kijkwijzer {
+          padding: 0;
+          margin: 0;
+          margin-left: 20px;
+          display: flex;
+          list-style: none;
+
+          li {
+            margin-right: -2px;
+          }
+        }
       }
     }
 
     .title {
       padding-top: 10px;
+      font-size: 0.85em;
+
+      h3 {
+        font-weight: bold;
+        font-size: 1em;
+        margin-bottom: 0;
+      }
+
+      div {
+        line-height: 1em;
+      }
     }
 
     .knoppen {
@@ -207,7 +230,7 @@
         }
 
         .extra {
-          transform: translate3d(0, -100%, 0) translate3d(0, -200px, 0);
+          transform: translate3d(0, 0, 0) translate3d(0, -120px, 0);
           opacity: 1;
           color: #fff;
         }

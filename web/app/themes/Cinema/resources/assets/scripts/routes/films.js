@@ -18,6 +18,12 @@ export default {
             openModal()
           }
           else if (
+            event.target.matches('.bestellen') 
+          ) {
+            console.log(event);
+            openOverlay(event);
+          }
+          else if (
             event.target.matches('#ticket-modal__close') ||
             !event.target.closest('.ticket-modal__wrapper')
           ) {
@@ -40,7 +46,7 @@ export default {
         trigger: '#cta-bar',
         start: 'top top', 
         pin: '#cta-bar',
-        end: '+=15000',
+        end: '+=150000',
         toggleClass: {targets: '#cta-bar', className: 'smaller'},
       });
 
@@ -49,9 +55,9 @@ export default {
       //Met alle sliders:
       sliders.forEach(slider => {
         const slidesToShow = 3;
-        console.log(slidesToShow);
+        // console.log(slidesToShow);
 
-        const slick = slider.querySelectorAll('.sliderlijst')
+        const slick = slider.querySelectorAll('.slider')
         $(slick).slick( {
 
         
@@ -88,6 +94,7 @@ export default {
   },
 };
 
+// open de kaarten modal:
 function openModal() {
   $('#ticket-modal').addClass('show');
 }
@@ -96,4 +103,38 @@ function closeModal() {
   $('#ticket-modal').removeClass('show');
 }
 
+
+
+const ticketOverlay = document.querySelector('#tickets-overlay');
+const closeButton = document.querySelector('.close-btn');
+const body = document.querySelector('body');
+const getRef = document.getElementById('tickets-iframe-holder');
+
+
+closeButton.addEventListener('click', () => {
+  ticketOverlay.classList.remove('active');
+  body.classList.remove('stop-scroll');
+});
+
+function openOverlay(e) {
+  //stop klikken en toevoegen classes
+  e.preventDefault;
+  ticketOverlay.classList.add('active');
+  body.classList.add('stop-scroll');
+
+  // Haal de informatie op om de juiste Target toe te voegen aan de iframe:
+  var el = e.target;
+  var index = el.dataset.number;
+
+  var makeIframe = document.createElement('iframe');
+  makeIframe.setAttribute('src', 'https://tickets.cinemaoostereiland.nl/shop/tickets.php?showid='+index);
+  makeIframe.setAttribute('scrolling', 'yes');
+  makeIframe.style.border = 'none';
+  makeIframe.style.maxWidth = '865px';
+  makeIframe.style.height = '1529px';
+
+  getRef.innerHTML = '';
+  getRef.appendChild(makeIframe);
+
+}
 

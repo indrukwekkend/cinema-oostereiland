@@ -70,7 +70,7 @@
           </div>
 
           <div class="cta-bar__content__right">
-            <a class="btn wp-block-button__link" id="toon_tickets" href="#">kaarten</a>
+            <a class="btn wp-block-button__link" id="toon_tickets" href="#">Tickets</a>
           </div>
 
 

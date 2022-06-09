@@ -30,16 +30,6 @@
       will-change: min-height;
       height: 100%;
     }
-
-    &:not(:first-child) {
-      margin-left: calc(4 * var(--global--spacing-horizontal));
-    }
-
-    &.afbeelding-kolom > :first-child {
-      border-left: $black1 dashed 1px;
-      padding-left: calc(3 * var(--global--spacing-horizontal));
-      margin-top: 10px;
-    }
   }
 
   .wp-block-column:not(:last-child) {
@@ -105,6 +95,24 @@
       h6:not(.has-background) {
         padding-left: var(--global--spacing-unit);
         padding-right: var(--global--spacing-unit);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 781px) {
+  //1024
+  // hier de verandereringen boven ipad
+  .wp-block-columns {
+    .wp-block-column {
+      &:not(:first-child) {
+        margin-left: calc(4 * var(--global--spacing-horizontal));
+      }
+
+      &.afbeelding-kolom > :first-child {
+        border-left: $black1 dashed 1px;
+        padding-left: calc(3 * var(--global--spacing-horizontal));
+        margin-top: 10px;
       }
     }
   }
