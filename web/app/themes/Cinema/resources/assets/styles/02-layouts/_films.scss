@@ -13,6 +13,10 @@
     padding-top: var(--global--spacing-vertical);
     padding-bottom: calc(var(--global--spacing-vertical) * 3);
 
+    h2 {
+      margin-bottom: 2rem;
+    }
+
     .content-element {
       .onderwerp {
         font-size: 4rem;

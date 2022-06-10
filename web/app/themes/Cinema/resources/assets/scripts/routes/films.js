@@ -39,6 +39,7 @@ export default {
       // scroll trigger pin CTA element
       ScrollTrigger.create({
         start: 'top top', 
+        end: '+=150000',
         toggleClass: {targets: '#cta-bar', className: 'active'}, 
       });
 

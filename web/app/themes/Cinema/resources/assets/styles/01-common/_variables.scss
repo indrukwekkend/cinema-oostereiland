@@ -133,7 +133,7 @@ $rfs-base-value: 2.2rem;
 //font sizes
 $base-font-size: 2.2rem;
 $h1-font-size: $base-font-size * 2.6;
-$h2-font-size: $base-font-size * 2;
+$h2-font-size: $base-font-size * 1.5;
 $h3-font-size: $base-font-size * 1.2;
 $h4-font-size: $base-font-size * 1.1;
 $h5-font-size: $base-font-size * 1;
@@ -142,7 +142,7 @@ $blockquote-font-size: $base-font-size * 1;
 //font margin (alleen bottom, uit RFS mixins)
 $base-margin: 1rem;
 $h1-margin: $base-margin * 2.6;
-$h2-margin: $base-margin * 2;
+$h2-margin: $base-margin * 1;
 $h3-margin: $base-margin * 1;
 $h4-margin: $base-margin * 1;
 $h5-margin: $base-margin * 1;
@@ -180,7 +180,7 @@ $button--color-text-hover: $wit;
 $button--color-text-arrow: $base-color;
 $button--color-outline: $base-color;
 $button--color-text-active: $brand-secondary;
-$button--color-background: $brand-primary;
+$button--color-background: $wit;
 $button--color-background-hover: $grijs;
 $button--color-background-active: $button--color-background-hover;
 

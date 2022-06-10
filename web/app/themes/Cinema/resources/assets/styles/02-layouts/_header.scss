@@ -52,7 +52,7 @@
   }
 
   .home & {
-    height: 85vh;
+    height: 100vh;
 
     .header-content-wrapper {
       top: 66%;
@@ -63,14 +63,14 @@
   .cta-bar {
     bottom: 0;
     position: absolute;
-    margin: 0;
     transition: background 0.5s ease-in-out;
     border-bottom: 1px solid transparent;
+    margin-bottom: 0;
 
     &__content {
       color: $film-header-color;
       font-weight: 500;
-      text-shadow: 2px 2px 7px rgba(10, 4, 3, 1);
+      text-shadow: 2px 2px 7px rgba(10, 4, 3, 0.765);
 
       .home & {
         margin-bottom: 6rem;
@@ -96,13 +96,12 @@
 
       &__right {
         display: flex;
-        align-items: flex-end;
+        align-items: center;
       }
 
       .wp-block-button__link {
         color: $black1;
         background-color: $wit;
-        font-size: 1.125em;
         transition: all 0.5s ease-in-out;
         text-shadow: none;
         font-weight: 600;
@@ -119,12 +118,10 @@
 
     &.active {
       background-color: $navigation-background;
-      border-bottom: 1px solid darken($navigation-background, 30);
       z-index: 100;
 
       .cta-bar__content {
         color: $brand-primary;
-        margin-bottom: 0;
         text-shadow: none;
 
         h1 {

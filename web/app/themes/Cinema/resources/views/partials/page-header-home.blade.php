@@ -71,7 +71,7 @@ endif;
   ?>
 
   <div class="container alignwide">
-  <h2>Vandaag <span class='alles'><a href='/agenda'>toon alles</a><span></h2> 
+  <h2>Vandaag <span class='alles'></h2> 
 
   
   <div class="slider dagslider">
@@ -146,7 +146,7 @@ function getTicketTable($shows) {
 
         $film_info .= $duur .' min. '.$taal.' '.$regisseur;
 
-        $size = 'medium';
+        $size = 'medium_large';
         $thumbnail = get_field( 'alternatieve_afbeelding', $id );
 
         if ( $thumbnail ) { 

@@ -26,7 +26,7 @@
 
 ?>
 
-<header class="page-header-film alignfull" style="background-image: url(<?=$backgroundImage?>); ">
+<header class="page-header-film alignfull contrast" style="background-image: url(<?=$backgroundImage?>); ">
 
 <div class="film_media">
   <button type="button" class="kill_btn youtube_btn" id="close-youtube">
@@ -64,7 +64,7 @@
             <h1 class="entry-title">{!! get_the_title() !!}</h1>
             <div class="film-info">
                 <div class="ticketDates"></div>
-                <p>&nbsp; / @php echo $regisseur . $label @endphp </p>
+                <!-- <p>&nbsp; / @php echo $regisseur . $label @endphp </p> -->
             </div>
           
           </div>

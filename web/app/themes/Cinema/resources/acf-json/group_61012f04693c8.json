@@ -105,6 +105,25 @@
             "new_lines": ""
         },
         {
+            "key": "field_62a333f16c4c9",
+            "label": "Aangeraden films titel",
+            "name": "aangeraden_films_titel",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Aangeraden films",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_610dadadbcb96",
             "label": "Filmdepot",
             "name": "",
@@ -157,5 +176,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1654688111
+    "modified": 1654862876
 }

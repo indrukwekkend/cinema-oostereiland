@@ -1,6 +1,7 @@
 <?php 
 //Get current active Genres:
 $custom_terms = get_the_terms( $film_id, 'film-genre' );
+$sectionTitle = get_field('aangeraden_films_titel', 'option');
 
 if( !empty( $custom_terms ) ):
   $number = sizeof ($custom_terms);
@@ -35,7 +36,7 @@ if( !empty( $custom_terms ) ):
     if( $loop->have_posts() ) : ?>
       <div class="alignwide block-aangeraden-films block-slider">
         <div class="content-element">
-          <span class="onderwerp h2">Voor jou </span>
+          <h2><?=$sectionTitle?></h2>
           <!-- lijst met aangeraden films -->
           <div class="slider">
                   

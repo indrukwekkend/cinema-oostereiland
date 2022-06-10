@@ -36,6 +36,8 @@ body {
 
 a {
   color: $brand-primary;
+  // text-decoration: none;
+  // border-bottom: 1px solid $brand-secondary;
 }
 
 p {
@@ -76,6 +78,7 @@ h2,
   font-weight: $h2-font-weight;
   line-height: 1.4em;
   text-transform: uppercase;
+  letter-spacing: 0.02em;
 
   a {
     color: $h2-font-color;

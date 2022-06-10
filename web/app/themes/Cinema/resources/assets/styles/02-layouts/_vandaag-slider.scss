@@ -1,6 +1,6 @@
 // home page slider vandaag..
 .vandaag-slider {
-  background: linear-gradient(0deg, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(0deg, rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0) 100%);
   padding-top: 1px;
 
   h2 {
@@ -8,6 +8,7 @@
     font-size: 3rem;
     text-transform: none;
     color: $wit;
+    margin-bottom: 1rem;
 
     .alles {
       font-size: 0.6em;
@@ -38,9 +39,13 @@
     padding-bottom: 1px;
     margin-top: -250px;
 
+    .container {
+      margin-bottom: 0;
+    }
+
     li.ticket {
       // Extend button style
-      @include card-in-slider();
+      @include card-in-vandaag-slider();
     }
   }
 }

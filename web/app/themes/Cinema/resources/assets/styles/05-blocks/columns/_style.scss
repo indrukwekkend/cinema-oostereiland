@@ -110,9 +110,10 @@
       }
 
       &.afbeelding-kolom > :first-child {
-        border-left: $black1 dashed 1px;
+        border-left: #888 dotted 2px;
         padding-left: calc(3 * var(--global--spacing-horizontal));
         margin-top: 10px;
+        height: 100%;
       }
     }
   }

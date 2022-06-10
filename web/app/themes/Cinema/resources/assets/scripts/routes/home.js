@@ -21,8 +21,7 @@ export default {
     const sliders = document.querySelectorAll('.vandaag-slider');
     //Met alle sliders:
     sliders.forEach((slider) => {
-      const slidesToShow = 6;
-      // console.log(slidesToShow);
+      const slidesToShow = 3;
 
       const slick = slider.querySelectorAll('.slider');
       $(slick).slick({
