@@ -391,12 +391,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:indrukwekkend/Film-blokken.git",
-                "reference": "601399f6d4329874a21c5fafac786ee04e76b80e"
+                "reference": "f504555b6147cd56dbc34ea3f7efe3b1b2d685a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/indrukwekkend/Film-blokken/zipball/601399f6d4329874a21c5fafac786ee04e76b80e",
-                "reference": "601399f6d4329874a21c5fafac786ee04e76b80e",
+                "url": "https://api.github.com/repos/indrukwekkend/Film-blokken/zipball/f504555b6147cd56dbc34ea3f7efe3b1b2d685a6",
+                "reference": "f504555b6147cd56dbc34ea3f7efe3b1b2d685a6",
                 "shasum": ""
             },
             "require": {
@@ -423,7 +423,7 @@
                 "source": "https://github.com/indrukwekkend/Film-blokken/tree/main",
                 "issues": "https://github.com/indrukwekkend/Film-blokken/issues"
             },
-            "time": "2022-06-10T09:08:05+00:00"
+            "time": "2022-06-16T09:10:18+00:00"
         },
         {
             "name": "kinsta/kinsta-mu-plugins",
