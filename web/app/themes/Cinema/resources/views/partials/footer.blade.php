@@ -38,9 +38,9 @@ if ( is_active_sidebar( 'sidebar-footer' ) ) : ?>
   <footer  id="footer-widget-area" class="content-info site-footer" role="contentinfo">
       <div class="content-holder container alignwide">
         <div class="col footer_titel">
-          <a href="/" title="home">
+          <!-- <a href="/" title="home">
             <img src="@asset('images/logo.svg')" alt="Logo: Cinemaoostereiland" class="logoduurzaam">
-          </a>
+          </a> -->
         </div>
 
         <div  class="widget-area">
@@ -50,32 +50,32 @@ if ( is_active_sidebar( 'sidebar-footer' ) ) : ?>
         <div class="socials">
           @if ($linkedin)
             <a target="_blank" href="<?= $linkedin; ?>" title="LinkedIn">
-              <i class="fab fa-linkedin"></i>
+              <i class="fab fa-linkedin-in"></i>
             </a>
           @endif
           @if ($pinterest)
             <a target="_blank" href="<?= $pinterest; ?>" title="Pinterest">
-              <i class="fab fa-pinterest-square"></i>
+              <i class="fab fa-pinterest"></i>
             </a>
           @endif
           @if ($facebook)
             <a target="_blank" href="<?= $facebook; ?>" title="Facebook">
-              <i class="fab fa-facebook-square"></i>
+              <i class="fab fa-facebook"></i>
             </a>
           @endif
           @if ($instagram)
             <a target="_blank" href="<?= $instagram; ?>" title="Instagram">
-              <i class="fab fa-instagram-square"></i>
+              <i class="fab fa-instagram"></i>
             </a>
           @endif
           @if ($twitter)
             <a target="_blank" href="<?= $twitter; ?>" title="Twitter">
-              <i class="fab fa-twitter-square"></i>
+              <i class="fab fa-twitter"></i>
             </a>
           @endif
           @if ($youtube)
             <a target="_blank" href="<?= $youtube; ?>" title="YouTube">
-              <i class="fab fa-youtube-square"></i>
+              <i class="fab fa-youtube"></i>
             </a>
           @endif
         </div>
