@@ -40,7 +40,7 @@ if ( is_active_sidebar( 'sidebar-footer' ) ) : ?>
         <div class="col footer_titel">
           <!-- <a href="/" title="home">
             <img src="@asset('images/logo.svg')" alt="Logo: Cinemaoostereiland" class="logoduurzaam">
-          </a> -->
+          </a>  -->
         </div>
 
         <div  class="widget-area">
