@@ -178,15 +178,15 @@ $button--color-background-hover: $grijs;
 $button--color-background-active: $button--color-background-hover;
 
 // Footer instellingen
-$footer-background-color: $grijs;
+$footer-background-color: $black1;
 $footer-font-size: 0.9em;
 $footer-font-weight: 600;
-$footer-font-color: $black1;
-$footer-link-color: $black1;
+$footer-font-color: $wit;
+$footer-link-color: $wit;
 $footer-font-hover-color: darken ($brand-secondary, 10);
 $footer-title-font-weight: 900;
 $footer-title-font-color: $wit;
-$footer-socials-color: $black1;
+$footer-socials-color: $wit;
 
 // root kan handig zijn om variabelen aan te passen in verschillende media breedte
 :root {

@@ -91,7 +91,7 @@ if ( is_active_sidebar( 'sidebar-footer' ) ) : ?>
     <?php endif; ?>
     {!! wp_nav_menu($foot_nav3) !!}
     <?php if ( get_theme_mod( 'display_title_and_tagline', true ) ) : ?>
-      <p class='powered_by'>Website: <a href="https://indrukwekkend.nl" target="_blank" title='Website realisatie: Indrukwekkend, full service communicatie'><img src="@asset('images/indrukwekkendEye.svg')"></a></p>  
+      <p class='powered_by'>Website: <a href="https://indrukwekkend.nl" target="_blank" title='Website realisatie: Indrukwekkend, full service communicatie'>Indrukwekkend</a></p>  
     <?php endif; ?>  
   </div>
 </footer>
