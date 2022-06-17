@@ -15,7 +15,7 @@
         Films A-Z
       </a> 
 
-      <a href="?specials=true" class="option" id="programma">+ Programma</a>
+      <a href="?specials=true" class="option" id="programma">Speciale voorstellingen</a>
 
     </div>
   </div>
