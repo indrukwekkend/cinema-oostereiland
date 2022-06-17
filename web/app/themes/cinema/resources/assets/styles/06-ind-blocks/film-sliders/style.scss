@@ -6,10 +6,19 @@
 }
 
 .wp-block-indrukwekkend-festival {
-  padding: 8rem 0 9rem;
+  padding: 3rem 0;
 
-  h3 {
-    color: $black1;
+  h2 {
+    margin-bottom: 2rem;
+
+    a {
+      text-decoration: none;
+      border-bottom: 2px dotted transparent;
+
+      &:hover {
+        border-color: $dark-grey;
+      }
+    }
   }
 
   .intro-text {
@@ -17,7 +26,12 @@
   }
 
   .festival-films {
-    margin-top: 9rem;
+    margin-top: 2rem;
+
+    h3 {
+      color: $black1;
+      margin-bottom: 1.5rem;
+    }
 
     .slick-track {
       margin-left: 0;
@@ -29,6 +43,7 @@
   }
 }
 
+/* stylelint-disable no-descending-specificity */
 .wp-block-indrukwekkend-special {
   padding: 4rem;
   background-color: $special-gray;

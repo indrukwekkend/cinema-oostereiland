@@ -6,6 +6,7 @@
    */
 
     $film_id = get_the_id();
+		$featured_post = get_field('festival_films');
     // overige meta:
   ?>
 
@@ -16,16 +17,15 @@
     @php the_content() @endphp
   </div>
 
-
-  <!-- OPTIE blok met Film Festival  -->
-  @include('partials.content-single-films-festivals')
-
   <!-- OPTIE Special blok. Gekoppeld aan de Special CPT -->
   @include('partials.content-single-films-specials')
 
-  <!-- OPTIE OVERIGE FILMS blok met interessante andere films -->
-  @include('partials.content-single-films-overigeFilms')
-
+  <!-- OPTIE blok met Film Festival  -->
+	@if( $featured_post )
+  	@include('partials.content-single-films-festivals')
+	@else	
+  	@include('partials.content-single-films-overigeFilms')
+	@endif
 </div>
 
 <!-- Youtube script code  -->

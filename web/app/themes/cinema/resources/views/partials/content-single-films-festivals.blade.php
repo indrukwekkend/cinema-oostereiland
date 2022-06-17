@@ -3,7 +3,7 @@
 //
 // onverdeel van single content Films
 
-$featured_post = get_field('festival_films');
+// $featured_post = get_field('festival_films');
 
 if( $featured_post ): 
   global $post; 
@@ -15,7 +15,7 @@ if( $featured_post ):
   // Festival Blok hieronder
   ?>
 
-  <div class="wp-block-group alignfull has-festival-grijs-background-color has-background">
+  <div class="wp-block-group alignfull has-festival-grijs-background-color has-background block-festival-films-holder">
     <div class="wp-block-group__inner-container">
       <div class="wp-block-indrukwekkend-festival alignwide">
         <div class="festival-content">
@@ -99,4 +99,6 @@ if( $featured_post ):
   // Reset the global post object so that the rest of the page works correctly.
   wp_reset_postdata(); ?>
 
-<?php endif; ?>
+<?php global $specials; 
+$specials = true;
+endif; ?>
