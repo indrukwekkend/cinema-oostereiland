@@ -4,6 +4,7 @@ header#masthead {
   position: absolute;
   width: 100%;
   transition: background 0.7s ease-in-out;
+  padding-bottom: 25px;
 
   .home & {
     position: fixed;
@@ -11,6 +12,12 @@ header#masthead {
 
   &.active {
     background-color: rgba(0, 0, 0, 0.897);
+  }
+
+  .menu-open & {
+    &.active {
+      background-color: rgba(0, 0, 0, 0);
+    }
   }
 }
 
@@ -94,7 +101,7 @@ header.site-header {
 
       &:hover {
         opacity: 1;
-        border-bottom: 1px solid $black1;
+        // border-bottom: 1px solid $black1;
       }
 
       &.is-active {
@@ -117,8 +124,18 @@ header.site-header {
           }
         }
 
+        /* stylelint-disable no-descending-specificity */
         &:hover {
-          border-bottom: 1px solid $black1;
+          .hamburger-inner {
+            background-color: $black1 !important;
+            box-shadow: none;
+
+            &::after,
+            &::before {
+              background-color: $black1 !important;
+              box-shadow: none;
+            }
+          }
         }
       }
 
@@ -141,7 +158,6 @@ header.site-header {
       }
     }
 
-    /* stylelint-disable no-descending-specificity */
     .nav-primary {
       justify-self: flex-end;
       display: flex;
@@ -321,7 +337,7 @@ header.site-header {
 
         &:hover {
           opacity: 1;
-          border-bottom: 1px solid $wit;
+          // border-bottom: 1px solid $wit;
 
           .hamburger-inner {
             background-color: $wit;

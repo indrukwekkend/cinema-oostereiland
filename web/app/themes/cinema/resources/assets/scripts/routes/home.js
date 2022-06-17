@@ -12,7 +12,7 @@ export default {
 
     ScrollTrigger.create({
       trigger: '#masthead',
-      start: '50px top',
+      start: 'top top',
       end: '+=15000',
       toggleClass: { targets: '#masthead', className: 'active' },
     });
