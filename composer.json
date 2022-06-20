@@ -64,6 +64,10 @@
       "type": "vcs",
       "url": "git@github.com:indrukwekkend/Film-blokken.git"
     },
+    "subpaginas": {
+      "type": "vcs",
+      "url": "git@github.com:indrukwekkend/subpaginas.git"
+    },
     "GravityForms": {
       "type": "package",
       "package": {
@@ -91,6 +95,7 @@
     "vlucas/phpdotenv": "^5.3",
     "oscarotero/env": "^2.1",
     "indrukwekkend/films": "dev-main",
+    "indrukwekkend/subpaginas": "dev-main",
     "roots/bedrock-autoloader": "^1.0",
     "roots/bedrock-disallow-indexing": "^2.0",
     "roots/wordpress": "^5.8",

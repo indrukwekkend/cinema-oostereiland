@@ -30,6 +30,25 @@
     background-color: $brand-primary;
     color: #fff;
   }
+
+  .slick-prev {
+    left: -70px;
+  }
+
+  .slick-prev::before,
+  .slick-next::before {
+    font-size: 50px;
+    line-height: 1;
+    color: #696969;
+    opacity: 0.55;
+    content: "\f053";
+    font-family: "Font Awesome 5 Pro", sans-serif;
+    font-weight: 300;
+  }
+
+  .slick-next::before {
+    content: "\f054";
+  }
 }
 
 @media only screen and (min-width: $mobile-width) { //768

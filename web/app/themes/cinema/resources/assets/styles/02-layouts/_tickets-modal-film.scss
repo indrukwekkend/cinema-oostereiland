@@ -58,6 +58,10 @@
       position: relative;
       text-transform: uppercase;
       width: 80%;
+
+      &__title {
+        margin-bottom: 0;
+      }
     }
 
     &__image {

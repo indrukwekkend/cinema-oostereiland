@@ -1,0 +1,23 @@
+.wp-block-indrukwekkend-kenmerk-one {
+  &.card {
+    .card-content {
+      &__post-title {
+        p {
+          font-size: $h3-font-size-editor;
+        }
+      }
+
+      &__post-excerpt {
+        p {
+          font-size: $base-font-size-editor;
+        }
+      }
+    }
+
+    .footer {
+      .knop {
+        font-size: 1.1em;
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.wp-block-indrukwekkend-subpaginas {
+  --grid-gap: 20px;
+
+  .card {
+    border: 2px dotted $dark-grey;
+    padding: 20px;
+    display: grid;
+    align-content: space-between;
+    position: relative;
+
+    .text {
+      h3 {
+        line-height: 1.1em;
+        margin-bottom: 2rem;
+
+        a {
+          text-decoration: none;
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+          }
+        }
+      }
+
+      p {
+        font-size: inherit;
+        line-height: 1.2em;
+      }
+    }
+
+    .footer {
+      display: flex;
+
+      .cta {
+        &::after {
+          content: "\f061";
+          font-family: "Font Awesome 5 Pro", sans-serif;
+          width: 20px;
+          float: right;
+          margin-left: 10px;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+    }
+
+    &:hover {
+      .footer {
+        .cta {
+          &::after {
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
+}

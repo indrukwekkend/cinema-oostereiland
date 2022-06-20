@@ -105,3 +105,5 @@ Container::getInstance()
             'view' => require dirname(__DIR__).'/config/view.php',
         ]);
     }, true);
+
+remove_filter('get_the_excerpt', 'wp_trim_excerpt');
