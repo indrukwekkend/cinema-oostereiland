@@ -277,11 +277,22 @@
     .text {
       h3 {
         font-size: 2rem;
+        margin-top: 10px;
+        margin-bottom: 10px;
       }
 
       .extra {
-        font-size: 2rem;
-        pointer-events: none;
+        ul.kijkwijzer {
+          padding: 0;
+          margin: 0;
+          margin-right: 20px;
+          display: flex;
+          list-style: none;
+
+          li {
+            width: 25px;
+          }
+        }
       }
     }
 

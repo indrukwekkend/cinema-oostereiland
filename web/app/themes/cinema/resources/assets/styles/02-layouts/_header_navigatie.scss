@@ -76,6 +76,11 @@ header.site-header {
       }
     }
 
+    //op mobiel uit
+    .menu-main-container {
+      display: none;
+    }
+
     .hamburger {
       display: flex;
       justify-self: flex-end;
@@ -483,6 +488,10 @@ header.site-header {
   //768
   header.site-header .container {
     // hier de verandereringen boven mobile
+    .menu-main-container {
+      display: inherit;
+    }
+
     .nav-primary {
       ul.nav {
         margin: 0;

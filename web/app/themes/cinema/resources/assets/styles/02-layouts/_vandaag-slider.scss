@@ -1,14 +1,15 @@
 // home page slider vandaag..
 .vandaag-slider {
-  background: linear-gradient(0deg, rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0) 100%);
+  background: var(--wp--preset--color--festival-grijs);
   padding-top: 1px;
   margin-bottom: 30px;
+  padding-bottom: 20px;
 
   h2 {
     font-weight: normal;
     font-size: 3rem;
     text-transform: none;
-    color: $wit;
+    color: $black1;
     margin-bottom: 1rem;
 
     .alles {
@@ -24,6 +25,8 @@
   li.ticket {
     // Extend button style
     @include card-outside-slider();
+
+    background-color: $wit;
   }
 
   a.bestellen {
@@ -51,14 +54,28 @@
   }
 }
 
-@media only screen and (min-width: $mobile-width) { //768
+@media only screen and (min-width: $ipad-width) { //768
 
   .vandaag-slider {
+    background: linear-gradient(0deg, rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0) 100%);
     padding-left: 30px;
     padding-right: 30px;
-    padding-bottom: 1px;
+    padding-bottom: 15px;
     margin-top: -250px;
     margin-bottom: 60px;
+
+    h2 {
+      font-weight: normal;
+      font-size: 3rem;
+      text-transform: none;
+      color: $wit;
+      margin-bottom: 1rem;
+
+      .alles {
+        font-size: 0.6em;
+        font-weight: normal;
+      }
+    }
 
     .container {
       margin-bottom: 0;
@@ -67,6 +84,8 @@
     li.ticket {
       // Extend button style
       @include card-in-vandaag-slider();
+
+      background-color: transparent;
     }
   }
 }

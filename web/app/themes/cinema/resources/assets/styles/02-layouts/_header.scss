@@ -52,11 +52,11 @@
   }
 
   .home & {
-    height: 100vh;
+    height: 85vh;
 
     .header-content-wrapper {
       top: 66%;
-      bottom: auto;
+      bottom: 0;
     }
   }
 
@@ -185,6 +185,16 @@
 
       &.smaller {
         max-height: 200px !important;
+      }
+    }
+  }
+
+  .page-header-film {
+    .home & {
+      height: 100vh;
+
+      .header-content-wrapper {
+        bottom: auto;
       }
     }
   }

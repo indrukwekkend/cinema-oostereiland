@@ -123,10 +123,11 @@ function getTicketTable($shows) {
 
     $the_query = new WP_Query( $args );
 
-    $titel = 'nog geen titel';
+    $titel = 'Nog geen titel';
     $film_info = '';
     $filmlink = '';
     $thumbnail = "<img src='https://picsum.photos/150/200' />";
+    $meta = '';
 
     while ( $the_query->have_posts() ) : $the_query->the_post();
       
@@ -137,6 +138,29 @@ function getTicketTable($shows) {
         $regisseur = '';
         $duur = '';
         $land = '';
+
+
+        // Load leeftijd settings and values.
+          $soorten = get_field('kijkwijzer_soort', $id);
+          $leeftijd = get_field('kijkwijzer_leeftijd', $id);
+
+
+          // Display labels. 
+          // PLUGIN_URL is een defined constant.
+
+          if( $soorten ): 
+              $meta .= '<ul class="kijkwijzer">';
+
+                  //leeftijd eerst
+                  $meta .= "<li><img src='". PLUGIN_URL ."dist/images/B_".$leeftijd['label'].".png' alt='".$leeftijd['value']." jaar' /></li>";
+                  
+                  //soorten daarna:
+                  foreach( $soorten as $soort ):
+                      $meta .=  '<li><img src="'. PLUGIN_URL .'dist/images/'. strtolower($soort) .'.png" alt="'.$soort.'" /></li>';
+                  endforeach;
+
+              $meta .= '</ul>';
+          endif;
 
         //metadata
         $regisseur = get_post_meta( $id, 'regie', true );
@@ -177,7 +201,7 @@ function getTicketTable($shows) {
               $output .= '<div class="text">';
               $output .= '<a class="overlay" href="'.$filmlink.'" title="'.$titel.'"></a>';
                   $output .= '<h3>'.$titel.'</h3>';
-                  // $output .= '<p class="film-info">'.$film_info.'</p>';
+                  $output .= '<div class="extra">'.$meta.'</div>';
             
               $output .= '</div>';
               $output .= '<div class="knoppen">';
