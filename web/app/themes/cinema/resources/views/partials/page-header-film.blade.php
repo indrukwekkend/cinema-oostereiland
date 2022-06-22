@@ -11,7 +11,13 @@
 
   $regisseur = get_post_meta( $film_id, 'regie', true );
   $image = get_field('header_img');
-  $backgroundImage = esc_url($image['url']); 
+
+  if( is_array($image) ) {
+    $backgroundImage = esc_url($image['url']); 
+  } else {
+    $backgroundImage = wp_get_attachment_image_url( $image, 'full' );
+  }
+
   $label = get_post_meta( $film_id, 'extra_tekst_label', true );
   if ($label != '') {
     $label = '<span class="label">'.$label.'</span>';

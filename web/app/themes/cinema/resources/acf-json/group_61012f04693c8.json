@@ -48,7 +48,7 @@
                 "class": "",
                 "id": ""
             },
-            "message": "<a href=\"\" id=\"render_events\" class=\"button button-primary button-large\">Laad films<\/a>\r\n\r\nAlle tickets worden opgeslagen in het tijdelijke geheugen. Klik hier om het geheugen te wissen, bijvoorbeeld na het aanpassen van een zaal\r\n<a href=\"\" id=\"render_tickets\" class=\"button button-primary button-large\">Ververs tickets<\/a>",
+            "message": "Alle Films laden vanaf onderstaande datum (draait normaal elke ochtend automatisch)\r\n<a href=\"\" id=\"render_events\" class=\"button button-primary button-large\">Laad ALLE films<\/a>\r\n\r\nMis je een sppecifieke film? Laad hem hiermee in.\r\n<a href=\"\" id=\"render_single_event\" class=\"button button-primary button-large\">Laad losse Film<\/a>\r\n\r\nAlle tickets worden opgeslagen in het tijdelijke geheugen. Klik hier om het geheugen te wissen, bijvoorbeeld na het aanpassen van een zaal\r\n<a href=\"\" id=\"render_tickets\" class=\"button button-primary button-large\">Ververs tickets<\/a>",
             "new_lines": "wpautop",
             "esc_html": 0
         },
@@ -176,5 +176,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1654862876
+    "modified": 1655893084
 }
