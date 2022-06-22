@@ -46,6 +46,7 @@
 
   &.is-style-indrukwekkend-columns-zonder {
     justify-content: space-around;
+    margin-top: calc(var(--global--spacing-vertical) * 2);
 
     @include media(laptop) {
       .wp-block-column {
@@ -112,7 +113,6 @@
       &.afbeelding-kolom > :first-child {
         border-left: #888 dotted 2px;
         padding-left: calc(3 * var(--global--spacing-horizontal));
-        margin-top: 10px;
         height: 100%;
       }
     }

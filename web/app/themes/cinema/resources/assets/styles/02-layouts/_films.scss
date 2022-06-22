@@ -1,4 +1,8 @@
 .single-films {
+  .wp-block-columns:first-of-type {
+    margin-top: calc(var(--global--spacing-vertical) * 2);
+  }
+
   p.film-intro {
     font-weight: bold;
   }
@@ -112,4 +116,5 @@
   right: 15px;
   top: 15px;
   z-index: 999999;
+  position: absolute;
 }

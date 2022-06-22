@@ -1,4 +1,9 @@
 <?php 
+/**
+ * Blok met aangeraden films. 
+ * De titel van het blok is in te stellen in de backend
+ * 
+ */
 //Get current active Genres:
 $custom_terms = get_the_terms( $film_id, 'film-genre' );
 $sectionTitle = get_field('aangeraden_films_titel', 'option');
@@ -28,6 +33,12 @@ if( !empty( $custom_terms ) ):
     $args = array( 'post_type' => 'films',
                     'post__not_in' => array($film_id),
                     'posts_per_page' => 5,
+                    'meta_query' => array(
+                      array(
+                          'key'   => 'actief',
+                          'value' => '1',
+                      )
+                      ),
                     'tax_query' => $tax_query );
 
     // finally run the query

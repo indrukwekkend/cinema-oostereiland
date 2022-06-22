@@ -14,10 +14,11 @@
   position: relative;
 
   .video-button {
-    //hier de css voor de videoknop
+    //hier de css voor de videoknop, z-index voor het contrast ::before
     position: absolute;
     top: 45%;
     left: 50%;
+    z-index: 2;
   }
 
   &.contrast {
@@ -29,6 +30,7 @@
       bottom: 0;
       left: 0;
       background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 35%);
+      z-index: 1;
     }
 
     &::after {

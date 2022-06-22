@@ -72,8 +72,8 @@ add_action('after_setup_theme', function () {
 			'categories'    => array( 'indrukwekkend' ),
 			'viewportWidth' => 1024, //align wide voor de inserter?
 			'description'   => esc_html_x( 'Een Media en Tekst blok met een grote afbeelding, titel en een verklarende tekst.', 'Block pattern description', 'indrukwekkend' ),
-			'content'       => '<!-- wp:media-text {"align":"full","mediaType":"image","mediaWidth":67,"className":"is-style-indrukwekkend-afbeelding"} -->
-			<div class="wp-block-media-text alignfull is-stacked-on-mobile is-style-indrukwekkend-afbeelding" style="grid-template-columns:67% auto"><figure class="wp-block-media-text__media"><img src="' . asset_path('images/de-slag.jpg') . '" alt="' . esc_attr__( 'Susan Radder -- De slag om de Schelde', 'indrukwekkend' ) . '"/></figure><div class="wp-block-media-text__content"><!-- wp:heading -->
+			'content'       => '<!-- wp:media-text {"align":"wide","mediaType":"image","mediaWidth":67,"className":"is-style-indrukwekkend-afbeelding"} -->
+			<div class="wp-block-media-text alignwide is-stacked-on-mobile is-style-indrukwekkend-afbeelding" style="grid-template-columns:67% auto"><figure class="wp-block-media-text__media"><img src="' . asset_path('images/de-slag.jpg') . '" alt="' . esc_attr__( 'Susan Radder -- De slag om de Schelde', 'indrukwekkend' ) . '"/></figure><div class="wp-block-media-text__content"><!-- wp:heading -->
 			<h2>Korte quote uit de film</h2>
 			<!-- /wp:heading -->
 			
@@ -128,7 +128,7 @@ add_action('after_setup_theme', function () {
 			'categories'    => array( 'indrukwekkend' ),
 			'viewportWidth' => 1024,
 			'description'   => esc_html_x( 'Twee aaneengesloten afbeeldingen, naast elkaar.', 'Block pattern description', 'indrukwekkend' ),
-			'content'       => '<!-- wp:columns {"verticalAlignment":"center","align":"wide","className":"is-style-indrukwekkend-columns-zonder"} --><div class="wp-block-columns alignwide are-vertically-aligned-center is-style-indrukwekkend-columns-zonder"><!-- wp:column {"verticalAlignment":"center"} --><div class="wp-block-column is-vertically-aligned-center"><!-- wp:image {"align":"full","sizeSlug":"full"} --><figure class="wp-block-image alignfull size-full"><img src="' . asset_path('images/the_shining.jpg') . '" alt="' . esc_attr__( 'The Shining', 'indrukwekkend' ) . '"/></figure><!-- /wp:image --></div><!-- /wp:column --><!-- wp:column {"verticalAlignment":"center"} --><div class="wp-block-column is-vertically-aligned-center"><!-- wp:image {"align":"full",sizeSlug":"full"} --><figure class="wp-block-image alignfull size-full"><img src="' . asset_path('images/walken.jpg') . '" alt="' . esc_attr__( 'Christopher Walken -- Pulp Fiction', 'indrukwekkend' ) . '"/></figure><!-- /wp:image --></div><!-- /wp:column --></div><!-- /wp:columns -->',
+			'content'       => '<!-- wp:columns {"verticalAlignment":"center","align":"wide","className":"is-style-indrukwekkend-columns-zonder"} --><div class="wp-block-columns alignwide are-vertically-aligned-center is-style-indrukwekkend-columns-zonder"><!-- wp:column {"verticalAlignment":"center"} --><div class="wp-block-column is-vertically-aligned-center"><!-- wp:image {"align":"full","sizeSlug":"filmsFeatImg"} --><figure class="wp-block-image alignfull size-filmsFeatImg"><img src="' . asset_path('images/the_shining.jpg') . '" alt="' . esc_attr__( 'The Shining', 'indrukwekkend' ) . '"/></figure><!-- /wp:image --></div><!-- /wp:column --><!-- wp:column {"verticalAlignment":"center"} --><div class="wp-block-column is-vertically-aligned-center"><!-- wp:image {"align":"full",sizeSlug":"filmsFeatImg"} --><figure class="wp-block-image alignfull size-filmsFeatImg"><img src="' . asset_path('images/walken.jpg') . '" alt="' . esc_attr__( 'Christopher Walken -- Pulp Fiction', 'indrukwekkend' ) . '"/></figure><!-- /wp:image --></div><!-- /wp:column --></div><!-- /wp:columns -->',
 		)
 	);
 

@@ -54,9 +54,16 @@
       }
     }
   }
+
+  .ajax-content {
+    padding-top: 3rem;
+
+    h3 {
+      display: none;
+    }
+  }
 }
 /* stylelint-disable no-descending-specificity */
-
 ul.tickets {
   list-style-type: none;
   margin-left: 0;
