@@ -14,6 +14,19 @@ input[type="reset"],
 .wp-block-button__link {
   // Extend button style
   @include button-style();
+
+  &.is-style-secundair {
+    background: $black1;
+    color: $wit;
+    border-color: $black1;
+    padding: 12px 22px;
+    //color????
+    &:hover {
+      color: $black1 !important;
+      background: $wit !important;
+      border-color: $black1 !important;
+    }
+  }
 }
 
 .site .button,
@@ -62,13 +75,14 @@ input[type="reset"],
 
   &.is-style-secundair {
     .wp-block-button__link {
-      background: $brand-secondary;
-      border-color: darken($brand-secondary, 5%);
+      background: $black1;
+      color: $wit;
+      border-color: $black1;
       //color????
       &:hover {
-        color: $button--color-text-hover !important;
-        background: $button--color-background-hover !important;
-        border-color: $button--color-background;
+        color: $black1 !important;
+        background: $wit !important;
+        border-color: $black1 !important;
       }
     }
   }
@@ -162,4 +176,23 @@ input[type="reset"],
 .wp-block-button a.wp-block-button__link[style*="radius"]:focus {
   outline-offset: 2px;
   outline: 2px dotted var(--button--color-background);
+}
+
+@media only screen and (min-width: 768px) {
+  .site .button,
+  input[type="submit"],
+  input[type="reset"],
+  .wp-block-search__button,
+  .wp-block-button__link {
+    // Extend button style
+    &.is-style-secundair {
+      margin-top: 0;
+      margin-left: 10px;
+    }
+  }
+
+  #mce-EMAIL {
+    max-width: 60%;
+    float: left;
+  }
 }

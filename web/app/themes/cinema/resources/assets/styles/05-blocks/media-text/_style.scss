@@ -139,18 +139,18 @@
       &__media {
         position: relative;
 
-        &::after {
-          content: "";
-          width: 100%;
-          top: 0;
-          left: 0;
-          height: 100%;
-          position: absolute;
-          background-image: url("../images/shape-vriend-van.svg");
-          background-size: contain;
-          background-position: 0, 0;
-          background-repeat: no-repeat;
-        }
+        // &::after {
+        //   content: "";
+        //   width: 100%;
+        //   top: 0;
+        //   left: 0;
+        //   height: 100%;
+        //   position: absolute;
+        //   background-image: url("../images/shape-vriend-van.svg");
+        //   background-size: contain;
+        //   background-position: 0, 0;
+        //   background-repeat: no-repeat;
+        // }
       }
 
       &__content {
