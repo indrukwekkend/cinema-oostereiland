@@ -41,6 +41,7 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/add_theme_support/#title-tag
      */
     add_theme_support('title-tag');
+ 
 
     /**
      * Register navigation menus
@@ -62,6 +63,8 @@ add_action('after_setup_theme', function () {
      */
     add_theme_support('post-thumbnails');
 
+    add_post_type_support( 'page', 'excerpt' );
+
     /**
      * Responsive embeds
      * @link https://thrivewp.com/youtube-embed-wordpress/
@@ -69,6 +72,7 @@ add_action('after_setup_theme', function () {
      */
     add_theme_support( 'responsive-embeds' );
 
+    
     /**
      * Enable HTML5 markup support
      * @link https://developer.wordpress.org/reference/functions/add_theme_support/#html5

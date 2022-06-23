@@ -7,8 +7,10 @@ hr {
   margin-right: auto;
 
   &.wp-block-separator {
-    border-bottom: var(--separator--height) solid $seperator-color;
+    border-bottom: var(--separator--height) dotted $seperator-color;
+    border-top: 0;
     opacity: 1;
+    margin: 36px auto;
 
     &:not(.is-style-dots):not(.alignwide) {
       max-width: var(--responsive--aligndefault-width);

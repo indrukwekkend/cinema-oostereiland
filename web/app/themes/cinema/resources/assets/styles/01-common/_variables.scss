@@ -50,7 +50,7 @@ $wit: #fff;
 $brand-primary: $black1;
 $brand-secondary: $button-gray;
 $base-color: $black1;
-$seperator-color: $grijs;
+$seperator-color: $dark-grey;
 $navigation-background:$special-gray;
 $navigation-background-color: $wit;
 $film-header-color: $wit;
@@ -198,7 +198,7 @@ $footer-socials-color: $wit;
   --global--spacing-measure: unset; // Use ch units here. ie: 60ch = 60 character max-width
   --global--spacing-horizontal: #{2.5 * $baseline-unit}; // 25px
   --global--spacing-vertical: #{3 * $baseline-unit}; // 30px.
-  --separator--height: 1px;
+  --separator--height: 2px;
 
   /* Buttons */
   // Fonts
