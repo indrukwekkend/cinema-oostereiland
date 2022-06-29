@@ -83,6 +83,10 @@
           "gotoandplay/gravityforms-composer-installer": "^2.3"
         }
       }
+    },
+    "WPMU": {
+      "type": "composer",
+      "url": "https://premium.wpmudev.org/"
     }
   },
   "require": {
@@ -104,7 +108,10 @@
     "wpackagist-plugin/duracelltomi-google-tag-manager": "^1.11",
     "wpackagist-plugin/regenerate-thumbnails": "^3.1",
     "wpackagist-plugin/post-2-post-for-acf": "1.7.0",
-    "wpackagist-plugin/acf-image-aspect-ratio-crop": "5.1.4"
+    "wpackagist-plugin/acf-image-aspect-ratio-crop": "^5",
+    "wpackagist-plugin/seo-by-rank-math": "*",
+    "wpackagist-plugin/duplicate-post": "^4",
+    "wpmudev/wp-smush-pro": "*"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.6.0",

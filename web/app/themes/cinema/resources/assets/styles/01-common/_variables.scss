@@ -11,8 +11,10 @@ $spacer: 2rem;
 $normal-width: 960px;
 $align-wide: 1200px;
 // boven (bijv.) 1500px   TODO: Koppelen aan XL width??
-$extra-wide: calc(8 * (100vw / 12) - 4rem);
-$align-extra-wide: calc(11 * (100vw / 12) - 4rem);
+// $extra-wide: calc(8 * (100vw / 12) - 4rem);
+// $align-extra-wide: calc(11 * (100vw / 12) - 4rem);
+$extra-wide: $normal-width;
+$align-extra-wide: $align-wide;
 
 //header width: opties: full: 100% / wide: $align-wide / normal: $normal
 $header-width: $align-wide;
@@ -29,7 +31,7 @@ $mobile-width: 414px;
 $ipad-width: 768px;
 $desktop-small-width: 1024px;
 $desktop-large-width: 1200px;
-$desktop-xl-width: 1900px;
+$desktop-xl-width: 1200px;
 
 //custom colors:
 $dynamic-dark: #7d7c7c;

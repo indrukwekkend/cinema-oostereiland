@@ -2,7 +2,7 @@ export default {
   init() {
     // JavaScript to be fired on the agenda page
 
-    // bij openen gelijk deze funvtie uitvoeren ("Vandaag")
+    // bij openen gelijk deze functie uitvoeren ("Vandaag")
     $(function() {
         
       var data = $('#film_number').serializeArray();
@@ -112,6 +112,29 @@ export default {
       actionAjax(data);
     };
 
+
+    // openen en sluiten van de kaarten module
+    document.addEventListener(
+      'click',
+      function(event) {
+        console.log(event);
+        // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
+
+        if (
+          event.target.matches('.bestellen') 
+        ) {
+          console.log(event);
+          openOverlay(event);
+        }
+        else if (
+          event.target.matches('#ticket-modal__close') ||
+          !event.target.closest('.ticket-modal__wrapper')
+        ) {
+          closeModal()
+        }
+      },
+      false
+    )
   },
 };
 
@@ -142,4 +165,53 @@ function removeActiveClass() {
   elems.forEach((elem) => {
     elem.classList.remove('active');
   });
+}
+
+function closeModal() {
+  $('#ticket-modal').removeClass('show');
+}
+
+
+
+const ticketOverlay = document.querySelector('#tickets-overlay');
+const closeButton = document.querySelector('.close-btn');
+const body = document.querySelector('body');
+const getRef = document.getElementById('tickets-iframe-holder');
+
+
+closeButton.addEventListener('click', () => {
+  ticketOverlay.classList.remove('active');
+  body.classList.remove('stop-scroll');
+});
+
+function openOverlay(e) {
+  //stop klikken en toevoegen classes
+  e.preventDefault;
+  ticketOverlay.classList.add('active');
+  body.classList.add('stop-scroll');
+
+  // Haal de informatie op om de juiste Target toe te voegen aan de iframe:
+  var el = e.target;
+  var index = el.dataset.number;
+  console.log(index);
+
+  var makeIframe = document.createElement('iframe');
+  // makeIframe.setAttribute('src', 'https://tickets.cinemaoostereiland.nl/shop/tickets.php?showid='+index);
+  makeIframe.setAttribute('src', 'https://kassa.echtekaartjes.nl/shop/tickets-new.php?showid=636');
+  makeIframe.setAttribute('scrolling', 'yes');
+  makeIframe.style.border = 'none';
+  makeIframe.style.maxWidth = '865px';
+  makeIframe.style.height = '150px';
+
+  window.addEventListener('message', function(e) {
+		// message that was passed from iframe page
+		let message = e.data;
+
+		makeIframe.style.height = message.height + 'px';
+		makeIframe.style.width = message.width + 'px';
+	} , false);
+
+  getRef.innerHTML = '';
+  getRef.appendChild(makeIframe);
+
 }
