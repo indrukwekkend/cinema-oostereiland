@@ -186,13 +186,12 @@ input[type="reset"],
   .wp-block-button__link {
     // Extend button style
     &.is-style-secundair {
-      margin-top: 0;
-      margin-left: 10px;
+      // margin-left: 10px;
     }
   }
 
   #mce-EMAIL {
     max-width: 60%;
-    float: left;
+    margin: 0 auto;
   }
 }

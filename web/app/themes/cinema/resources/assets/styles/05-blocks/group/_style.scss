@@ -18,18 +18,22 @@
     margin-left: auto;
     margin-right: auto;
 
+    .nieuwsbriefformulier {
+      margin-top: var(--global--spacing-vertical);
+    }
+
     > * {
-      margin-top: calc(0.666 * var(--global--spacing-vertical));
-      margin-bottom: calc(0.666 * var(--global--spacing-vertical));
+      margin-top: calc(0.3 * var(--global--spacing-vertical));
+      margin-bottom: calc(0.3 * var(--global--spacing-vertical));
 
       &.alignfull {
         @extend %responsive-alignfull-width-mobile;
       }
 
-      @include media(mobile) {
-        margin-top: var(--global--spacing-vertical);
-        margin-bottom: var(--global--spacing-vertical);
-      }
+      // @include media(mobile) {
+      //   margin-top: var(--global--spacing-vertical);
+      //   margin-bottom: var(--global--spacing-vertical);
+      // }
 
       &:first-child {
         margin-top: 0;
@@ -45,7 +49,7 @@
     padding: calc(0.666 * var(--global--spacing-vertical));
 
     @include media(mobile) {
-      padding: var(--global--spacing-vertical);
+      padding: calc(1.666 * var(--global--spacing-vertical));
     }
   }
 

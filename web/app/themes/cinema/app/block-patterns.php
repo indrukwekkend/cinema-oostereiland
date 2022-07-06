@@ -27,6 +27,10 @@ if ( function_exists( 'register_block_pattern_category' ) ) {
 		'indrukwekkend',
 		array( 'label' => esc_html__( 'Indrukwekkend', 'indrukwekkend' ) )
 	);
+	register_block_pattern_category(
+		'header',
+		array( 'label' => esc_html__( 'Header', 'indrukwekkend' ) )
+	);
 }
 
 /**
@@ -131,6 +135,24 @@ add_action('after_setup_theme', function () {
 			'content'       => '<!-- wp:columns {"verticalAlignment":"center","align":"wide","className":"is-style-indrukwekkend-columns-zonder"} --><div class="wp-block-columns alignwide are-vertically-aligned-center is-style-indrukwekkend-columns-zonder"><!-- wp:column {"verticalAlignment":"center"} --><div class="wp-block-column is-vertically-aligned-center"><!-- wp:image {"align":"full","sizeSlug":"filmsFeatImg"} --><figure class="wp-block-image alignfull size-filmsFeatImg"><img src="' . asset_path('images/the_shining.jpg') . '" alt="' . esc_attr__( 'The Shining', 'indrukwekkend' ) . '"/></figure><!-- /wp:image --></div><!-- /wp:column --><!-- wp:column {"verticalAlignment":"center"} --><div class="wp-block-column is-vertically-aligned-center"><!-- wp:image {"align":"full",sizeSlug":"filmsFeatImg"} --><figure class="wp-block-image alignfull size-filmsFeatImg"><img src="' . asset_path('images/walken.jpg') . '" alt="' . esc_attr__( 'Christopher Walken -- Pulp Fiction', 'indrukwekkend' ) . '"/></figure><!-- /wp:image --></div><!-- /wp:column --></div><!-- /wp:columns -->',
 		)
 	);
+
+		// Aangesloten afbeeldingen.
+		register_block_pattern(
+			'indrukwekkend/header-landing',
+			array(
+				'title'         => esc_html__( 'Header landingspagina', 'indrukwekkend' ),
+				'categories'    => array( 'header' ),
+				'viewportWidth' => 1024,
+				'description'   => esc_html_x( 'Twee aaneengesloten afbeeldingen, naast elkaar.', 'Block pattern description', 'indrukwekkend' ),
+				'content'       => '<!-- wp:cover {"url":"'. asset_path('images/idfa.jpg') .'","id":2347,"dimRatio":20,"minHeight":307,"minHeightUnit":"px","isDark":false,"align":"full"} -->
+				<div class="wp-block-cover alignfull is-light" style="min-height:307px"><span aria-hidden="true" class="has-background-dim-20 wp-block-cover__gradient-background has-background-dim"></span><img class="wp-block-cover__image-background wp-image-2347" alt="" src="'. asset_path('images/idfa.jpg') .'" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Titel schrijven...","fontSize":"large"} -->
+				<p class="has-text-align-center has-large-font-size"></p>
+				<!-- /wp:paragraph --></div></div>
+				<!-- /wp:cover -->
+				
+				<!-- wp:post-title {"level":1} /-->',
+			)
+		);
 
 
 	// TODO: Kijken of we hier homepage moten instellen:

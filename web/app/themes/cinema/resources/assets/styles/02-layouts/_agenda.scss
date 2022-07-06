@@ -5,15 +5,6 @@
     display: block;
     padding-top: $top-marge-transparant;
 
-    .page-header-agenda {
-      h1 {
-        font-size: $h2-font-size;
-        font-weight: 100;
-        letter-spacing: 0;
-        text-transform: uppercase;
-      }
-    }
-
     .entry-content-agenda > :not(.alignfull) {
       max-width: 960px;
       width: 100% !important;

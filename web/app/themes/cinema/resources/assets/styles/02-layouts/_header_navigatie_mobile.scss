@@ -72,7 +72,7 @@
 
         &::after {
           transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1) 0s;
-          background: #0e0e0e;
+          border-bottom: 2px dotted black;
           bottom: 0;
           content: "";
           height: 2px;

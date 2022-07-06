@@ -34,6 +34,7 @@ if ( has_block( 'indrukwekkend/header-achtergrond' ) || is_singular('films') )  
       @endif
  
       @php do_action('get_footer') @endphp
+      @include('partials.footer-cta')
       @include('partials.footer')
     </div>
     @php wp_footer() @endphp

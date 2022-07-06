@@ -55,3 +55,26 @@ fieldset[disabled] .btn:hover {
   background-color: #f0f0f0;
   border: none;
 }
+
+div.seat {
+  background-image: url('https://cinemabedrock.local/app/themes/cinema/dist/images/stoelkeuze_vrij.png') !important;
+  border: none !important;
+}
+
+#seats-container div.peg {
+  background-image: url('https://cinemabedrock.local/app/themes/cinema/dist/images/stoelkeuze_jij.png') !important;
+}
+
+div.seat.seat-unavailable {
+  background-image: url('https://cinemabedrock.local/app/themes/cinema/dist/images/stoelkeuze_bezet.png') !important;
+}
+
+div.seat.seat-blocked {
+  background-image: url('https://cinemabedrock.local/app/themes/cinema/dist/images/stoelkeuze_blocked.png') !important;
+}
+
+.ticketlab-margin-bottom { margin: 20px 0; }
+
+#frontindicator {
+  margin-left: 1%;
+}
