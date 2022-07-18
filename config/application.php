@@ -53,6 +53,7 @@ define('WP_ENV', env('WP_ENV') ?: 'production');
  */
 Config::define('WP_HOME', env('WP_HOME'));
 Config::define('WP_SITEURL', env('WP_SITEURL'));
+Config::define('TICKETURL', env('TICKETURL'));
 
 /**
  * Custom Content Directory

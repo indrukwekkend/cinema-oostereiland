@@ -157,6 +157,42 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_62c81cc50ffd7",
+            "label": "Ticketlab_username",
+            "name": "ticketlab_username",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62c81d0d820c9",
+            "label": "ticketlab_password",
+            "name": "ticketlab_password",
+            "type": "password",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -176,5 +212,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1655893084
+    "modified": 1657286018
 }

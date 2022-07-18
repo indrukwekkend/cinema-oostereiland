@@ -92,7 +92,7 @@
   "require": {
     "php": ">=7.1",
     "advanced-custom-fields/advanced-custom-fields-pro": "^5.8",
-    "deliciousbrains-plugin/wp-migrate-db-pro": "^1.8",
+    "deliciousbrains-plugin/wp-migrate-db-pro": "^2",
     "composer/installers": "^1.11",
     "kinsta/kinsta-mu-plugins": "2.0.15",
     "gravityforms/gravityforms": "*",

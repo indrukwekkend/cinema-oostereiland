@@ -126,9 +126,10 @@ function openOverlay(e) {
   // Haal de informatie op om de juiste Target toe te voegen aan de iframe:
   var el = e.target;
   var index = el.dataset.number;
+  var site = el.dataset.site;
 
   var makeIframe = document.createElement('iframe');
-  makeIframe.setAttribute('src', 'https://tickets.cinemaoostereiland.nl/shop/tickets.php?showid='+index);
+  makeIframe.setAttribute('src', 'https://'+site+'/shop/tickets.php?showid='+index);
   makeIframe.setAttribute('scrolling', 'yes');
   makeIframe.style.border = 'none';
   makeIframe.style.maxWidth = '865px';
