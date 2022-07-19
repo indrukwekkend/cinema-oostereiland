@@ -152,8 +152,94 @@ export default {
 
     });
 
+    // openen en sluiten van de kaarten bestel modules
+    document.addEventListener(
+      'click',
+      function(event) {
+        console.log(event);
+        // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
+        if (
+          event.target.matches('#toon_tickets')
+        ) {
+          openModal()
+        }
+        else if (
+          event.target.matches('.bestellen') 
+        ) {
+          // console.log(event);
+          openOverlay(event);
+        }
+        else if (
+          event.target.matches('.friend') 
+        ) {
+          // console.log(event);
+          openOverlay(event);
+        }
+        else if (
+          event.target.matches('#ticket-modal__close') ||
+          !event.target.closest('.ticket-modal__wrapper')
+        ) {
+          closeModal()
+        }
+      },
+      false
+    )
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
   },
 };
+
+// open de kaarten modal:
+function openModal() {
+  $('#ticket-modal').addClass('show');
+}
+
+function closeModal() {
+  $('#ticket-modal').removeClass('show');
+}
+
+
+
+const ticketOverlay = document.querySelector('#tickets-overlay');
+const closeButton = document.querySelector('.close-btn');
+const body = document.querySelector('body');
+const getRef = document.getElementById('tickets-iframe-holder');
+
+
+closeButton.addEventListener('click', () => {
+  ticketOverlay.classList.remove('active');
+  body.classList.remove('stop-scroll');
+});
+
+function openOverlay(e) {
+  //stop klikken en toevoegen classes
+  e.preventDefault;
+  ticketOverlay.classList.add('active');
+  body.classList.add('stop-scroll');
+
+  // Haal de informatie op om de juiste Target toe te voegen aan de iframe:
+  var el = e.target;
+  var index = el.dataset.number;
+  var site = el.dataset.site;
+  var classes = el.className;
+
+  var makeIframe = document.createElement('iframe');
+  
+  if (classes.includes('friend')) {
+    makeIframe.setAttribute('src', 'https://'+site+'/membership/enroll.php');
+  } 
+  else {
+    makeIframe.setAttribute('src', 'https://'+site+'/shop/tickets.php?showid='+index);
+  }
+  makeIframe.setAttribute('scrolling', 'yes');
+  makeIframe.style.border = 'none';
+  makeIframe.style.maxWidth = '865px';
+  makeIframe.style.height = '1529px';
+
+  getRef.innerHTML = '';
+  getRef.appendChild(makeIframe);
+
+}
+
+
