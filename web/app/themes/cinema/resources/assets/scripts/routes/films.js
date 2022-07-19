@@ -20,7 +20,7 @@ export default {
           else if (
             event.target.matches('.bestellen') 
           ) {
-            console.log(event);
+            // console.log(event);
             openOverlay(event);
           }
           else if (
