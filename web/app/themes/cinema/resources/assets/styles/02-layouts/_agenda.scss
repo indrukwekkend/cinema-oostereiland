@@ -72,6 +72,14 @@ ul.tickets {
     text-transform: uppercase;
     border-bottom: 2px dotted gray;
 
+    &.hidden {
+      display: none;
+    }
+
+    &.admin {
+      background: #f4d1d1;
+    }
+
     &:last-child {
       border-bottom: none;
     }

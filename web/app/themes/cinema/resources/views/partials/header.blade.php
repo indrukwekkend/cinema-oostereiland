@@ -8,6 +8,23 @@
  */
 
 $wrapper_classes  = 'banner site-header';
+
+  if (TICKETURL != 'tickets.cinemaoostereiland.nl') :
+?>
+
+ <style>
+  header.site-header .container .brand,
+  .template-agenda header.site-header .container .brand {
+    background-image: url(/app/themes/cinema/dist/images/CE_logo_diap.svg);
+  }
+
+  .home header.site-header .container .brand, .single-films header.site-header .container .brand {
+    background-image: url(/app/themes/cinema/dist/images/CE_logo.svg);
+  }
+</style>
+
+<?php
+  endif;
 ?>
 
 <header class="<?php echo esc_attr( $wrapper_classes ); ?>" id="masthead" role="banner">

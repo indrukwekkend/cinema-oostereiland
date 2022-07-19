@@ -30,3 +30,29 @@ add_action('customize_preview_init', function () {
 add_action('enqueue_block_editor_assets', function () {
     wp_enqueue_script('sage/customizer.js', asset_path('scripts/block-editor.js'), ['customize-preview'], null, true);
 });
+
+
+/*
+ * Add columns to exhibition post list
+ */
+
+add_filter ( 'manage_films_posts_columns', function ($columns) {
+
+    return array_merge ( $columns, array ( 
+        'start_date' => __ ( 'TL Nummer' ),
+      ) );
+
+});
+
+/*
+ * Add columns to exhibition post list
+ */
+add_action ( 'manage_films_posts_custom_column',  __NAMESPACE__ . '\\exhibition_custom_column', 10, 2 );
+
+function exhibition_custom_column ( $column, $post_id ) {
+    switch ( $column ) {
+      case 'start_date':
+        echo get_post_meta ( $post_id, 'ticketlab_id', true );
+        break;
+  }
+}

@@ -230,6 +230,12 @@ figcaption a,
   display: none;
 }
 
+#loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
 @media only screen and (min-width: 765px) {
   h2,
   .h2 {

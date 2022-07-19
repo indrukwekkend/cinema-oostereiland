@@ -36,12 +36,22 @@
 
   &__close {
     font-weight: 400;
-    font-size: 19px;
+    font-size: 0;
     position: absolute;
     right: 12px;
     text-decoration: none;
     top: 12px;
     z-index: 30;
+
+    &::before {
+      font-size: 50px;
+      line-height: 1;
+      color: #fff;
+      opacity: 1;
+      content: "\f00d";
+      font-family: "Font Awesome 5 Pro", sans-serif;
+      font-weight: 300;
+    }
   }
 
   .ticket-overlay {
@@ -110,6 +120,7 @@
 
       .special {
         small {
+          display: none;
           font-size: 1.6rem;
           background-color: #fff;
         }
@@ -150,7 +161,7 @@
 
     &__close {
       font-weight: 400;
-      font-size: 19px;
+      font-size: 0;
       position: absolute;
       right: 12px;
       text-decoration: none;
