@@ -22,12 +22,10 @@ web/.htaccess
 .env.*
 !.env.example
 
-#authentications (secret)
-auth.json
-
 # Composer
 /vendor
 
 # WP-CLI
 wp-cli.local.yml
+auth.*
 auth.json
