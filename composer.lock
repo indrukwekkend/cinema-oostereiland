@@ -391,12 +391,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:indrukwekkend/Film-blokken.git",
-                "reference": "4d1d8d5ee7aadf095c867d836bdae0a09b0e9bf5"
+                "reference": "e2bbd9d294b5aae877d04233a4423b0d849c9983"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/indrukwekkend/Film-blokken/zipball/4d1d8d5ee7aadf095c867d836bdae0a09b0e9bf5",
-                "reference": "4d1d8d5ee7aadf095c867d836bdae0a09b0e9bf5",
+                "url": "https://api.github.com/repos/indrukwekkend/Film-blokken/zipball/e2bbd9d294b5aae877d04233a4423b0d849c9983",
+                "reference": "e2bbd9d294b5aae877d04233a4423b0d849c9983",
                 "shasum": ""
             },
             "require": {
@@ -423,7 +423,7 @@
                 "source": "https://github.com/indrukwekkend/Film-blokken/tree/main",
                 "issues": "https://github.com/indrukwekkend/Film-blokken/issues"
             },
-            "time": "2022-07-19T11:29:50+00:00"
+            "time": "2022-07-19T14:20:16+00:00"
         },
         {
             "name": "indrukwekkend/subpaginas",

@@ -159,11 +159,6 @@ export default {
         console.log(event);
         // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
         if (
-          event.target.matches('#toon_tickets')
-        ) {
-          openModal()
-        }
-        else if (
           event.target.matches('.bestellen') 
         ) {
           // console.log(event);
@@ -175,12 +170,6 @@ export default {
           // console.log(event);
           openOverlay(event);
         }
-        else if (
-          event.target.matches('#ticket-modal__close') ||
-          !event.target.closest('.ticket-modal__wrapper')
-        ) {
-          closeModal()
-        }
       },
       false
     )
@@ -189,15 +178,6 @@ export default {
     // JavaScript to be fired on all pages, after page specific JS is fired
   },
 };
-
-// open de kaarten modal:
-function openModal() {
-  $('#ticket-modal').addClass('show');
-}
-
-function closeModal() {
-  $('#ticket-modal').removeClass('show');
-}
 
 
 

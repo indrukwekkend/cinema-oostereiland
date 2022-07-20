@@ -103,6 +103,11 @@ ul.tickets {
         background-color: #fff;
         transform: scaleX(1.08) scaleY(1.09);
       }
+
+      a.bestellen {
+        background-color: $black1;
+        color: #fff;
+      }
     }
 
     .text {
@@ -148,6 +153,8 @@ ul.tickets {
 
         .label {
           @include label_style();
+
+          display: none;
         }
 
         .special {
@@ -212,15 +219,32 @@ ul.films {
     display: grid;
     padding: 30px;
     position: relative;
+    transition: all 0.2s;
 
     &:nth-child(2n-1) {
       background-color: darken($special-gray, 3);
     }
 
-    a.bestellen {
+    a.tickets {
       @include button_style();
 
       background-color: $wit;
+    }
+
+    &:hover,
+    &:focus-within {
+      background-color: $wit;
+
+      &::after {
+        box-shadow: 0 7px 13px rgba(0, 0, 0, 0.12);
+        background-color: #fff;
+        transform: scaleX(1.08) scaleY(1.09);
+      }
+
+      a.tickets {
+        background-color: $black1;
+        color: #fff;
+      }
     }
 
     a.overlay {

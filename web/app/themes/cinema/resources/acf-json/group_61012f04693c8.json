@@ -31,7 +31,7 @@
                 "class": "",
                 "id": ""
             },
-            "message": "De algemene werking van de Films hier kort uitgelegd:\r\n\r\n<b>Nieuwe Films<\/b>\r\nIedere ochtend worden de nieuwe films opgehaald van de ticketlab server.\r\nDe film wordt dan in \"concept\" geplaatst op de site. De film krijgt dan het label \"verwacht\" mee.\r\n\r\n<b>Film Gegevens<\/b>\r\nIedere film in \"concept\" met het label \"verwacht\" én met MackBox data wordt op het filmdepot gecontroleerd en hier worden automatisch films, foto's, data en beschrijvingen toegevoegd. Dat gebeurt éénmalig.\r\nBewerken van de gegevens kan nu gewoon, ze worden niet meer overschreven door filmdepot, tenzij je het vinkje in de film weer uitzet.\r\nhierna kun je de film publiceren. Hij komt nu in de lijst \"verwacht\" te staan, totdat er voorstellingen aan gekoppeld worden.\r\n\r\n<b>Voorstellingen<\/b>\r\nOok wordt iedere ochtend gecontroleerd of de films met het label \"verwacht\" inmiddels voorstellingen hebben. Als dat zo is, wordt de film automatisch op \"gepubliceerd\" gezet en het label \"verwacht\" wordt verwijdert. Dit gebeurt om te zorgen dat nooit per ongeluk tickets zijn zonder gekoppelde film. \r\nLET OP! de film moet dus compleet zijn voordat er voorstellingen worden gepland. \r\n\r\n<b>Oude films<\/b>\r\nOm ervoor te zorgen dat niet continue alle oude films gecontroleerd worden op het hebben van voorstellingen (te belastend voor het kassasysteem), krijgt elke film ook het label \"actief\" mee de eerste keer dat hij voorstellingen heeft. Zodra er geen voorstellingen meer zijn van de film, wordt het label automatisch verandert  in \"nee\".\r\nWil je nu een oude film opnieuw activeren? zet dan het label \"verwacht\" weer op \"aan\". Hierna wordt deze weer meegenomen in de cyclus van controles op tickets en actief op de site geplaatst. \r\n\r\n<b>LET OP! <\/b>Er zijn dus in elk geval 3 criteria voor het goed verschijnen van de films op de site:\r\nDe film is gepubliceerd (niet concept)\r\nDe film heeft het juiste label \"verwacht\" \r\nDe film heeft het juiste label \"actief\"\r\n\r\nIn deze instellingen staan een aantal onderdelen die handig zijn om te gebruiken:\r\nDe labels van Films kunnen worden aangepast middels de tekst velden op deze pagina",
+            "message": "De algemene werking van de Films hier kort uitgelegd:\r\n\r\n<b>Nieuwe Films<\/b>\r\nNa het plannen van de films in Ticketlab, klik je hieronder op \"ALLE Films ophalen\"\r\nDe films worden dan in \"concept\" geplaatst op de site. De film krijgt dan het label \"actief\" mee.\r\n\r\n<b>Film Gegevens<\/b>\r\nElke nieuwe film ga je nu af om te bewerken. In \"geavanceerd\" staat de knop \"ophalen filmdepot\". Door daarop te klikken, laad je de filmdepotdata. Als die gegevens niet beschikbaar zijn, kun je ze ook met de hand toevoegen. \r\nNa het laden van de gegevens wordt de film al automatisch gepubliceerd. De filmdepot knop is verdwenen.\r\n\r\n<b>Voorstellingen<\/b>\r\nOmdat voorstellingen in de agenda direct van ticketlab afkomstig zijn, controleren we elke film dagelijks op het hebben van voorstellingen. \r\nHet vinkje in de film \"actief\" wordt hiermee dan aan- of uitgezet. Dat vinkje zorgt er voor dat een film in de lijsten met films niet getoond wordt terwijl er geen voorstellingen van zijn. \r\nPlan je echter later nieuwe voorstellingen van een niet meer actieve film, dan wordt dat dus weer hersteld.\r\n\r\n<b>LET OP! <\/b>Er zijn dus in elk geval 2 criteria voor het goed verschijnen van de films op de site:\r\nDe film is gepubliceerd (niet concept);\r\nDe film heeft het juiste label \"actief\".\r\n\r\nDe labels van Films kunnen worden aangepast middels de tekst velden op deze pagina",
             "new_lines": "wpautop",
             "esc_html": 0
         },
@@ -48,7 +48,7 @@
                 "class": "",
                 "id": ""
             },
-            "message": "Alle Films laden vanaf onderstaande datum (draait normaal elke ochtend automatisch)\r\n<a href=\"\" id=\"render_events\" class=\"button button-primary button-large\">Laad ALLE films<\/a>\r\n\r\nMis je een sppecifieke film? Laad hem hiermee in.\r\n<a href=\"\" id=\"render_single_event\" class=\"button button-primary button-large\">Laad losse Film<\/a>\r\n\r\nAlle tickets worden opgeslagen in het tijdelijke geheugen. Klik hier om het geheugen te wissen, bijvoorbeeld na het aanpassen van een zaal\r\n<a href=\"\" id=\"render_tickets\" class=\"button button-primary button-large\">Ververs tickets<\/a>",
+            "message": "Alle Films laden vanaf onderstaande datum.\r\n<a href=\"\" id=\"render_events\" class=\"button button-primary button-large\">Laad ALLE films<\/a>\r\n\r\nMis je een sppecifieke film? Laad hem hiermee in.\r\n<a href=\"\" id=\"render_single_event\" class=\"button button-primary button-large\">Laad losse Film<\/a>\r\n\r\nAlle tickets worden opgeslagen in het tijdelijke geheugen. Klik hier om het geheugen te wissen, bijvoorbeeld na het aanpassen van een zaal\r\n<a href=\"\" id=\"render_tickets\" class=\"button button-primary button-large\">Ververs tickets<\/a>",
             "new_lines": "wpautop",
             "esc_html": 0
         },
@@ -57,7 +57,7 @@
             "label": "Nieuwe Films ophalen vanaf datum",
             "name": "nieuwe_films_ophalen_vanaf_datum",
             "type": "date_picker",
-            "instructions": "",
+            "instructions": "Na het aanpassen van deze datum, moet je eerst \"bijwerken\" (rechtsboven)",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -212,5 +212,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1657286018
+    "modified": 1658237938
 }
