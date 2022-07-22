@@ -200,16 +200,29 @@ header.site-header {
             display: inline-block;
 
             > a {
-              background-color: $wit;
-              color: $black1;
-              border: 1px solid $wit;
+              background-color: $black1;
+              color: $wit;
+              border: 1px solid $black1;
               transition: all 0.3s;
               text-shadow: none !important;
 
               &:hover {
-                background-color: $black1;
-                border-color: $black1;
-                color: $wit !important;
+                background-color: $wit;
+                color: $black1 !important;
+              }
+            }
+
+            .home & {
+              > a {
+                background-color: $wit;
+                color: $black1;
+                border: 1px solid $wit;
+
+                &:hover {
+                  background-color: $black1;
+                  color: $wit !important;
+                  border: 1px solid $black1;
+                }
               }
             }
           }
