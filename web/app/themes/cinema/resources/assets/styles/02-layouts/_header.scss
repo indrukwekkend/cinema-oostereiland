@@ -170,6 +170,8 @@
 @media only screen and (min-width: $ipad-width) { //1024
   // hier de verandereringen boven ipad
   .cta-bar {
+    bottom: 70%;
+
     &__content {
       display: flex;
       justify-content: space-between;

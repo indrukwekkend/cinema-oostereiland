@@ -18,7 +18,7 @@
 
     .list {
       display: flex;
-      align-items: center;
+      flex-direction: column;
 
       .option {
         margin-right: 30px;
@@ -279,6 +279,13 @@ ul.films {
         min-height: 800px;
         margin-left: 30px;
         margin-right: 30px;
+      }
+    }
+
+    .filters {
+      .list {
+        flex-direction: row;
+        align-items: center;
       }
     }
   }
