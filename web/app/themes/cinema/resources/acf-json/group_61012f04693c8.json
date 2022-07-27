@@ -181,7 +181,7 @@
             "key": "field_62c81d0d820c9",
             "label": "ticketlab_password",
             "name": "ticketlab_password",
-            "type": "password",
+            "type": "text",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -190,9 +190,11 @@
                 "class": "",
                 "id": ""
             },
+            "default_value": "",
             "placeholder": "",
             "prepend": "",
-            "append": ""
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -212,5 +214,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1658237938
+    "modified": 1658851748
 }

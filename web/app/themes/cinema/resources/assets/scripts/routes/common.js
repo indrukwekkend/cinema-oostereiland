@@ -212,13 +212,23 @@ function openOverlay(e) {
   else {
     makeIframe.setAttribute('src', 'https://'+site+'/shop/tickets.php?showid='+index);
   }
-  makeIframe.setAttribute('scrolling', 'yes');
+  makeIframe.setAttribute('scrolling', 'no');
   makeIframe.style.border = 'none';
   makeIframe.style.maxWidth = '865px';
-  makeIframe.style.height = '1529px';
+  makeIframe.style.height = '150px';
+
+  window.addEventListener('message', function(e) {
+		// message that was passed from iframe page
+		let message = e.data;
+
+		makeIframe.style.height = message.height + 'px';
+		makeIframe.style.width = message.width + 'px';
+	} , false);
 
   getRef.innerHTML = '';
   getRef.appendChild(makeIframe);
+
+  
 
 }
 
