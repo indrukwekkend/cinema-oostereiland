@@ -127,7 +127,7 @@ button,
   .faux-button,
   .faux-button.more-link,
   .wp-block-file__button {
-    font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+    // font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif; 
   }
 }
 
@@ -235,6 +235,15 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 }
 
+.search-form {
+  button {
+    @include button-style();
+  
+    background-color: #000;
+    color: #fff;
+  }
+}
+
 //verborgen zoek formulier boven de pagina
 #search {
   position: fixed;
@@ -278,7 +287,9 @@ input[type="search"]::-webkit-search-results-decoration {
     }
   }
 
-  .search-form .search-field {
-    width: 300px;
+  .search-form {
+    .search-field {
+      width: 300px;
+    }
   }
 }

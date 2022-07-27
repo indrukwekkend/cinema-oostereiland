@@ -14,7 +14,7 @@
   <div class="wp-block-group__inner-container">
     <h2 class="has-text-align-center">Profiteer van korting op elke film</h2>
 
-    <p class="has-text-align-center">Ben je filmliefhebber en wil je onze activiteiten ondersteunen? Je bent van harte welkom als Vriend van Cinema Oostereiland!</p>
+    <p class="has-text-align-center">Ben je filmliefhebber en wil je onze activiteiten ondersteunen? Je bent van harte welkom als Vriend van Cinema <?= $cinema ?>!</p>
 
     <div class="wp-container-1 wp-block-buttons">
       <div class="wp-block-button aligncenter is-style-secundair"><a class="wp-block-button__link friend" data-site="<?= TICKETURL ?>">Ik word vriend</a></div>
