@@ -24,6 +24,9 @@ if( $hero ):
   $wrapper_classes .= true === $contrast ? ' contrast' : '';
 
 endif; 
+
+$titel_actueel = get_field('actuele_films_titel', 'options');
+$alleen_vandaag = get_field('films_vandaag', 'options');
 ?>
 
 <header class="page-header-film alignfull {{$wrapper_classes}}" style="background-image: url(<?=$backgroundImage?>); ">
@@ -71,11 +74,17 @@ endif;
   ?>
 
   <div class="container alignwide">
-  <h2>Vandaag <span class='alles'></h2> 
+  <h2>@php echo $titel_actueel @endphp</h2> 
 
   
   <div class="slider dagslider">
-    @php echo getTicketTable($shows); @endphp 
+    <?php 
+      if ($alleen_vandaag): 
+          echo getTicketTable($shows);
+      else:
+          echo getFilms();
+      endif;
+    ?>
   </div>
 
   </div>
@@ -126,7 +135,7 @@ function getTicketTable($shows) {
     $titel = 'Nog geen titel';
     $film_info = '';
     $filmlink = '';
-    $thumbnail = "<img src='https://picsum.photos/150/200' />";
+    $thumbnail = "<img src='https://picsum.photos/150/250' />";
     $meta = '';
 
     while ( $the_query->have_posts() ) : $the_query->the_post();
@@ -219,4 +228,118 @@ function getTicketTable($shows) {
   wp_reset_postdata();
   return $output;
 }
+
+function getFilms() {
+
+  $output = '';
+
+  // get states
+  $args = array(
+    'post_type' => 'films',
+    'posts_per_page' => -1,
+    'orderby' => 'rand',
+    'post_status' => array( 'publish', 'future' ),
+    //TODO: Alleen actieve films ophalen, de oude niet....
+    'meta_key'   => 'actief',		
+      'meta_query' => array(
+        array(
+            'key'     => 'actief',
+            'value'   => 1,
+            'compare' => 'IN',
+        ),
+    ),
+  );
+
+    $the_query = new WP_Query( $args );
+
+    while ( $the_query->have_posts() ) : $the_query->the_post();
+
+      $id = get_the_ID();
+      $titel = get_the_title();
+      $meta = '';
+      $film_info = '';
+      $filmlink = get_the_permalink();
+
+      $regisseur = '';
+      $duur = '';
+      $land = '';
+
+      $size = 'medium_large';
+      $thumbnail = get_field( 'alternatieve_afbeelding');
+
+      // Load leeftijd settings and values.
+      $soorten = get_field('kijkwijzer_soort');
+      $leeftijd = get_field('kijkwijzer_leeftijd');
+
+      //Thumbnail
+      if ( $thumbnail ) { 
+
+        $url = $thumbnail['url'];
+        $alt = esc_attr($thumbnail['alt']);
+    
+        // Thumbnail size attributes.
+        $thumb = esc_url($thumbnail['sizes'][ $size ]);
+  
+        $thumbnail = "<img src='$thumb' alt='$alt' />";
+  
+      }
+
+      // Display labels. 
+      // PLUGIN_URL is een defined constant.
+      if( $soorten ): 
+        $meta .= '<ul class="kijkwijzer">';
+
+            //leeftijd eerst
+            $meta .= "<li><img src='". PLUGIN_URL ."dist/images/B_".$leeftijd['label'].".png' alt='".$leeftijd['value']." jaar' /></li>";
+            
+            //soorten daarna:
+            foreach( $soorten as $soort ):
+                $meta .=  '<li><img src="'. PLUGIN_URL .'dist/images/'. strtolower($soort) .'.png" alt="'.$soort.'" /></li>';
+            endforeach;
+
+          $meta .= '</ul>';
+      endif;
+
+      //metadata
+      $regisseur = get_post_meta( $id, 'regie', true );
+      $duur = get_post_meta( $id, 'duur', true );
+      $land = get_post_meta( $id, 'land', true );
+      $taal = get_post_meta( $id, 'taal', true );
+
+      $film_info .= $duur .' min. '.$taal.' '.$regisseur;
+
+
+      ///////////////////////////////////
+      //
+      // Output naar de site begint hier:
+      //
+      //////////////////////////////////
+
+      $output .= '<li class="ticket">';
+          //TODO: Specials
+      // Titel met URL
+      $output .= '<div class="card filmsFeatImg">';
+        $output .= sprintf('<picture class="thumbnail">%1$s</picture>', $thumbnail);
+        $output .= '<div class="text">';
+        $output .= '<a class="overlay" href="'.$filmlink.'" title="'.$titel.'"></a>';
+            $output .= '<h3>'.$titel.'</h3>';
+            $output .= '<div class="extra">'.$meta.'</div>';
+      
+        $output .= '</div>';
+      $output .= '</div>';
+
+      // Tijd:
+      // Zaal:
+
+    $output .= '</li>';
+
+  endwhile;
+
+
+
+  wp_reset_postdata();
+  return $output;
+}
+
+
 ?>

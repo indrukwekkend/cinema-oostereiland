@@ -105,11 +105,49 @@
             "new_lines": ""
         },
         {
+            "key": "field_62e25a36e6fb8",
+            "label": "Films vandaag",
+            "name": "films_vandaag",
+            "type": "true_false",
+            "instructions": "De filmslider op de homepage laat alleen films van vandaag zien, óf hij laat de 6 eerstvolgende films zien.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "Toon alleen films van vandaag",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_62e2596b6fdb8",
+            "label": "Home page actuele films",
+            "name": "actuele_films_titel",
+            "type": "text",
+            "instructions": "Deze titel staat op de homepage direct onder het filmbeeld.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "75",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Vandaag",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_62a333f16c4c9",
             "label": "Aangeraden films titel",
             "name": "aangeraden_films_titel",
             "type": "text",
-            "instructions": "",
+            "instructions": "Deze titel wordt gebruikt onder elke individuele film, om andere films aan te raden.",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -214,5 +252,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1658851748
+    "modified": 1659001558
 }
