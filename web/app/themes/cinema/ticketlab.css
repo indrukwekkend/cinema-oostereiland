@@ -56,21 +56,25 @@ fieldset[disabled] .btn:hover {
   border: none;
 }
 
-div.seat {
-  background-image: url('https://cinemabedrock.local/app/themes/cinema/dist/images/stoelkeuze_vrij.png') !important;
+div.seat,
+div.legend-available {
+  background-image: url('https://cinemaoostereiland.nl/app/themes/cinema/dist/images/stoelkeuze_vrij.png') !important;
   border: none !important;
 }
 
-#seats-container div.peg {
-  background-image: url('https://cinemabedrock.local/app/themes/cinema/dist/images/stoelkeuze_jij.png') !important;
+#seats-container div.peg,
+div.legend-selected {
+  background-image: url('https://cinemaoostereiland.nl/app/themes/cinema/dist/images/stoelkeuze_jij.png') !important;
 }
 
-div.seat.seat-unavailable {
-  background-image: url('https://cinemabedrock.local/app/themes/cinema/dist/images/stoelkeuze_bezet.png') !important;
+div.seat.seat-unavailable,
+div.legend-unavailable {
+  background-image: url('https://cinemaoostereiland.nl/app/themes/cinema/dist/images/stoelkeuze_bezet.png') !important;
 }
 
-div.seat.seat-blocked {
-  background-image: url('https://cinemabedrock.local/app/themes/cinema/dist/images/stoelkeuze_blocked.png') !important;
+div.seat.seat-blocked,
+div.legend-blocked {
+  background-image: url('https://cinemaoostereiland.nl/app/themes/cinema/dist/images/stoelkeuze_blocked.png') !important;
 }
 
 .ticketlab-margin-bottom { margin: 20px 0; }
