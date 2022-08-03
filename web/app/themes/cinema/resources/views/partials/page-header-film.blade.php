@@ -28,7 +28,12 @@
 
   // Youtube staat er als complete URL in, dus zoeken we de ?v=  : 
   parse_str( parse_url( $Youtube, PHP_URL_QUERY ), $my_array_of_vars );
-  $Youtube = $my_array_of_vars['v'];
+  if (isset($my_array_of_vars['v'])) {
+    $Youtube = $my_array_of_vars['v'];
+  } else {
+    $Youtube = substr($Youtube, strrpos($Youtube, '/') + 1);
+  }
+  
 
 ?>
 
