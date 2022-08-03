@@ -391,12 +391,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:indrukwekkend/Film-blokken.git",
-                "reference": "95d6506b904f309b96a43ff2391550b99564641b"
+                "reference": "b5dc71475aad42b3540324ec74f1a6aa13708256"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/indrukwekkend/Film-blokken/zipball/95d6506b904f309b96a43ff2391550b99564641b",
-                "reference": "95d6506b904f309b96a43ff2391550b99564641b",
+                "url": "https://api.github.com/repos/indrukwekkend/Film-blokken/zipball/b5dc71475aad42b3540324ec74f1a6aa13708256",
+                "reference": "b5dc71475aad42b3540324ec74f1a6aa13708256",
                 "shasum": ""
             },
             "require": {
@@ -423,7 +423,7 @@
                 "source": "https://github.com/indrukwekkend/Film-blokken/tree/main",
                 "issues": "https://github.com/indrukwekkend/Film-blokken/issues"
             },
-            "time": "2022-08-01T13:31:48+00:00"
+            "time": "2022-08-03T17:14:35+00:00"
         },
         {
             "name": "indrukwekkend/subpaginas",
@@ -1341,15 +1341,15 @@
         },
         {
             "name": "wpackagist-plugin/duracelltomi-google-tag-manager",
-            "version": "1.16",
+            "version": "1.16.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/duracelltomi-google-tag-manager/",
-                "reference": "tags/1.16"
+                "reference": "tags/1.16.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/duracelltomi-google-tag-manager.1.16.zip"
+                "url": "https://downloads.wordpress.org/plugin/duracelltomi-google-tag-manager.1.16.1.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
