@@ -110,7 +110,7 @@ function getTicketTable($shows) {
 
     $nl_date = $date;
     $nl_date->setTimeZone(new DateTimeZone('Europe/Amsterdam'));
-    setlocale(LC_ALL, 'nl_NL');
+    setlocale(LC_ALL, 'nl_NL.utf8');
 
     /* Output: vrijdag 22 december 1978 */
     $datum = strftime("%a <span class='datum_notatie'>%e %b</span>", strtotime($show['datetime']));

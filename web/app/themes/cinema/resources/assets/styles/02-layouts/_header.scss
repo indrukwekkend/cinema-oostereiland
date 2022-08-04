@@ -31,6 +31,7 @@
       left: 0;
       background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 35%);
       z-index: 1;
+      pointer-events: none;
     }
 
     &::after {
@@ -41,6 +42,7 @@
       bottom: 0;
       left: 0;
       background: linear-gradient(40deg, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0) 48%);
+      pointer-events: none;
     }
   }
 
