@@ -85,7 +85,7 @@ ul.tickets {
     }
 
     &::after {
-      content: "";
+      // content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -294,6 +294,10 @@ ul.films {
     li.ticket {
       grid-template-columns: 170px 135px 1fr 1fr 150px;
       align-items: center;
+
+      &::after {
+        content: "";
+      }
 
       .datum {
         grid-column: 1;
