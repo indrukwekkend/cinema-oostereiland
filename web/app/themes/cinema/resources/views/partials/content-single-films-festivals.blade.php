@@ -76,9 +76,10 @@ if( $featured_post ):
                             <?php echo sprintf('<picture class="thumbnail">%1$s</picture>', $thumbnail);?>
                             <div class="text">
                               <a class="overlay" href="<?php the_permalink(); ?>" title="<?php echo esc_attr($title); ?>"></a>
-                              <h3><?php the_title(); ?></h3>
-                              <p>Extra informatie</p>
+                              
+                              <!-- <p>Extra informatie</p> -->
                             </div>
+                            <h3><?php the_title(); ?></h3>
                         </div>
                       </li>
 
