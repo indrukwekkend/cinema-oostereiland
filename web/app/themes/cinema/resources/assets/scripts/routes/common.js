@@ -114,7 +114,7 @@ export default {
     const sliders = document.querySelectorAll('.festival-films')
     //Met alle sliders:
     sliders.forEach(slider => {
-      const slidesToShow = 4;
+      const slidesToShow = 5;
       console.log(slidesToShow);
 
       const slick = slider.querySelectorAll('.slider')

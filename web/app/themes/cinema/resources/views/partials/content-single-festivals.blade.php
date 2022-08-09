@@ -3,6 +3,7 @@
   <?php
   $image = get_field('header_festival');
   $backgroundImage = esc_url($image['url']); 
+  $intro_tekst = get_field('intro_tekst');
   // overige meta:
   ?>
 
@@ -18,7 +19,8 @@
             <div class="cta-bar__content__left">
               <h1 class="entry-title">{!! get_the_title() !!}</h1>
               <div class="film-info">
-                Hier nog de informatie van de Drama reeks? Datum tijd groepje.. Als het een start en einddatum heeft.
+                <?= $intro_tekst ?>
+                <!-- Hier nog de informatie van de Drama reeks? Datum tijd groepje.. Als het een start en einddatum heeft. -->
               </div>
             </div>
           </div>
@@ -69,9 +71,10 @@
                             <?php echo sprintf('<picture class="thumbnail">%1$s</picture>', $thumbnail);?>
                             <div class="text">
                               <a class="overlay" href="<?php the_permalink(); ?>" title="<?php echo esc_attr($title); ?>"></a>
-                              <h3><?php the_title(); ?></h3>
-                              <p>Extra informatie</p>
+                              
+                              <!-- <p>Extra informatie</p> -->
                             </div>
+                            <h3><?php the_title(); ?></h3>
                         </div>
                       </li>
 
