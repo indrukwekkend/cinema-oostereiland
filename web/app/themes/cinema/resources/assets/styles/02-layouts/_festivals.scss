@@ -23,3 +23,22 @@
     }
   }
 }
+
+p.special-intro {
+  background: #c63739;
+  font-weight: bold;
+  color: white;
+  padding: 0 20px;
+  display: inline;
+  float: left;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+
+h2.special-intro {
+  display: inline;
+  line-height: 0.8em;
+  margin-bottom: -8px;
+  text-align: end;
+  transform: translateY(2px);
+}
