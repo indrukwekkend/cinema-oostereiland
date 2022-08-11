@@ -391,12 +391,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:indrukwekkend/Film-blokken.git",
-                "reference": "288d983e35f0b900d1b8c4281eded549b15378e5"
+                "reference": "4dd0bf41dcf04e8a83660b305d771671a4709151"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/indrukwekkend/Film-blokken/zipball/288d983e35f0b900d1b8c4281eded549b15378e5",
-                "reference": "288d983e35f0b900d1b8c4281eded549b15378e5",
+                "url": "https://api.github.com/repos/indrukwekkend/Film-blokken/zipball/4dd0bf41dcf04e8a83660b305d771671a4709151",
+                "reference": "4dd0bf41dcf04e8a83660b305d771671a4709151",
                 "shasum": ""
             },
             "require": {
@@ -423,7 +423,7 @@
                 "source": "https://github.com/indrukwekkend/Film-blokken/tree/main",
                 "issues": "https://github.com/indrukwekkend/Film-blokken/issues"
             },
-            "time": "2022-08-09T12:55:25+00:00"
+            "time": "2022-08-11T12:25:16+00:00"
         },
         {
             "name": "indrukwekkend/subpaginas",
@@ -1413,10 +1413,10 @@
         },
         {
             "name": "wpmudev/wp-smush-pro",
-            "version": "3.10.3",
+            "version": "3.11",
             "dist": {
                 "type": "zip",
-                "url": "https://wpmudev.com/download/smush-pro-3.10.3.zip"
+                "url": "https://wpmudev.com/download/smush-pro-3.11.zip"
             },
             "require": {
                 "composer/installers": "1.*"
