@@ -10,8 +10,7 @@
       @if ($alleen_vandaag)
         <a href="/agenda" class="option active" id="vandaag">Vandaag</a> 
       @else 
-      <a href="/agenda" class="option active" id="vandaag">@php echo $titel_actueel @endphp</a> 
-
+        <a href="/agenda" class="option active" id="vandaag">@php echo $titel_actueel @endphp</a> 
       @endif
 
 
