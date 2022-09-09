@@ -1,24 +1,25 @@
 <div class="entry-content entry-content-agenda">
   <div class="filters">
 
-@php  $alleen_vandaag = get_field('films_vandaag', 'options'); @endphp
+@php  $alleen_vandaag = get_field('films_datum_selectie', 'options'); @endphp
+@php  $titel_actueel = get_field('agenda_actuele_films', 'options'); @endphp
 
 
     <div class="list">
 
       @if ($alleen_vandaag)
         <a href="/agenda" class="option active" id="vandaag">Vandaag</a> 
-
-        <div class="option">	<input type="date" id="start" name="from"
-          value={lastWeekDisplay}
-          min="{today}" max={today}></input>
-        </div>
+      @else 
+      <a href="/agenda" class="option active" id="vandaag">@php echo $titel_actueel @endphp</a> 
 
       @endif
 
-      @if (!$alleen_vandaag)
-        <a href="/agenda" class="option active" id="vandaag">Actueel</a> 
-      @endif
+
+      <div class="option">	<input type="date" id="start" name="from"
+        value={lastWeekDisplay}
+        min="{today}" max={today}></input>
+      </div>
+
 
       <a href="?order=az" class="option" id="az">
         Films A-Z

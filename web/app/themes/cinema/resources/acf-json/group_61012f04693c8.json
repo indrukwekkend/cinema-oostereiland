@@ -143,6 +143,52 @@
             "maxlength": ""
         },
         {
+            "key": "field_631b33c0a24fa",
+            "label": "Film agenda met selectie",
+            "name": "films_datum_selectie",
+            "type": "true_false",
+            "instructions": "Laat de films in de agenda zien als \"vandaag\" + een datumpicker",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "Toon alleen films van vandaag",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_631b35642e2e1",
+            "label": "Agenda  actuele films",
+            "name": "agenda_actuele_films",
+            "type": "text",
+            "instructions": "Deze titel staat op de Agenda als label bij de actuele films.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_631b33c0a24fa",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "75",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Deze maand",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_62a333f16c4c9",
             "label": "Aangeraden films titel",
             "name": "aangeraden_films_titel",
@@ -252,5 +298,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1659001558
+    "modified": 1662727923
 }
