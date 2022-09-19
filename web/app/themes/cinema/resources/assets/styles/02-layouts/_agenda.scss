@@ -21,18 +21,20 @@
       flex-direction: column;
 
       .option {
-        margin-right: 30px;
+        margin-right: 10px;
         text-decoration: none;
-        border-bottom: 2px dotted transparent;
+        border: 2px dotted $dark-grey;
+        padding: 2px 10px;
 
         &.active {
           font-weight: bold;
-          border-bottom: 2px dotted $dark-grey;
+          border: 1px solid $dark-grey;
+          background-color: #fff;
         }
 
         &:hover {
           color: $black1;
-          border-bottom: 2px dotted $dark-grey;
+          background-color: rgba(255, 255, 255, 0.6);
         }
       }
 

@@ -12,10 +12,39 @@
     text-transform: none;
     color: $black1;
     margin-bottom: 1rem;
+    display: inline-block;
 
     .alles {
       font-size: 0.6em;
       font-weight: normal;
+    }
+  }
+
+  a.agenda {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    position: relative;
+    z-index: 100;
+    display: inline-block;
+
+    &::after {
+      transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+      border-bottom: 2px dotted white;
+      bottom: 0;
+      content: "";
+      height: 2px;
+      width: 0;
+      left: 50%;
+      position: absolute;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
     }
   }
 

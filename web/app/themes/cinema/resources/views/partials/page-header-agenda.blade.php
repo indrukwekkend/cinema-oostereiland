@@ -13,6 +13,6 @@ $wrapper_classes  = 'page-header-agenda';
 $wrapper_classes .= true === get_theme_mod( 'display_transparant_nav', true ) ? ' transparant' : ''; ?>
 
 <div class="<?php echo esc_attr( $wrapper_classes ); ?>">
-  <h1>{!! App::title() !!}</h1>
+<h1><?php echo the_title() ?></h1>
 </div>
 

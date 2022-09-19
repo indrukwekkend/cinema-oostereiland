@@ -38,8 +38,8 @@ $alleen_vandaag = get_field('films_vandaag', 'options');
       <div id="cta-bar" class="cta-bar alignfull">
         <div class="cta-bar__content alignwide">
           
-          <div class="cta-bar__content__left">
-            <h2 class="entry-title">{{$titel}}</h2>
+          <div class="cta-bar__content_right">
+             <h2 class="entry-title"> <a href="{{$link}}"> {{$titel}}</a> </h2>
             <p><span>{{$label}}</span>{{$subheader}}</p>
               <?php if ($knop): ?>
                 <a class="btn wp-block-button__link tickets" id="toon_tickets" href="{{$link}}#tickets">{{$linktekst}}</a>
@@ -74,7 +74,7 @@ $alleen_vandaag = get_field('films_vandaag', 'options');
   ?>
 
   <div class="container alignwide">
-  <h2>@php echo $titel_actueel @endphp</h2> 
+  <h2 class='title inline'>@php echo $titel_actueel @endphp </h2> <a class='agenda' href='/agenda'>Toon alles <i class="fal fa-chevron-right"></i> </a> 
 
   
   <div class="slider dagslider">

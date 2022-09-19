@@ -27,7 +27,7 @@ else { ?>
     <?php   if ( function_exists('yoast_breadcrumb') && !is_front_page() && !is_home()  ) : ?>
       <?php yoast_breadcrumb( '<p id="breadcrumbs">','</p>' ); ?>
     <?php endif; ?>
-    <h1>{!! App::title() !!}</h1>
+    <h1><?php echo the_title() ?></h1>
   </div>
 
 <?php } ?>

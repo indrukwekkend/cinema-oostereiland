@@ -13,11 +13,11 @@
         <a href="/agenda" class="option active" id="vandaag">@php echo $titel_actueel @endphp</a> 
       @endif
 
-
+<!-- 
       <div class="option">	<input type="date" id="start" name="from"
         value={lastWeekDisplay}
         min="{today}" max={today}></input>
-      </div>
+      </div> -->
 
 
       <a href="?order=az" class="option" id="az">

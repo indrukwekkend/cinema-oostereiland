@@ -4,7 +4,7 @@
     <div class="sub-page">
         <div class="wp-editor container">
             <div class="page-header">
-                <h1>{!! App::title() !!}</h1>
+                <h1><?php echo the_title() ?></h1>
             </div>
             @if (!have_posts())
             <div class="alert alert-warning">

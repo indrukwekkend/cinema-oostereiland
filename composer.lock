@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ef1048a50043eaff9d56e58ffe6aed05",
+    "content-hash": "eaae0ac7b1e16641a211ac65a26ea5a8",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -467,7 +467,7 @@
         },
         {
             "name": "kinsta/kinsta-mu-plugins",
-            "version": "2.0.15",
+            "version": "2.4.8",
             "dist": {
                 "type": "zip",
                 "url": "https://kinsta.com/kinsta-tools/kinsta-mu-plugins.zip"
