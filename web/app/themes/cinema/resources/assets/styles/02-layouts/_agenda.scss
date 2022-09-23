@@ -28,13 +28,32 @@
 
         &.active {
           font-weight: bold;
-          border: 1px solid $dark-grey;
+          border: 2px solid $dark-grey;
           background-color: #fff;
         }
 
         &:hover {
           color: $black1;
           background-color: rgba(255, 255, 255, 0.6);
+        }
+      }
+
+      .search {
+        position: relative;
+
+        #zoek {
+          padding-left: 45px;
+
+          &:focus {
+            border: 2px dotted black;
+            outline: none;
+          }
+        }
+
+        svg {
+          position: absolute;
+          top: 15px;
+          left: 10px;
         }
       }
 

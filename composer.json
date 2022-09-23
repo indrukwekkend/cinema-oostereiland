@@ -111,6 +111,7 @@
     "wpackagist-plugin/acf-image-aspect-ratio-crop": "^5",
     "wpackagist-plugin/seo-by-rank-math": "*",
     "wpackagist-plugin/duplicate-post": "^4",
+    "wpackagist-plugin/rating-block": "^1",
     "wpmudev/wp-smush-pro": "*"
   },
   "require-dev": {

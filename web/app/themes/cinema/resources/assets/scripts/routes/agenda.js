@@ -70,6 +70,25 @@ export default {
       actionAjax(data);
     }
 
+    // onchange event
+    document.getElementById('zoek').onchange = function(e){
+      e.preventDefault();
+      removeActiveClass();
+      
+      var data = Array();
+      data.push({
+        name:   'action',
+        value:  'get_ajax_agenda_tickets',
+      });
+
+      data.push({
+        name:   'order',
+        value:  this.value,
+      });
+
+      actionAjax(data);
+    };
+
     document.getElementById('programma').onclick = function(e){
       e.preventDefault();
       // controleren en toevoegen en verwijderen van action class!!!

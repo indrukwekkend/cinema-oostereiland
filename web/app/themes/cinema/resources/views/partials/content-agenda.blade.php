@@ -13,8 +13,8 @@
         <a href="/agenda" class="option active" id="vandaag">@php echo $titel_actueel @endphp</a> 
       @endif
 
-<!-- 
-      <div class="option">	<input type="date" id="start" name="from"
+      
+      <!-- <div class="option">	<input type="date" id="start" name="from"
         value={lastWeekDisplay}
         min="{today}" max={today}></input>
       </div> -->
@@ -25,6 +25,11 @@
       </a> 
 
       <a href="?specials=true" class="option" id="programma">Speciale voorstellingen</a>
+
+      <div class="search">
+        <i class="fal fa-search"></i>
+        <input type="text" id="zoek" placeholder="Film titel"> </input>
+      </div>
 
     </div>
   </div>
