@@ -1,8 +1,12 @@
 export default {
   init() {
     // JavaScript to be fired on the agenda page
+    // ajax agenda tickets is de code die staat op: 
+    // films plugin: film-agenda
+    // 
 
-    // bij openen gelijk deze functie uitvoeren ("Vandaag")
+
+    // bij openen gelijk deze functie uitvoeren ("Vandaag, alle films")
     $(function() {
         
       var data = $('#film_number').serializeArray();
@@ -72,6 +76,7 @@ export default {
 
     // onchange event
     document.getElementById('zoek').onchange = function(e){
+
       e.preventDefault();
       removeActiveClass();
       
@@ -111,25 +116,25 @@ export default {
     }
 
     // onchange event
-    document.getElementById('start').onchange = function(e){
-      e.preventDefault();
-      removeActiveClass();
+    // document.getElementById('start').onchange = function(e){
+    //   e.preventDefault();
+    //   removeActiveClass();
 
-      console.log(this.value);
+    //   console.log(this.value);
       
-      var data = Array();
-      data.push({
-        name:   'action',
-        value:  'get_ajax_agenda_tickets',
-      });
+    //   var data = Array();
+    //   data.push({
+    //     name:   'action',
+    //     value:  'get_ajax_agenda_tickets',
+    //   });
 
-      data.push({
-        name:   'date',
-        value:  this.value,
-      });
+    //   data.push({
+    //     name:   'date',
+    //     value:  this.value,
+    //   });
 
-      actionAjax(data);
-    };
+    //   actionAjax(data);
+    // };
 
 
     // openen en sluiten van de kaarten module
