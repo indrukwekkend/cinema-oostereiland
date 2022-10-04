@@ -212,7 +212,7 @@ function openOverlay(e) {
   else {
     makeIframe.setAttribute('src', 'https://'+site+'/shop/tickets.php?showid='+index);
   }
-  makeIframe.setAttribute('scrolling', 'no');
+  makeIframe.setAttribute('scrolling', 'yes');
   makeIframe.style.border = 'none';
   makeIframe.style.maxWidth = '865px';
   makeIframe.style.height = '150px';

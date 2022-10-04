@@ -80,7 +80,7 @@ $alleen_vandaag = get_field('films_vandaag', 'options');
   <div class="slider dagslider">
     <?php 
       if ($alleen_vandaag): 
-          echo getTicketTable($shows);
+          echo getFilmsAll($shows);
       else:
           echo getFilms();
       endif;
@@ -94,7 +94,7 @@ $alleen_vandaag = get_field('films_vandaag', 'options');
 
 <?php
 // deze functie dan het liefte als methode in de getShowToday() methode. Dat nog ff uitzoeken... 
-function getTicketTable($shows) {
+function getFilmsAll($shows) {
   global $wp_query;
 
   $output = '';
