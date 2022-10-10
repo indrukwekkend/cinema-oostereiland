@@ -195,6 +195,7 @@ export default {
 
 const ticketOverlay = document.querySelector('#tickets-overlay');
 const closeButton = document.querySelector('.close-btn');
+const gaVerder = document.querySelector('.ga-verder');
 const body = document.querySelector('body');
 const getRef = document.getElementById('tickets-iframe-holder');
 
@@ -203,6 +204,18 @@ closeButton.addEventListener('click', () => {
   ticketOverlay.classList.remove('active');
   body.classList.remove('stop-scroll');
 });
+
+gaVerder.addEventListener('click', () => {
+  var currentLocation = window.location.pathname;
+
+  if (currentLocation == '/agenda/') {
+    ticketOverlay.classList.remove('active');
+    body.classList.remove('stop-scroll');
+  } else {
+      window.location = '/agenda';
+  }
+});
+
 
 function openOverlay(e) {
   //stop klikken en toevoegen classes

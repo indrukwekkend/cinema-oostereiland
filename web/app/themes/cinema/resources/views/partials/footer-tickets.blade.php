@@ -5,6 +5,6 @@
      <p class="cart-info">Kaartjes worden 15 minuten gereserveerd in het winkelmandje.</p> 
 
      <div id="tickets-iframe-holder"></div> 
-     <div class="continue-holder"><div class="button">
+     <div class="continue-holder"><div class="button ga-verder">
 					Ga door met kaartjes zoeken
 				</div> <span class="button-info">Nog niet bevestigen, ik wil meer tickets kopen.</span></div></div></div>
