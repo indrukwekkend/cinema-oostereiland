@@ -39,6 +39,12 @@ export default {
       $('#search').removeClass('active');
     }),
 
+    $('#cart-open').click( function(event){
+      // console.log(event);
+      openOverlay(event);
+    }),
+
+
     $( 'button.hamburger' ).click(function() {
       $( this ).toggleClass('is-active');
       $('.mobile-navigation-container').removeClass('start');
@@ -170,6 +176,12 @@ export default {
           // console.log(event);
           openOverlay(event);
         }
+        else if (
+          event.target.matches('.cart') 
+        ) {
+          // console.log(event);
+          openOverlay(event);
+        }
       },
       false
     )
@@ -195,11 +207,15 @@ closeButton.addEventListener('click', () => {
 function openOverlay(e) {
   //stop klikken en toevoegen classes
   e.preventDefault;
+  console.log(e);
   ticketOverlay.classList.add('active');
   body.classList.add('stop-scroll');
 
   // Haal de informatie op om de juiste Target toe te voegen aan de iframe:
-  var el = e.target;
+
+
+  let el = e.target;
+
   var index = el.dataset.number;
   var site = el.dataset.site;
   var classes = el.className;
@@ -208,7 +224,11 @@ function openOverlay(e) {
   
   if (classes.includes('friend')) {
     makeIframe.setAttribute('src', 'https://'+site+'/membership/enroll.php');
-  } 
+  }
+  else if (classes.includes('cart')) {
+    console.log('hier' + classes);
+    makeIframe.setAttribute('src', 'https://'+site+'/shop/cart.php');
+  }
   else {
     makeIframe.setAttribute('src', 'https://'+site+'/shop/tickets.php?showid='+index);
   }

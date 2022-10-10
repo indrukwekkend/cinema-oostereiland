@@ -40,6 +40,8 @@ $wrapper_classes  = 'banner site-header';
     
       <!-- Search button -->
       <button class='search-header-icon' id='search-open'><i class="fas fa-search"></i></button>
+      <!-- Cart button -->
+      <a class="shopping-cart-icon cart" data-site="<?= TICKETURL ?>" href="#"><i class="far fa-shopping-cart"></i></a>
 
        <!-- Hamburger navigation -->
       <button class="hamburger hamburger--spin" type="button">

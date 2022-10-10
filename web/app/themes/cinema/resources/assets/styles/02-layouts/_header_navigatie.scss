@@ -291,7 +291,8 @@ header.site-header {
       }
     }
 
-    .search-header-icon {
+    .search-header-icon,
+    .shopping-cart-icon {
       display: none;
       background: none;
       color: $wit;
@@ -307,6 +308,14 @@ header.site-header {
       .menu-open &,
       .template-agenda & {
         color: $black1;
+      }
+    }
+
+    .shopping-cart-icon {
+      display: block;
+
+      svg {
+        pointer-events: none;
       }
     }
   }
