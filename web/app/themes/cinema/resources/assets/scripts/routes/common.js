@@ -162,7 +162,7 @@ export default {
     document.addEventListener(
       'click',
       function(event) {
-        console.log(event);
+         console.log(event);
         // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
         if (
           event.target.matches('.bestellen') 
@@ -172,6 +172,12 @@ export default {
         }
         else if (
           event.target.matches('.friend') 
+        ) {
+          // console.log(event);
+          openOverlay(event);
+        }
+        else if (
+          event.target.matches('.cadeau') 
         ) {
           // console.log(event);
           openOverlay(event);
@@ -220,12 +226,11 @@ gaVerder.addEventListener('click', () => {
 function openOverlay(e) {
   //stop klikken en toevoegen classes
   e.preventDefault;
-  console.log(e);
+  // console.log(e);
   ticketOverlay.classList.add('active');
   body.classList.add('stop-scroll');
 
   // Haal de informatie op om de juiste Target toe te voegen aan de iframe:
-
 
   let el = e.target;
 
@@ -233,14 +238,21 @@ function openOverlay(e) {
   var site = el.dataset.site;
   var classes = el.className;
 
+  // console.log (el);
+  // console.log (site);
+
   var makeIframe = document.createElement('iframe');
   
   if (classes.includes('friend')) {
     makeIframe.setAttribute('src', 'https://'+site+'/membership/enroll.php');
   }
   else if (classes.includes('cart')) {
-    console.log('hier' + classes);
+    // console.log('hier' + classes);
     makeIframe.setAttribute('src', 'https://'+site+'/shop/cart.php');
+  }
+  else if (classes.includes('cadeau')) {
+    // console.log('hier' + classes);
+    makeIframe.setAttribute('src', 'https://'+site+'/coupons/purchase.php');
   }
   else {
     makeIframe.setAttribute('src', 'https://'+site+'/shop/tickets.php?showid='+index);

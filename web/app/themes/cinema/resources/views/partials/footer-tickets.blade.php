@@ -7,4 +7,4 @@
      <div id="tickets-iframe-holder"></div> 
      <div class="continue-holder"><div class="button ga-verder">
 					Ga door met kaartjes zoeken
-				</div> <span class="button-info">Nog niet bevestigen, ik wil meer tickets kopen.</span></div></div></div>
+				</div> <span class="button-info">Nog niet bevestigen, ga terug naar Agenda.</span></div></div></div>
