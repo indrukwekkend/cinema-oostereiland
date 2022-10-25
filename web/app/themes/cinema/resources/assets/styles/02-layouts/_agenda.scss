@@ -16,6 +16,31 @@
       font-weight: 400;
     }
 
+    &.active {
+      position: fixed;
+      padding-bottom: 10px;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      z-index: 10;
+
+      &::after {
+        content: "";
+        transform: scaleX(1.19) scaleY(1.1);
+        background-color: #eee8e2;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+      }
+    }
+
     .list {
       display: flex;
       flex-direction: column;
@@ -304,6 +329,11 @@ ul.films {
     }
 
     .filters {
+      &.active {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
       .list {
         flex-direction: row;
         align-items: center;

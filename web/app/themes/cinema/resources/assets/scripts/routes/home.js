@@ -13,8 +13,10 @@ export default {
     ScrollTrigger.create({
       trigger: '#masthead',
       start: 'top top',
-      end: '+=15000',
+      endTrigger: 'html',
+      end: 'bottom top',
       toggleClass: { targets: '#masthead', className: 'active' },
+      // markers: true,
     });
 
     // pak alle sliders op de filmpagina op, in 1 array.

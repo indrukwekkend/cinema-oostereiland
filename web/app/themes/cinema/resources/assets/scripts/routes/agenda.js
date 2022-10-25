@@ -1,3 +1,6 @@
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 export default {
   init() {
     // JavaScript to be fired on the agenda page
@@ -5,6 +8,18 @@ export default {
     // films plugin: film-agenda
     // 
 
+    // GSAP voor animaties. Hiermee zetten we elementen vast onscrolltrigger:
+    gsap.registerPlugin(ScrollTrigger);
+
+    ScrollTrigger.create({
+      trigger: '.filters',
+      start: 'top top',
+      endTrigger: 'html',
+      //top verplaatsen naar beneden, krijg je marge, maar naar boven plaatsen van de stop gaat wel goed!
+      end: 'bottom -9000px top',
+      toggleClass: { targets: '.filters', className: 'active' },
+      // markers: true,
+    });
 
     // bij openen gelijk deze functie uitvoeren ("Vandaag, alle films")
     $(function() {
