@@ -12,7 +12,7 @@ use Roots\Sage\Template\BladeProvider;
  */
 add_action('wp_enqueue_scripts', function () {
 
-    $version = '1.1.4';
+    $version = '1.1.5';
     if(defined('WP_DEBUG') && WP_DEBUG === true){
         $version = time();
     }

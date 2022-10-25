@@ -239,9 +239,9 @@
     "location": [
         [
             {
-                "param": "page",
+                "param": "page_type",
                 "operator": "==",
-                "value": "2"
+                "value": "front_page"
             }
         ]
     ],
@@ -253,5 +253,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632929303
+    "modified": 1666708044
 }

@@ -117,6 +117,8 @@ header.site-header {
         .hamburger-title {
           text-shadow: none;
           color: $black1;
+          font-size: 17px;
+          margin-right: 5px !important;
         }
 
         .hamburger-inner {
@@ -537,6 +539,8 @@ header.site-header {
 
       &-title {
         display: block;
+        font-size: revert;
+        margin-right: 15px;
       }
     }
 

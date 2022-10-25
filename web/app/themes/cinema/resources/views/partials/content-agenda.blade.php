@@ -1,11 +1,13 @@
 <div class="entry-content entry-content-agenda">
   <div class="filters">
+    <p>Bekijk op:</p>
 
 @php  $alleen_vandaag = get_field('films_datum_selectie', 'options'); @endphp
 @php  $titel_actueel = get_field('agenda_actuele_films', 'options'); @endphp
 
 
     <div class="list">
+
 
       @if ($alleen_vandaag)
         <a href="/agenda" class="option active" id="vandaag">Vandaag</a> 
