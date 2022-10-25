@@ -92,8 +92,9 @@ header.site-header {
 
       &-title {
         font-weight: 600;
-        margin-right: 15px;
         text-transform: uppercase;
+        font-size: 17px;
+        margin-right: 5px;
       }
 
       &-inner {
@@ -117,8 +118,6 @@ header.site-header {
         .hamburger-title {
           text-shadow: none;
           color: $black1;
-          font-size: 17px;
-          margin-right: 5px !important;
         }
 
         .hamburger-inner {
