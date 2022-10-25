@@ -125,7 +125,6 @@ export default {
 
       const slick = slider.querySelectorAll('.slider')
       $(slick).slick( {
-
       
         // normal options...
         infinite: true,
@@ -140,18 +139,21 @@ export default {
             slidesToShow: slidesToShow -1,
           },
       
-        // }, {
+        }, {
       
-        // 	breakpoint: 600,
-        // 	settings: {
-        // 		slidesToShow: 2,
-        // 		dots: true,
-        // 	},
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          dots: true,
+        },
       
-        // }, {
+        }, {
       
-        // 	breakpoint: 300,
-        // 	settings: 'unslick', // destroys slick
+        breakpoint: 340,
+          settings: {
+            slidesToShow: 1,
+            dots: true,
+          },
       
         } ],
       } );

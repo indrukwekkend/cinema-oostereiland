@@ -63,31 +63,31 @@
     background-color: $brand-primary;
     color: #fff;
   }
+}
 
-  .slick-prev,
-  .slick-next {
-    height: auto;
-    width: auto;
-  }
+.slick-prev,
+.slick-next {
+  height: auto;
+  width: auto;
+}
 
-  .slick-prev {
-    left: -70px;
-  }
+.slick-prev {
+  left: -70px;
+}
 
-  .slick-prev::before,
-  .slick-next::before {
-    font-size: 50px;
-    line-height: 1;
-    color: #fff;
-    opacity: 1;
-    content: "\f053";
-    font-family: "Font Awesome 5 Pro", sans-serif;
-    font-weight: 300;
-  }
+.slick-prev::before,
+.slick-next::before {
+  font-size: 50px;
+  line-height: 1;
+  color: #fff;
+  opacity: 1;
+  content: "\f053";
+  font-family: "Font Awesome 5 Pro", sans-serif;
+  font-weight: 300;
+}
 
-  .slick-next::before {
-    content: "\f054";
-  }
+.slick-next::before {
+  content: "\f054";
 }
 
 @media only screen and (min-width: $ipad-width) { //768
