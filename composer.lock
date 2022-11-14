@@ -391,12 +391,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:indrukwekkend/Film-blokken.git",
-                "reference": "81fbb958f81a46d7f0cd24184f0608a13305964a"
+                "reference": "3ba77847c0a958e39c91c2722855fb0c2ff872ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/indrukwekkend/Film-blokken/zipball/81fbb958f81a46d7f0cd24184f0608a13305964a",
-                "reference": "81fbb958f81a46d7f0cd24184f0608a13305964a",
+                "url": "https://api.github.com/repos/indrukwekkend/Film-blokken/zipball/3ba77847c0a958e39c91c2722855fb0c2ff872ae",
+                "reference": "3ba77847c0a958e39c91c2722855fb0c2ff872ae",
                 "shasum": ""
             },
             "require": {
@@ -423,7 +423,7 @@
                 "source": "https://github.com/indrukwekkend/Film-blokken/tree/main",
                 "issues": "https://github.com/indrukwekkend/Film-blokken/issues"
             },
-            "time": "2022-11-14T16:11:17+00:00"
+            "time": "2022-11-14T16:27:14+00:00"
         },
         {
             "name": "indrukwekkend/subpaginas",
@@ -1434,15 +1434,15 @@
         },
         {
             "name": "wpackagist-plugin/seo-by-rank-math",
-            "version": "1.0.101",
+            "version": "1.0.102",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/seo-by-rank-math/",
-                "reference": "tags/1.0.101"
+                "reference": "tags/1.0.102"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/seo-by-rank-math.1.0.101.zip"
+                "url": "https://downloads.wordpress.org/plugin/seo-by-rank-math.1.0.102.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
