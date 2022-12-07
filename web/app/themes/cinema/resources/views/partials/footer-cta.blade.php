@@ -17,7 +17,7 @@
     <p class="has-text-align-center">Ben je filmliefhebber en wil je onze activiteiten ondersteunen? Je bent van harte welkom als Vriend van Cinema <?= $cinema ?>!</p>
 
     <div class="wp-container-1 wp-block-buttons">
-      <div class="wp-block-button aligncenter is-style-secundair"><a class="wp-block-button__link friend" data-site="<?= TICKETURL ?>">Ik word vriend</a></div>
+      <div class="wp-block-button aligncenter is-style-secundair"><a class="wp-block-button__link friend" data-site="tickets.cinemaoostereiland.nl">Ik word vriend</a></div>
     </div>
   </div>
 </div>
