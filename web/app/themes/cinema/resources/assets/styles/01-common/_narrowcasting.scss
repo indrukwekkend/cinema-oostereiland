@@ -15,4 +15,21 @@ body.template-narrowcasting {
   header.site-header .container .brand {
     background-image: url(/app/themes/cinema/dist/images/logo.svg) !important;
   }
+
+  table {
+    color: #fff;
+
+    tr {
+      border-color: #fff;
+    }
+
+    td {
+      border: none;
+    }
+  }
+
+  h3 {
+    color: #fff;
+    font-size: 64px;
+  }
 }

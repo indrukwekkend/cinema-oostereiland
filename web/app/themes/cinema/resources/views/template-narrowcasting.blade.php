@@ -6,8 +6,9 @@
 
 @section('content')
   @while(have_posts()) @php the_post() @endphp
-  <div class="page-holder alignwide">
+  <div class="page-holder alignfull">
     @include('partials.page-header-agenda')
+    @include('partials.content-page')
 
   </div>
   @endwhile
