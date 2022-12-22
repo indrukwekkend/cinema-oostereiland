@@ -1,0 +1,18 @@
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  box-sizing: border-box;
+}
+
+body.template-narrowcasting {
+  font-family: $primary-font;
+  line-height: $base-line-height;
+  background-color: $base-color;
+  color: #fff;
+  font-weight: $base-font-weight;
+  font-size: $base-font-size;
+  letter-spacing: $base-letter-spacing;
+
+  header.site-header .container .brand {
+    background-image: url(/app/themes/cinema/dist/images/logo.svg) !important;
+  }
+}
