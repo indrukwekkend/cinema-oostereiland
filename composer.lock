@@ -1184,12 +1184,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:indrukwekkend/Film-blokken.git",
-                "reference": "eb55060949006aeccff1d4d723bfb1aff5c5e394"
+                "reference": "0aecce88282ef54fd716a712f44f986a85f318d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/indrukwekkend/Film-blokken/zipball/eb55060949006aeccff1d4d723bfb1aff5c5e394",
-                "reference": "eb55060949006aeccff1d4d723bfb1aff5c5e394",
+                "url": "https://api.github.com/repos/indrukwekkend/Film-blokken/zipball/0aecce88282ef54fd716a712f44f986a85f318d2",
+                "reference": "0aecce88282ef54fd716a712f44f986a85f318d2",
                 "shasum": ""
             },
             "require": {
@@ -1217,7 +1217,7 @@
                 "source": "https://github.com/indrukwekkend/Film-blokken/tree/main",
                 "issues": "https://github.com/indrukwekkend/Film-blokken/issues"
             },
-            "time": "2022-12-22T13:30:09+00:00"
+            "time": "2022-12-23T20:17:41+00:00"
         },
         {
             "name": "indrukwekkend/narrowcasting",
@@ -3497,12 +3497,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "58046a3fc3555eda6567a2bdae7195be6aa9babe"
+                "reference": "57a3ee3eb79b9538f3012e6b66c04cdac0b551d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/58046a3fc3555eda6567a2bdae7195be6aa9babe",
-                "reference": "58046a3fc3555eda6567a2bdae7195be6aa9babe",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/57a3ee3eb79b9538f3012e6b66c04cdac0b551d1",
+                "reference": "57a3ee3eb79b9538f3012e6b66c04cdac0b551d1",
                 "shasum": ""
             },
             "conflict": {
@@ -3557,7 +3557,7 @@
                 "cesnet/simplesamlphp-module-proxystatistics": "<3.1",
                 "codeception/codeception": "<3.1.3|>=4,<4.1.22",
                 "codeigniter/framework": "<=3.0.6",
-                "codeigniter4/framework": "<4.2.7",
+                "codeigniter4/framework": "<4.2.11",
                 "codeigniter4/shield": "= 1.0.0-beta",
                 "codiad/codiad": "<=2.8.4",
                 "composer/composer": "<1.10.26|>=2-alpha.1,<2.2.12|>=2.3,<2.3.5",
@@ -4035,7 +4035,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-12-21T06:05:00+00:00"
+            "time": "2022-12-22T20:04:36+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
