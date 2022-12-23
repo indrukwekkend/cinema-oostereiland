@@ -1184,12 +1184,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:indrukwekkend/Film-blokken.git",
-                "reference": "0aecce88282ef54fd716a712f44f986a85f318d2"
+                "reference": "75a0a027fc23a31b786425862ccd4978c387753f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/indrukwekkend/Film-blokken/zipball/0aecce88282ef54fd716a712f44f986a85f318d2",
-                "reference": "0aecce88282ef54fd716a712f44f986a85f318d2",
+                "url": "https://api.github.com/repos/indrukwekkend/Film-blokken/zipball/75a0a027fc23a31b786425862ccd4978c387753f",
+                "reference": "75a0a027fc23a31b786425862ccd4978c387753f",
                 "shasum": ""
             },
             "require": {
@@ -1217,7 +1217,7 @@
                 "source": "https://github.com/indrukwekkend/Film-blokken/tree/main",
                 "issues": "https://github.com/indrukwekkend/Film-blokken/issues"
             },
-            "time": "2022-12-23T20:17:41+00:00"
+            "time": "2022-12-23T20:52:58+00:00"
         },
         {
             "name": "indrukwekkend/narrowcasting",
