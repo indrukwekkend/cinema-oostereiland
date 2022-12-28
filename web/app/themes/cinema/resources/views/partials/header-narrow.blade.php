@@ -25,6 +25,7 @@ $wrapper_classes  = 'banner site-header';
 
 <?php
 
+  $time = @date('d M Y');
   endif;
 ?>
 
@@ -32,6 +33,9 @@ $wrapper_classes  = 'banner site-header';
   <div class="container">
     <!-- logo en home -->
     <a class="brand" href="{{ home_url('/') }}">{{ get_bloginfo('name', 'display') }}</a>
+
+    <div id="datumTijd"><h1><span id="tijd"><?php echo($time); ?></span></h1></div>		
+								
    
   </div>
 </header>

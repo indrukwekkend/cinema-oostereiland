@@ -1184,12 +1184,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:indrukwekkend/Film-blokken.git",
-                "reference": "f7da59ce92c34550aa296ccc7756ce9507a041a9"
+                "reference": "22f985dc250da7cb8a77d0ead526315006e631ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/indrukwekkend/Film-blokken/zipball/f7da59ce92c34550aa296ccc7756ce9507a041a9",
-                "reference": "f7da59ce92c34550aa296ccc7756ce9507a041a9",
+                "url": "https://api.github.com/repos/indrukwekkend/Film-blokken/zipball/22f985dc250da7cb8a77d0ead526315006e631ff",
+                "reference": "22f985dc250da7cb8a77d0ead526315006e631ff",
                 "shasum": ""
             },
             "require": {
@@ -1217,7 +1217,7 @@
                 "source": "https://github.com/indrukwekkend/Film-blokken/tree/main",
                 "issues": "https://github.com/indrukwekkend/Film-blokken/issues"
             },
-            "time": "2022-12-24T14:10:10+00:00"
+            "time": "2022-12-28T07:38:53+00:00"
         },
         {
             "name": "indrukwekkend/narrowcasting",
@@ -1225,12 +1225,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:indrukwekkend/narrowcasting.git",
-                "reference": "8d47664fcca923112de89883e9f6749278c0ca50"
+                "reference": "c86c4471b935806a92dbee170250e79f78549f73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/indrukwekkend/narrowcasting/zipball/8d47664fcca923112de89883e9f6749278c0ca50",
-                "reference": "8d47664fcca923112de89883e9f6749278c0ca50",
+                "url": "https://api.github.com/repos/indrukwekkend/narrowcasting/zipball/c86c4471b935806a92dbee170250e79f78549f73",
+                "reference": "c86c4471b935806a92dbee170250e79f78549f73",
                 "shasum": ""
             },
             "require": {
@@ -1258,7 +1258,7 @@
                 "source": "https://github.com/indrukwekkend/narrowcasting/tree/main",
                 "issues": "https://github.com/indrukwekkend/narrowcasting/issues"
             },
-            "time": "2022-12-22T14:33:03+00:00"
+            "time": "2022-12-28T16:23:56+00:00"
         },
         {
             "name": "indrukwekkend/subpaginas",
@@ -3456,15 +3456,15 @@
         },
         {
             "name": "wpackagist-plugin/seo-by-rank-math",
-            "version": "1.0.104.1",
+            "version": "1.0.105",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/seo-by-rank-math/",
-                "reference": "tags/1.0.104.1"
+                "reference": "tags/1.0.105"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/seo-by-rank-math.1.0.104.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/seo-by-rank-math.1.0.105.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"

@@ -16,6 +16,10 @@ body.template-narrowcasting {
     background-image: url(/app/themes/cinema/dist/images/logo.svg) !important;
   }
 
+  #tijd {
+    color: #fff;
+  }
+
   table {
     color: #fff;
 
@@ -31,5 +35,13 @@ body.template-narrowcasting {
   h3 {
     color: #fff;
     font-size: 64px;
+
+    &.starttijd {
+      width: 175px;
+    }
+
+    &.zaal {
+      width: 126px;
+    }
   }
 }
