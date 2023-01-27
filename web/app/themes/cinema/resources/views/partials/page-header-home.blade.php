@@ -38,16 +38,19 @@ $alleen_vandaag = get_field('films_vandaag', 'options');
       <div id="cta-bar" class="cta-bar alignfull">
         <div class="cta-bar__content alignwide">
           
-          <div class="cta-bar__content_right">
-             <h2 class="entry-title"> <a href="{{$link}}"> {{$titel}}</a> </h2>
-            <p><span>{{$label}}</span>{{$subheader}}</p>
-              <?php if ($knop): ?>
-                <a class="btn wp-block-button__link tickets" id="toon_tickets" href="{{$link}}#tickets">{{$linktekst}}</a>
-                <a class="btn wp-block-button__link info" id="toon_info" href="{{$link}}">Informatie</a>
-                    
-              <?php endif; ?>
-          </div>
+          <?php if ($titel != ''): ?>
 
+            <div class="cta-bar__content_right">
+              <h2 class="entry-title"> <a href="{{$link}}"> {{$titel}}</a> </h2>
+              <p><span>{{$label}}</span>{{$subheader}}</p>
+                <?php if ($knop): ?>
+                  <a class="btn wp-block-button__link tickets" id="toon_tickets" href="{{$link}}#tickets">{{$linktekst}}</a>
+                  <a class="btn wp-block-button__link info" id="toon_info" href="{{$link}}">Informatie</a>
+                      
+                <?php endif; ?>
+            </div>
+
+          <?php endif; ?>
         </div>
       </div>
   </div>
