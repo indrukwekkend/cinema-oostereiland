@@ -15,13 +15,13 @@ $wrapper_classes  = 'banner site-header';
  <style>
   header.site-header .container .brand,
   .template-agenda header.site-header .container .brand {
-    background-image: url(/app/themes/cinema/dist/images/CE_logo_diap.svg);
+    background-image: url(/app/themes/cinema/dist/images/CE_logo_diap.svg) !important;
   }
 
   .home header.site-header .container .brand, 
   .single-films header.site-header .container .brand,
-  .single-festivals header.site-header .container .brand, {
-    background-image: url(/app/themes/cinema/dist/images/CE_logo.svg);
+  .single-festivals header.site-header .container .brand {
+    background-image: url(/app/themes/cinema/dist/images/CE_logo.svg) !important;
   }
 </style>
 

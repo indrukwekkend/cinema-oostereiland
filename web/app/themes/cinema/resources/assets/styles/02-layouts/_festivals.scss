@@ -21,6 +21,11 @@
     li.film {
       @include card-in-slider();
     }
+
+    .slick-prev::before,
+    .slick-next::before {
+      color: rgb(41, 40, 40);
+    }
   }
 
   .alternatieve-kolom {
