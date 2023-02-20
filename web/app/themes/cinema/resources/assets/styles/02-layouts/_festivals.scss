@@ -21,11 +21,6 @@
     li.film {
       @include card-in-slider();
     }
-
-    .slick-prev::before,
-    .slick-next::before {
-      color: rgb(41, 40, 40);
-    }
   }
 
   .alternatieve-kolom {
@@ -35,6 +30,13 @@
     h3 {
       margin-bottom: -3rem !important;
     }
+  }
+}
+
+.festival-films-lijst {
+  .slick-prev::before,
+  .slick-next::before {
+    color: rgb(43, 43, 43);
   }
 }
 
