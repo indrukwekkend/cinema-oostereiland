@@ -18,7 +18,9 @@ $wrapper_classes  = 'banner site-header';
     background-image: url(/app/themes/cinema/dist/images/CE_logo_diap.svg);
   }
 
-  .home header.site-header .container .brand, .single-films header.site-header .container .brand {
+  .home header.site-header .container .brand, 
+  .single-films header.site-header .container .brand,
+  .single-festivals header.site-header .container .brand, {
     background-image: url(/app/themes/cinema/dist/images/CE_logo.svg);
   }
 </style>
