@@ -1185,12 +1185,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:indrukwekkend/Film-blokken.git",
-                "reference": "40af63cc24870f0cec786703ccff200fafe65116"
+                "reference": "502ecb61e9dde31f5288fdbf981fbdf5aa9b27d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/indrukwekkend/Film-blokken/zipball/40af63cc24870f0cec786703ccff200fafe65116",
-                "reference": "40af63cc24870f0cec786703ccff200fafe65116",
+                "url": "https://api.github.com/repos/indrukwekkend/Film-blokken/zipball/502ecb61e9dde31f5288fdbf981fbdf5aa9b27d9",
+                "reference": "502ecb61e9dde31f5288fdbf981fbdf5aa9b27d9",
                 "shasum": ""
             },
             "require": {
@@ -1218,7 +1218,7 @@
                 "source": "https://github.com/indrukwekkend/Film-blokken/tree/main",
                 "issues": "https://github.com/indrukwekkend/Film-blokken/issues"
             },
-            "time": "2023-03-02T13:48:20+00:00"
+            "time": "2023-03-02T19:31:57+00:00"
         },
         {
             "name": "indrukwekkend/narrowcasting",
@@ -3498,12 +3498,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "3a45705887412bb03836d4cf363d4c60fa306e82"
+                "reference": "2f3a048ff643e4aff8308eaeea738c82dfac0a81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/3a45705887412bb03836d4cf363d4c60fa306e82",
-                "reference": "3a45705887412bb03836d4cf363d4c60fa306e82",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/2f3a048ff643e4aff8308eaeea738c82dfac0a81",
+                "reference": "2f3a048ff643e4aff8308eaeea738c82dfac0a81",
                 "shasum": ""
             },
             "conflict": {
@@ -3758,7 +3758,7 @@
                 "modx/revolution": "<= 2.8.3-pl|<2.8",
                 "mojo42/jirafeau": "<4.4",
                 "monolog/monolog": ">=1.8,<1.12",
-                "moodle/moodle": "<4.0.5",
+                "moodle/moodle": "<4.0.6|>=4.1-beta,<4.1.1",
                 "mustache/mustache": ">=2,<2.14.1",
                 "namshi/jose": "<2.2",
                 "neoan3-apps/template": "<1.1.1",
@@ -4075,7 +4075,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-03-01T23:04:23+00:00"
+            "time": "2023-03-02T19:04:12+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
