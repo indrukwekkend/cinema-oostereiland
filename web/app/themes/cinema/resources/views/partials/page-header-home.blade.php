@@ -203,7 +203,7 @@ function getFilmsAll($shows) {
 
         if ( $thumbnail ) { 
 
-          var_dump($thumbnail);
+          // var_dump($thumbnail);
 
           $url = $thumbnail['url'];
           $alt = esc_attr($thumbnail['alt']);
