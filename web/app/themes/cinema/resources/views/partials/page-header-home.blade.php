@@ -62,18 +62,21 @@ $alleen_vandaag = get_field('films_vandaag', 'options');
   <?php 
   $output =  "";
   //data settings
-    $today = strtotime('today');
-    $tomorrow = strtotime('tomorrow +3 hours');
-    $now = strtotime('now');
-    // Datetime in data zetten: Vandaag en morgen 
-    $data = array (
-        'datumvandaag' => date("Y-m-d", $today),
-        'datetime[strictly_after]' => date("Y-m-d\TH:i:s", $now),
-        'datetime[strictly_before]' => date("Y-m-d\TH:i:s", $tomorrow),
-        'order[datetime]' => 'asc',
-    );
-  $tickets = new TicketlabCurl();
-  $shows = $tickets->getShowstoday( $data );
+  //   $today = strtotime('today');
+  //   $tomorrow = strtotime('tomorrow +3 hours');
+  //   $now = strtotime('now');
+  //   // Datetime in data zetten: Vandaag en morgen 
+  //   $data = array (
+  //       'datumvandaag' => date("Y-m-d", $today),
+  //       'datetime[strictly_after]' => date("Y-m-d\TH:i:s", $now),
+  //       'datetime[strictly_before]' => date("Y-m-d\TH:i:s", $tomorrow),
+  //       'order[datetime]' => 'asc',
+  //   );
+  // $tickets = new TicketlabCurl();
+  // $shows = $tickets->getShowstoday( $data );
+
+  $shows = get_option( 'agenda_vandaag' );
+
   ?>
 
   <div class="container alignwide">
@@ -97,11 +100,22 @@ $alleen_vandaag = get_field('films_vandaag', 'options');
 
 <?php
 // deze functie dan het liefte als methode in de getShowToday() methode. Dat nog ff uitzoeken... 
+// alleen vandaag, of alle films vanaf nu
 function getFilmsAll($shows) {
   global $wp_query;
 
   $output = '';
   foreach($shows as $key => $show) {
+
+    // zorg voor wel en niet tonen van de films: 
+    // met name de BESLOTEN voorstellingen staan niet in de database
+    $display = false;
+
+    $dateTimestamp1 = strtotime($show['datetime']);
+    $dateTimestamp2 = strtotime('now UTC -5 minutes');
+
+    // Compare the timestamp date 15 minuten voor aanvang geen kaartverkoop via de site:
+    if ($dateTimestamp1 < $dateTimestamp2) continue;
 
     if ($key === 'status') {
       continue;
@@ -131,6 +145,7 @@ function getFilmsAll($shows) {
       'post_type'		=> 'films',
       'meta_key'		=> 'ticketlab_id',
       'meta_value'	=> $show['eventid'],
+      'post_status' => 'publish',
     );
 
     $the_query = new WP_Query( $args );
@@ -138,11 +153,12 @@ function getFilmsAll($shows) {
     $titel = 'Nog geen titel';
     $film_info = '';
     $filmlink = '';
-    $thumbnail = "<img src='https://picsum.photos/150/250' />";
+    $thumbnail = "<img src='https://picsum.photos/300/400' />";
     $meta = '';
 
     while ( $the_query->have_posts() ) : $the_query->the_post();
       
+        $display = true;
         $id = get_the_ID();
         $titel = get_the_title();
         $filmlink = get_the_permalink();
@@ -182,10 +198,12 @@ function getFilmsAll($shows) {
 
         $film_info .= $duur .' min. '.$taal.' '.$regisseur;
 
-        $size = 'medium_large';
+        $size = 'filmsSliderStanding';
         $thumbnail = get_field( 'alternatieve_afbeelding', $id );
 
         if ( $thumbnail ) { 
+
+          var_dump($thumbnail);
 
           $url = $thumbnail['url'];
           $alt = esc_attr($thumbnail['alt']);
@@ -199,13 +217,15 @@ function getFilmsAll($shows) {
     endwhile;
 
 
-        ///////////////////////////////////
-        //
-        // Output naar de site begint hier:
-        //
-        //////////////////////////////////
+    ///////////////////////////////////
+    //
+    // Output naar de site begint hier:
+    //
+    //////////////////////////////////
 
-    $output .= '<li class="ticket">';
+    if($display):
+
+      $output .= '<li class="ticket">';
                 //TODO: Specials
             // Titel met URL
             $output .= '<div class="card filmsFeatImg">';
@@ -224,7 +244,9 @@ function getFilmsAll($shows) {
             // Tijd:
             // Zaal:
 
-    $output .= '</li>';
+      $output .= '</li>';
+
+    endif;
 
 
   }
@@ -267,7 +289,7 @@ function getFilms() {
       $duur = '';
       $land = '';
 
-      $size = 'medium_large';
+      $size = 'filmsSliderStanding';
       $thumbnail = get_field( 'alternatieve_afbeelding');
 
       // Load leeftijd settings and values.
@@ -343,6 +365,5 @@ function getFilms() {
   wp_reset_postdata();
   return $output;
 }
-
 
 ?>
