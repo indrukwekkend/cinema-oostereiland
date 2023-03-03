@@ -30,7 +30,7 @@
 
       <div class="search">
         <i class="fal fa-search"></i>
-        <input type="text" id="zoek" placeholder="Film titel"> </input>
+        <input type="text" id="zoek" placeholder="Filmtitel"> </input>
       </div>
 
     </div>

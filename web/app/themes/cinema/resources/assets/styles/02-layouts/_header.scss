@@ -8,7 +8,8 @@
   margin: 0;
   margin-bottom: 0;
   padding: 0;
-  height: 100vh;
+  height: 70vh;
+  max-height: 350px;
   background-size: cover;
   background-position: center center;
   position: relative;
@@ -207,6 +208,8 @@
   }
 
   .page-header-film {
+    max-height: 100%;
+
     .home & {
       height: 100vh;
 

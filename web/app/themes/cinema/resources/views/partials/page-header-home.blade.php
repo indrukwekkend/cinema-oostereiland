@@ -42,7 +42,13 @@ $alleen_vandaag = get_field('films_vandaag', 'options');
 
             <div class="cta-bar__content_right">
               <h2 class="entry-title"> <a href="{{$link}}"> {{$titel}}</a> </h2>
-              <p><span>{{$label}}</span>{{$subheader}}</p>
+              @if ($subheader != '' || $label != 0  )
+                <p>
+                @if ( $label != 0  )<span>{{$label}}</span>  @endif
+                @if ($subheader != '') {{$subheader}} @endif
+                </p>
+              @endif
+             
                 <?php if ($knop): ?>
                   <a class="btn wp-block-button__link tickets" id="toon_tickets" href="{{$link}}#tickets">{{$linktekst}}</a>
                   <a class="btn wp-block-button__link info" id="toon_info" href="{{$link}}">Informatie</a>

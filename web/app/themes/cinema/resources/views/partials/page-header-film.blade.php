@@ -39,6 +39,8 @@
 
 <header class="page-header-film alignfull contrast" style="background-image: url(<?=$backgroundImage?>); ">
 
+<img src="<?= $backgroundImage; ?>" alt="" class="position-absolute" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+
 <div class="film_media">
   
     <?php if ($Youtube != '') : ?>
