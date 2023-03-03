@@ -1185,12 +1185,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:indrukwekkend/Film-blokken.git",
-                "reference": "240dc10e09f17ae4508274ed94d20871af3e848e"
+                "reference": "7e5d8efc86971091df21e1caf6086802f788dc9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/indrukwekkend/Film-blokken/zipball/240dc10e09f17ae4508274ed94d20871af3e848e",
-                "reference": "240dc10e09f17ae4508274ed94d20871af3e848e",
+                "url": "https://api.github.com/repos/indrukwekkend/Film-blokken/zipball/7e5d8efc86971091df21e1caf6086802f788dc9c",
+                "reference": "7e5d8efc86971091df21e1caf6086802f788dc9c",
                 "shasum": ""
             },
             "require": {
@@ -1218,7 +1218,7 @@
                 "source": "https://github.com/indrukwekkend/Film-blokken/tree/main",
                 "issues": "https://github.com/indrukwekkend/Film-blokken/issues"
             },
-            "time": "2023-03-03T09:35:57+00:00"
+            "time": "2023-03-03T14:41:02+00:00"
         },
         {
             "name": "indrukwekkend/narrowcasting",
@@ -1226,12 +1226,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:indrukwekkend/narrowcasting.git",
-                "reference": "c86c4471b935806a92dbee170250e79f78549f73"
+                "reference": "2bbc2d73124629964b3261c075a9d35e6ba9f601"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/indrukwekkend/narrowcasting/zipball/c86c4471b935806a92dbee170250e79f78549f73",
-                "reference": "c86c4471b935806a92dbee170250e79f78549f73",
+                "url": "https://api.github.com/repos/indrukwekkend/narrowcasting/zipball/2bbc2d73124629964b3261c075a9d35e6ba9f601",
+                "reference": "2bbc2d73124629964b3261c075a9d35e6ba9f601",
                 "shasum": ""
             },
             "require": {
@@ -1259,7 +1259,7 @@
                 "source": "https://github.com/indrukwekkend/narrowcasting/tree/main",
                 "issues": "https://github.com/indrukwekkend/narrowcasting/issues"
             },
-            "time": "2022-12-28T16:23:56+00:00"
+            "time": "2023-03-03T14:40:45+00:00"
         },
         {
             "name": "indrukwekkend/subpaginas",
