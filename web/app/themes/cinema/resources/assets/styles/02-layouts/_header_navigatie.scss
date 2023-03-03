@@ -50,22 +50,31 @@ header.site-header {
     max-width: $header-width;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
+
+    @media only screen and (min-width: $ipad-width) {
+      align-items: center;
+    }
 
     .brand {
       background-image: url("../images/logo_diap.svg");
       background-repeat: no-repeat;
       background-size: contain;
       width: 350px;
-      max-width: 50%;
+      max-width: 33%;
       height: 80px;
-      margin-top: 30px;
+      margin-top: 15px;
       display: block;
       font-size: 0;
       align-self: center;
       transition: all 0.5s ease-in-out;
       text-indent: -15000px;
+
+      @media only screen and (min-width: $ipad-width) {
+        margin-top: 35px;
+        max-width: 33%;
+      }
 
       &.small {
         height: 50px;
@@ -78,7 +87,7 @@ header.site-header {
 
     //op mobiel uit
     .menu-main-container {
-      display: none;
+      // display: none;
     }
 
     .hamburger {
@@ -91,10 +100,15 @@ header.site-header {
       margin-left: 20px;
 
       &-title {
+        display: none;
         font-weight: 600;
         text-transform: uppercase;
         font-size: 17px;
         margin-right: 5px;
+
+        @media only screen and (min-width: $ipad-width) {
+          display: block;
+        }
       }
 
       &-inner {

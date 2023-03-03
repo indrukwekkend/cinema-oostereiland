@@ -50,19 +50,31 @@ export default {
       gsap.registerPlugin(ScrollTrigger);
 
       // scroll trigger pin CTA element
-      ScrollTrigger.create({
-        start: 'top top', 
-        end: '+=150000',
-        toggleClass: {targets: '#cta-bar', className: 'active'}, 
-      });
+      // ScrollTrigger.create({
+      //   trigger: '#cta-bar',
+      //   pin: '#cta-bar',
+      //   start: 'top top', 
+      //   end: 'top bottom',
+      //   toggleClass: {targets: '#cta-bar', className: 'active'}, 
+      // });
 
       ScrollTrigger.create({
         trigger: '#cta-bar',
-        start: 'top top', 
-        pin: '#cta-bar',
-        end: '+=150000',
-        toggleClass: {targets: '#cta-bar', className: 'smaller'},
+        start: 'top top',
+        endTrigger: 'html',
+        //top verplaatsen naar beneden, krijg je marge, maar naar boven plaatsen van de stop gaat wel goed!
+        end: 'bottom -9000px top',
+        toggleClass: { targets: '#cta-bar', className: 'active' },
+        // markers: true,
       });
+
+      // ScrollTrigger.create({
+      //   trigger: '#cta-bar',
+      //   start: 'top top', 
+      //   pin: '#cta-bar',
+      //   end: '#mainfooter',
+      //   toggleClass: {targets: '#cta-bar', className: 'smaller'},
+      // });
 
       // pak alle sliders op de filmpagina op, in 1 array.
       const sliders = document.querySelectorAll('.block-slider')

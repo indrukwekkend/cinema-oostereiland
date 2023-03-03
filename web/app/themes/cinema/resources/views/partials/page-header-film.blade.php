@@ -37,61 +37,47 @@
 
 ?>
 
-<header class="page-header-film alignfull contrast" style="background-image: url(<?=$backgroundImage?>); ">
+<section class='film-header'>
+  <header class="page-header-film alignfull contrast" style="background-image: url(<?=$backgroundImage?>); ">
+    <img src="<?= $backgroundImage; ?>" alt="" class="position-absolute" id="main-image">
 
-<img src="<?= $backgroundImage; ?>" alt="" class="position-absolute" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+    <!-- Button  Youtube position absolute -->
+      <?php if ($Youtube != '') : ?>
+        <div class="video-button">
+          <button type="button" class="play_btn" id="open-youtube">
+            <i class="fa fa-play-circle fa-5x" aria-hidden="true"></i>
+          </button>
+        </div>
+      <?php endif; ?>
 
-<div class="film_media">
-  
-    <?php if ($Youtube != '') : ?>
-      <button type="button" class="kill_btn youtube_btn" id="close-youtube">
-        <i class="fa fa-times-circle fa-2x" aria-hidden="true"></i>
-      </button>
-      <div class="fitVids-wrapper">
-          <iframe class="position-absolute" id="video" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" src="https://www.youtube.com/embed/<?= $Youtube; ?>?enablejsapi=1&amp;controls=1&amp;showinfo=0&amp;rel=0&amp;modestbranding=1" frameborder="0" allowfullscreen="" data-gtm-yt-inspected-11196688_19="true"></iframe>
-      </div>
-    <?php endif; ?>
-  </div>
-
-  <?php if ($Youtube != '') : ?>
-    <div class="video-button">
-      <button type="button" class="play_btn" id="open-youtube">
-        <i class="fa fa-play-circle fa-5x" aria-hidden="true"></i>
-      </button>
+    <!-- Youtube iframe -->
+    <div class="film_media">
+      <?php if ($Youtube != '') : ?>
+        <button type="button" class="kill_btn youtube_btn" id="close-youtube">
+          <i class="fa fa-times-circle fa-2x" aria-hidden="true"></i>
+        </button>
+        <div class="fitVids-wrapper">
+            <iframe class="position-absolute" id="video" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" src="https://www.youtube.com/embed/<?= $Youtube; ?>?enablejsapi=1&amp;controls=1&amp;showinfo=0&amp;rel=0&amp;modestbranding=1" frameborder="0" allowfullscreen="" data-gtm-yt-inspected-11196688_19="true"></iframe>
+        </div>
+      <?php endif; ?>
     </div>
-  <?php endif; ?>
-
-
+    <!-- Einde Youtube iframe -->
+  </header>
 
   <div class="header-content-wrapper">
-      
-      <!-- <div class="header-content-wrapper__content alignwide">
-        <p>hier het label</p>
-        <h1 class="entry-title">{!! get_the_title() !!}</h1>
-        <p>hier de subtekst</p>
-      </div> -->
-
-      <!-- TODO: de button naar de film tickets in een balk, onderaan de header -->
-
-      <div id="cta-bar" class="cta-bar alignfull">
-        <div class="cta-bar__content alignwide">
-          
-          <div class="cta-bar__content__left">
-            <h1 class="entry-title">{!! get_the_title() !!}</h1>
-            <div class="film-info">
-                <div class="ticketDates"></div>
-                <!-- <p>&nbsp; / @php echo $regisseur . $label @endphp </p> -->
-            </div>
-          
+    <div id="cta-bar" class="cta-bar alignfull">
+      <div class="cta-bar__content alignwide">
+        <div class="cta-bar__content__left">
+          <h1 class="entry-title">{!! get_the_title() !!}</h1>
+          <div class="film-info">
+              <div class="ticketDates"></div>
           </div>
+        </div>
 
-          <div class="cta-bar__content__right">
-            <a class="btn wp-block-button__link" id="toon_tickets" href="#">Tickets</a>
-          </div>
-
-
+        <div class="cta-bar__content__right">
+          <a class="btn wp-block-button__link" id="toon_tickets" href="#">Tickets</a>
         </div>
       </div>
+    </div>
   </div>
-
-</header>
+</section>

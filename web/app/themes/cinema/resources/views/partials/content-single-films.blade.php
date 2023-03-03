@@ -62,6 +62,7 @@
 			headerplayer.playVideo();
 			jQuery('.film_media').slideToggle(800);
 			jQuery('#masthead').slideToggle("slow");
+			jQuery('#main-image').toggleClass("slow");
 		});
 	  
 		var pauseButton = document.getElementById("close-youtube");
@@ -80,6 +81,7 @@
 	jQuery('.kill_btn').click(function () {
 			jQuery('.film_media').slideToggle(800);
 			jQuery('#masthead').slideToggle("slow");
+			jQuery('#main-image').toggleClass("slow");
 	});
 
 	jQuery('.youtube_btn_mob').click(function () {
