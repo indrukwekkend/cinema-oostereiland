@@ -73,10 +73,15 @@
     padding-top: 0;
     height: 85vh;
     max-height: 900px;
-
+    /* stylelint-disable no-descending-specificity */
     .header-content-wrapper {
       top: 66%;
       bottom: 0;
+      position: absolute;
+
+      .cta-bar__content {
+        color: $wit;
+      }
     }
   }
 
