@@ -4,7 +4,7 @@ html {
 }
 
 body.template-narrowcasting {
-  font-family: $primary-font;
+  font-family: "Assistant", sans-serif;
   line-height: $base-line-height;
   background-color: $base-color;
   color: #fff;
@@ -35,6 +35,7 @@ body.template-narrowcasting {
   h3 {
     color: #fff;
     font-size: 64px;
+    line-height: 0.9em;
 
     &.starttijd {
       width: 175px;
