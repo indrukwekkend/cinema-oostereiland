@@ -194,18 +194,15 @@ class FilmsApi {
             
           }
         }
-       
 
 				$the_posts[] = [
 					'id'        => $id,
 					'title'     => $the_post->post_title,
-					'post_status'   => 'publish',
-          'excerpt'     => $excerpt,
-					'content'   => $content,
-					// 'date'      => wp_date( get_option( 'date_format' ), get_post_timestamp( $the_post ) ),
+					'post_status'   => 'actief',
+          'samenvatting'     => $excerpt,
 					'permalink' => get_the_permalink( $the_post ),
 					'thumbnail' => $thumb,
-          'thumbnail1' => $thumb1,
+          'filmposter' => $thumb1,
           'voorstellingen' => $shows,
 					
 				];
