@@ -105,34 +105,6 @@
             "placeholder": ""
         },
         {
-            "key": "field_61547d5aba98a",
-            "label": "Extra tekst Label (kopie)",
-            "name": "extra_tekst_label_kopie",
-            "type": "select",
-            "instructions": "Extra label voor bij de film. Deze lijst kun je aanpassen in de filminstellingen.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "0": "-- Selecteer een label --",
-                "special": "special",
-                "2e succesweek": "2e succesweek",
-                "3e succesweek": "3e succesweek",
-                "LHBTQ": "LHBTQ"
-            },
-            "default_value": false,
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
             "key": "field_60f83218fc496",
             "label": "Deze film hoort bij festival",
             "name": "festival_films",
@@ -171,6 +143,33 @@
             "endpoint": 0
         },
         {
+            "key": "field_61090abfe9472",
+            "label": "Alternatieve afbeelding",
+            "name": "alternatieve_afbeelding",
+            "type": "image_aspect_ratio_crop",
+            "instructions": "Deze afbeelding wordt gebruikt als er een staand beeld nodig is voor de film",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "crop_type": "aspect_ratio",
+            "aspect_ratio_width": 300,
+            "aspect_ratio_height": 427,
+            "return_format": "array",
+            "preview_size": "full",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_61090b911eb6d",
             "label": "Header afbeelding",
             "name": "header_img",
@@ -188,33 +187,6 @@
             "aspect_ratio_height": 800,
             "return_format": "array",
             "preview_size": "medium_large",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_61090abfe9472",
-            "label": "Alternatieve afbeelding",
-            "name": "alternatieve_afbeelding",
-            "type": "image_aspect_ratio_crop",
-            "instructions": "Deze afbeelding wordt gebruikt als er een staand beeld nodig is voor de film",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "25",
-                "class": "",
-                "id": ""
-            },
-            "crop_type": "aspect_ratio",
-            "aspect_ratio_width": 300,
-            "aspect_ratio_height": 400,
-            "return_format": "array",
-            "preview_size": "full",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -491,5 +463,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632927087
+    "modified": 1689600735
 }
