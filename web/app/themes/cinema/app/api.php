@@ -180,9 +180,23 @@ class FilmsApi {
         // haal alle shows op die bij deze film horen:
         $shows = get_option( $refTable );
 
+        // bewerk de Array shows zodat deze geschikt is voor de API:
         if ($shows) {
            // change the show eventid to the url of the event:
+           $i = 0;
           foreach($shows as $key => $show) {
+
+            //remove the @id and @type from the array:
+            unset($shows[$i]['@id']);
+            unset($shows[$i]['@type']);
+            unset($shows[$i]['creationdate']);
+            unset($shows[$i]['scheduled']);
+            unset($shows[$i]['pauselength']);
+            unset($shows[$i]['locationid']);
+            unset($shows[$i]['leaderlength']);
+            unset($shows[$i]['seating']);
+            unset($shows[$i]['eventid']);
+
             $events = array("events", "/");
             $eventnummer = str_replace($events, "",  $show['eventid'] );
             $shows[$key]['eventid'] = $eventnummer;
@@ -192,9 +206,11 @@ class FilmsApi {
             $zaalnummer = intval($zaalnummer) - 1;
             $shows[$key]['zaalnummer'] = $zaalnummer;
             
+            $i++;
           }
         }
 
+        // genereer de output:
 				$the_posts[] = [
 					'id'        => $id,
 					'title'     => $the_post->post_title,
@@ -217,7 +233,7 @@ class FilmsApi {
 
 		// Return the formatted result.
 		return (object) [
-			'posts'          => $the_posts,
+			'films'          => $the_posts,
 			'posts_per_page' => $results->query['posts_per_page'],
 			'tax_query'     => $results->query['tax_query'],
 			'total_posts'    => $results->found_posts,
