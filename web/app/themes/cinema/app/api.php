@@ -142,6 +142,10 @@ class FilmsApi {
 				$id = $the_post->ID;
         // voor de content geldt tegenwoordig natuurlijk dat je blokken krijgt. Je kunt die dus niet makkelijk gebruiken om een soort excerpt te genereren. 
         $content = $the_post->post_content;
+        //strip alle html tags
+        $content = strip_tags($content);
+        $content = trim(preg_replace('/\s\s+/', ' ', $content));
+
 
         //
         //images
@@ -173,6 +177,7 @@ class FilmsApi {
 
         // Ophalen van de voorstellingen:
         $film_nummer = get_field( "ticketlab_id", $id );
+        $duur = get_post_meta( $id, 'duur', true );
         $events = array("events", "/");
         $filmnummer = str_replace($events, "",  $film_nummer );
         // //kijk eerst in de database of de film tickets heeft:
@@ -186,7 +191,7 @@ class FilmsApi {
            $i = 0;
           foreach($shows as $key => $show) {
 
-            //remove the @id and @type from the array:
+            // remove the @id and @type from the array:
             unset($shows[$i]['@id']);
             unset($shows[$i]['@type']);
             unset($shows[$i]['creationdate']);
@@ -214,8 +219,10 @@ class FilmsApi {
 				$the_posts[] = [
 					'id'        => $id,
 					'title'     => $the_post->post_title,
+          'duur'     => $duur,
 					'post_status'   => 'actief',
           'samenvatting'     => $excerpt,
+          'content'     => $content,
 					'permalink' => get_the_permalink( $the_post ),
 					'thumbnail' => $thumb,
           'filmposter' => $thumb1,
