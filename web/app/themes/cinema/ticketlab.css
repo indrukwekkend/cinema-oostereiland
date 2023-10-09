@@ -82,3 +82,21 @@ div.legend-blocked {
 #frontindicator {
   margin-left: 1%;
 }
+
+/* // button informatie */
+.text-muted.hidden-xs {
+  display: none;
+}
+
+#addtocart-hint {
+  display: block;
+}
+
+.button.ga-verder {
+  border: 1px solid;
+}
+
+.button.ga-verder:hover {
+  background: #000;
+  color: #fff;
+}
