@@ -37,7 +37,7 @@
       "package": {
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
         "version": "5.10.2",
-        "type": "wordpress-plugin",
+        "type": "wordpress-muplugin",
         "dist": {
           "type": "zip",
           "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t={%VERSION}"
@@ -96,7 +96,7 @@
   "require": {
     "php": ">=7.1",
     "advanced-custom-fields/advanced-custom-fields-pro": "^5.8",
-    "deliciousbrains-plugin/wp-migrate-db-pro": "^2",
+    "deliciousbrains-plugin/wp-migrate-db-pro": "2.6.8",
     "composer/installers": "^1.11",
     "kinsta/kinsta-mu-plugins": "^2",
     "gravityforms/gravityforms": "*",
@@ -117,6 +117,7 @@
     "wpackagist-plugin/seo-by-rank-math": "*",
     "wpackagist-plugin/duplicate-post": "^4",
     "wpackagist-plugin/rating-block": "^1",
+    "wpackagist-theme/twentytwentythree": "^1.0",
     "wpmudev/wp-smush-pro": "*"
   },
   "require-dev": {
