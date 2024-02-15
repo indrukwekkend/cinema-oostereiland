@@ -36,7 +36,7 @@
       "type": "package",
       "package": {
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "5.10.2",
+        "version": "6.2.6.1",
         "type": "wordpress-muplugin",
         "dist": {
           "type": "zip",
@@ -95,7 +95,7 @@
   },
   "require": {
     "php": ">=7.1",
-    "advanced-custom-fields/advanced-custom-fields-pro": "^5.8",
+    "advanced-custom-fields/advanced-custom-fields-pro": "^6",
     "deliciousbrains-plugin/wp-migrate-db-pro": "^2",
     "composer/installers": "^1.11",
     "kinsta/kinsta-mu-plugins": "^2",
@@ -107,7 +107,7 @@
     "indrukwekkend/subpaginas": "dev-main",
     "roots/bedrock-autoloader": "^1.0",
     "roots/bedrock-disallow-indexing": "^2.0",
-    "roots/wordpress": "6.3",
+    "roots/wordpress": "6.4.3",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.1.0",
     "wpackagist-plugin/duracelltomi-google-tag-manager": "^1.11",

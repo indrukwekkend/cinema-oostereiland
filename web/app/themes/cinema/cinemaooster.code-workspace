@@ -10,10 +10,10 @@
 			"path": "resources/assets/styles"
 		},
 		{
-			"path": "../../../../../../../cinemaoostereiland-2021/app/public/wp-content/plugins/films"
+			"path": "../../plugins/films"
 		},
 		{
-			"path": "../../plugins/films"
+			"path": "../../../../../../../filmsite/app/public/wp-content/plugins/films"
 		}
 	],
 	"settings": {}
