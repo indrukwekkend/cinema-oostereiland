@@ -153,8 +153,8 @@
     }
 
     &__wrapper {
-      margin: 150px 120px 50px;
-      width: calc(100% - 240px);
+      margin: 20px 0 0 0;
+      width: calc(100% - 40px);
       background: #fff;
       position: relative;
     }
@@ -260,6 +260,15 @@
           }
         }
       }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .ticket-modal {
+    &__wrapper {
+      margin: 150px 120px 50px;
+      width: calc(100% - 240px);
     }
   }
 }
