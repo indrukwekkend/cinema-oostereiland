@@ -83,12 +83,12 @@ div.seat-available-seat-flag-wheelchair:first-child {
 
 div.seat-available-seat-flag-wheelchair:nth-child(2) {
   background-image: url('https://cinemaoostereiland.nl/app/themes/cinema/dist/images/rolstoelkeuze_vrij.png') !important;
-  width: 74px !important;
+  /* width: 74px !important; */
 }
 
 div.seat-available-seat-flag-wheelchair:nth-child(2).peg {
   background-image: url('https://cinemaoostereiland.nl/app/themes/cinema/dist/images/rolstoelkeuze_jij.png') !important;
-  width: 74px !important;
+  /* width: 74px !important; */
 }
 
 .ticketlab-margin-bottom { margin: 20px 0; }
