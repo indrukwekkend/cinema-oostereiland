@@ -76,7 +76,7 @@
       "type": "package",
       "package": {
         "name": "gravityforms/gravityforms",
-        "version": "2.8.18",
+        "version": "2.5.10.1",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",

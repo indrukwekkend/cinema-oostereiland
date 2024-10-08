@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "55c550c8a718475672c777d4efd11bc1",
+    "content-hash": "93a975fc1e0c99c2d80741a0e90b1b63",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -1116,7 +1116,7 @@
         },
         {
             "name": "gravityforms/gravityforms",
-            "version": "2.8.18",
+            "version": "2.5.10.1",
             "dist": {
                 "type": "zip",
                 "url": "https://www.gravityhelp.com/wp-content/plugins/gravitymanager/api.php?op=get_plugin&slug=gravityforms&key={%GRAVITY_FORMS_KEY}"
