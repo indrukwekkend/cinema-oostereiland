@@ -76,7 +76,7 @@
       "type": "package",
       "package": {
         "name": "gravityforms/gravityforms",
-        "version": "2.5.10.1",
+        "version": "2.8.18",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
@@ -107,7 +107,7 @@
     "indrukwekkend/subpaginas": "dev-main",
     "roots/bedrock-autoloader": "^1.0",
     "roots/bedrock-disallow-indexing": "^2.0",
-    "roots/wordpress": "6.4.3",
+    "roots/wordpress": "6.6.2",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.1.0",
     "wpackagist-plugin/duracelltomi-google-tag-manager": "^1.11",
@@ -126,7 +126,11 @@
   },
   "config": {
     "optimize-autoloader": true,
-    "preferred-install": "dist"
+    "preferred-install": "dist",
+    "allow-plugins": {
+      "ffraenz/private-composer-installer": true,
+      "gotoandplay/gravityforms-composer-installer": true
+    }
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
