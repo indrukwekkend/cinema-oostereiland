@@ -97,7 +97,6 @@
     "php": ">=7.1",
     "advanced-custom-fields/advanced-custom-fields-pro": "^6",
     "deliciousbrains-plugin/wp-migrate-db-pro": "^2",
-    "composer/installers": "^1.11",
     "kinsta/kinsta-mu-plugins": "^2",
     "gravityforms/gravityforms": "*",
     "vlucas/phpdotenv": "^5.3",
@@ -129,6 +128,7 @@
     "preferred-install": "dist",
     "allow-plugins": {
       "ffraenz/private-composer-installer": true,
+      "composer/installers": true,
       "gotoandplay/gravityforms-composer-installer": true
     }
   },
