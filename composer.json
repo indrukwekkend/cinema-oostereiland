@@ -108,6 +108,7 @@
     "roots/bedrock-disallow-indexing": "^2.0",
     "roots/wordpress": "6.6.2",
     "roots/wp-config": "1.0.0",
+    "roots/wordpress-core-installer": "*",
     "roots/wp-password-bcrypt": "1.1.0",
     "wpackagist-plugin/duracelltomi-google-tag-manager": "^1.11",
     "wpackagist-plugin/regenerate-thumbnails": "^3.1",
