@@ -129,7 +129,8 @@
     "allow-plugins": {
       "composer/installers": true,
       "ffraenz/private-composer-installer": true,
-      "gotoandplay/gravityforms-composer-installer": true
+      "gotoandplay/gravityforms-composer-installer": true,
+      "composer/wordpress-core-installer": true
     }
   },
   "minimum-stability": "dev",
