@@ -56,7 +56,7 @@ fieldset[disabled] .btn:hover {
   border: none;
 }
 
-#seats-container .seat-available-seat-flag-wheelchair {
+#seats-container .seat.seat-available-seat-flag-wheelchair {
 	background-image: url('https://cinemaoostereiland.nl/app/themes/cinema/dist/images/rolstoelkeuze_vrij.png') !important;
 }
 
