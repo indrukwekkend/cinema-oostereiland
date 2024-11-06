@@ -2,6 +2,8 @@
 web/app/plugins/*
 !web/app/plugins/.gitkeep
 web/app/mu-plugins/*/
+!web/app/plugins/gravityforms/
+!web/app/plugins/advanced-custom-fields-pro/
 web/app/upgrade
 web/app/languages
 web/app/themes/twentytwentythree
