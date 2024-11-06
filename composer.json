@@ -32,22 +32,6 @@
         "type": "composer",
         "url": "https://composer.deliciousbrains.com"
     },
-    "2": {
-      "type": "package",
-      "package": {
-        "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "6.2.6.1",
-        "type": "wordpress-muplugin",
-        "dist": {
-          "type": "zip",
-          "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t={%VERSION}"
-        },
-        "require": {
-          "composer/installers": "^1.4",
-          "ffraenz/private-composer-installer": "^5.0"
-        }
-      }
-    },
     "KinstaMU": {
       "type": "package",
       "package": {
@@ -72,22 +56,6 @@
       "type": "vcs",
       "url": "git@github.com:indrukwekkend/subpaginas.git"
     },
-    "GravityForms": {
-      "type": "package",
-      "package": {
-        "name": "gravityforms/gravityforms",
-        "version": "2.5.10.1",
-        "type": "wordpress-plugin",
-        "dist": {
-          "type": "zip",
-          "url": "https://www.gravityhelp.com/wp-content/plugins/gravitymanager/api.php?op=get_plugin&slug=gravityforms&key={%GRAVITY_FORMS_KEY}"
-        },
-        "require": {
-          "composer/installers": "^1.4",
-          "gotoandplay/gravityforms-composer-installer": "^2.3"
-        }
-      }
-    },
     "WPMU": {
       "type": "composer",
       "url": "https://premium.wpmudev.org/"
@@ -95,10 +63,8 @@
   },
   "require": {
     "php": ">=7.1",
-    "advanced-custom-fields/advanced-custom-fields-pro": "^6",
     "deliciousbrains-plugin/wp-migrate-db-pro": "^2",
     "kinsta/kinsta-mu-plugins": "^2",
-    "gravityforms/gravityforms": "*",
     "vlucas/phpdotenv": "^5.3",
     "oscarotero/env": "^2.1",
     "indrukwekkend/films": "dev-main",
