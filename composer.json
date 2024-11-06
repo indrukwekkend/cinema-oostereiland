@@ -32,22 +32,6 @@
         "type": "composer",
         "url": "https://composer.deliciousbrains.com"
     },
-    "2": {
-      "type": "package",
-      "package": {
-        "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "6.3.10",
-        "type": "wordpress-muplugin",
-        "dist": {
-          "type": "zip",
-          "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t={%VERSION}"
-        },
-        "require": {
-          "composer/installers": "^1.4",
-          "ffraenz/private-composer-installer": "^5.0"
-        }
-      }
-    },
     "KinstaMU": {
       "type": "package",
       "package": {
@@ -95,7 +79,6 @@
   },
   "require": {
     "php": ">=7.1",
-    "advanced-custom-fields/advanced-custom-fields-pro": "^6",
     "deliciousbrains-plugin/wp-migrate-db-pro": "^2",
     "kinsta/kinsta-mu-plugins": "^2",
     "gravityforms/gravityforms": "*",
