@@ -94,7 +94,6 @@
     }
   },
   "require": {
-    "php": ">=7.1",
     "advanced-custom-fields/advanced-custom-fields-pro": "^6",
     "deliciousbrains-plugin/wp-migrate-db-pro": "^2",
     "composer/installers": "^1.11",
@@ -128,13 +127,12 @@
   },
   "config": {
     "optimize-autoloader": true,
-    "platform": {
-      "php": "7.4.0"
-  },
     "preferred-install": "dist",
     "allow-plugins": {
       "composer/installers": true,
-      "roots/wordpress-core-installer": true
+      "roots/wordpress-core-installer": true,
+      "ffraenz/private-composer-installer": true,
+      "gotoandplay/gravityforms-composer-installer": true
     }
   },
   "minimum-stability": "dev",
