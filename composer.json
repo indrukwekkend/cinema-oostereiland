@@ -25,23 +25,23 @@
   },
   "repositories": {
     "0": {
-        "type": "composer",
-        "url": "https://wpackagist.org"
+      "type": "composer",
+      "url": "https://wpackagist.org"
     },
     "1": {
-        "type": "composer",
-        "url": "https://composer.deliciousbrains.com"
+      "type": "composer",
+      "url": "https://composer.deliciousbrains.com"
     },
     "KinstaMU": {
       "type": "package",
       "package": {
-          "name": "kinsta/kinsta-mu-plugins",
-          "type": "wordpress-muplugin",
-          "version": "2.4.8",
-          "dist": {
-              "url": "https://kinsta.com/kinsta-tools/kinsta-mu-plugins.zip",
-              "type": "zip"
-          }
+        "name": "kinsta/kinsta-mu-plugins",
+        "type": "wordpress-muplugin",
+        "version": "2.4.8",
+        "dist": {
+          "url": "https://kinsta.com/kinsta-tools/kinsta-mu-plugins.zip",
+          "type": "zip"
+        }
       }
     },
     "films": {
@@ -62,8 +62,7 @@
     }
   },
   "require": {
-    "php": ">=7.1",
-    "deliciousbrains-plugin/wp-migrate-db-pro": "^2",
+    "php": ">=8.1",
     "kinsta/kinsta-mu-plugins": "^2",
     "vlucas/phpdotenv": "^5.3",
     "oscarotero/env": "^2.1",
@@ -91,7 +90,9 @@
   },
   "config": {
     "optimize-autoloader": true,
-    "preferred-install": "dist",
+    "platform": {
+        "php": "8.1.0"
+    },
     "allow-plugins": {
       "ffraenz/private-composer-installer": true,
       "composer/installers": true,
@@ -99,7 +100,7 @@
       "gotoandplay/gravityforms-composer-installer": true
     }
   },
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "prefer-stable": true,
   "extra": {
     "installer-paths": {
