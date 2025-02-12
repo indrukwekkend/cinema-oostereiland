@@ -129,7 +129,7 @@
   "config": {
     "optimize-autoloader": true,
     "platform": {
-      "php": "8.1.0"
+      "php": "7.4.0"
   },
     "preferred-install": "dist",
     "allow-plugins": {
