@@ -108,7 +108,7 @@ Container::getInstance()
 
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 
-// Hide indrukwekkend/bussiness-card
+// Verberg indrukwekkend/bussiness-card aan de achterkant
 function custom_admin_css() {
     echo '<style>
         .wp-block-missing {
