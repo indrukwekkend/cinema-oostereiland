@@ -109,11 +109,11 @@ Container::getInstance()
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
 
 // Verberg indrukwekkend/bussiness-card aan de achterkant
-function custom_admin_css() {
-    echo '<style>
-        .wp-block-missing {
-            display: none !important;
-        }
-    </style>';
-}
-add_action('admin_head', 'custom_admin_css');
+// function custom_admin_css() {
+//     echo '<style>
+//         .wp-block-missing {
+//             display: none !important;
+//         }
+//     </style>';
+// }
+// add_action('admin_head', 'custom_admin_css');
