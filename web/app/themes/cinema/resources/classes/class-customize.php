@@ -81,6 +81,26 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 				)
 			);
 
+			// Add "display_title_and_tagline" setting for displaying the site-title & tagline.
+			$wp_customize->add_setting(
+				'display_filmcafe_nav',
+				array(
+					'capability'        => 'edit_theme_options',
+					'default'           => true,
+					'sanitize_callback' => array( __CLASS__, 'sanitize_checkbox' ),
+				)
+			);
+
+			// Add control for the "display_title_and_tagline" setting.
+			$wp_customize->add_control(
+				'display_filmcafe_nav',
+				array(
+					'type'    => 'checkbox',
+					'section' => 'title_tagline',
+					'label'   => esc_html__( 'Display Site Title & Tagline', 'twentytwentyone' ),
+				)
+			);
+
 					// Add "display_title_and_tagline" setting for displaying the site-title & tagline.
 					$wp_customize->add_setting(
 						'display_transparant_nav',

@@ -8,8 +8,8 @@
  */
 
 $wrapper_classes  = 'page-header'; 
-//$wrapper_classes .= true === get_theme_mod( 'display_title_and_tagline', true ) ? ' has-title-and-tagline' : ''; 
-$wrapper_classes .= true === get_theme_mod( 'display_transparant_nav', true ) ? ' transparant' : '';
+$wrapper_classes .= true === get_theme_mod( 'display_filmcafe_nav', true ) ? ' has-title-and-tagline' : ''; 
+// $wrapper_classes .= true === get_theme_mod( 'display_transparant_nav', true ) ? ' transparant' : '';
  ?>
 
   <div class="<?php echo esc_attr( $wrapper_classes ); ?>">
