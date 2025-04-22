@@ -44,7 +44,7 @@ if ( is_active_sidebar( 'filmcafe-footer' ) ) : ?>
         </div>
 
         <div  class="widget-area">
-          <?php dynamic_sidebar( 'filmcafe-footerr' ); ?>
+          <?php dynamic_sidebar( 'filmcafe-footer' ); ?>
         </div>
 
         <div class="socials">
