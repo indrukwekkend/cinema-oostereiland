@@ -87,10 +87,7 @@ if ( is_active_sidebar( 'filmcafe-footer' ) ) : ?>
 <footer class="content-info site-footer" id="mainfooter" role="contentinfo">
   <div class="container alignwide"> 
     <?php if ( get_bloginfo( 'name' ) && get_theme_mod( 'display_title_and_tagline', true ) ) : ?>
-      <p>&copy; <?php bloginfo( 'name' ); ?></p>  
-      <p>Schuijteskade 5</p>
-      <p>1621 DE Hoorn</p>
-      <p>0229 228 018</p>
+      <p>&copy; <?php bloginfo( 'name' ); ?></p>
     <?php endif; ?>
     {!! wp_nav_menu($foot_nav3) !!}
     <?php if ( get_theme_mod( 'display_title_and_tagline', true ) ) : ?>
