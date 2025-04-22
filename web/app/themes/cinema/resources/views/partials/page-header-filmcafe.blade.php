@@ -75,9 +75,6 @@ $wrapper_classes  = 'banner site-header';
       @if (has_nav_menu('filmcafe_top_navigation'))
         {!! wp_nav_menu(['theme_location' => 'filmcafe_top_navigation', 'container_id' => 'cssmenu', 'walker' => new CSS_Menu_Maker_Walker()]) !!}
       @endif
-      @if (has_nav_menu('filmcafe_top_navigation'))
-        {!! wp_nav_menu(['theme_location' => 'filmcafe_top_navigation', 'menu_class' => 'nav']) !!}
-      @endif
     </nav>
     
 </header>
