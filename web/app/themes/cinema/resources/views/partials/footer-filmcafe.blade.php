@@ -34,7 +34,7 @@ $foot_nav3 = array(
 <!-- Footer navigatie -->
 
 <?php
-if ( is_active_sidebar( 'sidebar-footer' ) ) : ?>
+if ( is_active_sidebar( 'filmcafe-footer' ) ) : ?>
   <footer  id="footer-widget-area" class="content-info site-footer" role="contentinfo">
       <div class="content-holder container alignwide">
         <div class="col footer_titel">
@@ -44,7 +44,7 @@ if ( is_active_sidebar( 'sidebar-footer' ) ) : ?>
         </div>
 
         <div  class="widget-area">
-          <?php dynamic_sidebar( 'sidebar-footer' ); ?>
+          <?php dynamic_sidebar( 'filmcafe-footerr' ); ?>
         </div>
 
         <div class="socials">
