@@ -47,7 +47,7 @@ $wrapper_classes  = 'banner site-header';
 
        <!-- Hamburger navigation -->
       <button class="hamburger hamburger--spin" type="button">
-        <span class="hamburger-title">Menuu</span>
+        <span class="hamburger-title">Menu</span>
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
