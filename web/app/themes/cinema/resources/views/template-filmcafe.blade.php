@@ -6,7 +6,6 @@
 
 @section('content')
   @while(have_posts()) @php the_post() @endphp
-    @include('partials.page-header-filmcafe')
     @include('partials.content-filmcafe')
   @endwhile
 @endsection
