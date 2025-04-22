@@ -61,7 +61,8 @@ add_action('after_setup_theme', function () {
         'footer2_navigation' => __('Footer midden Navigation', 'sage'),
         'footer3_navigation' => __('Footer rechts Navigation', 'sage'),
         'footer4_navigation' => __('Footer bodem Navigatie', 'sage'),
-        'filmcafe_navigation' => __('Filmcafe footer navigation', 'sage')
+        'filmcafe_navigation' => __('Filmcafe footer navigation', 'sage'),
+        'filmcafe_top_navigation' => __('Filmcafe top navigation', 'sage')
     ]);
 
     /**
