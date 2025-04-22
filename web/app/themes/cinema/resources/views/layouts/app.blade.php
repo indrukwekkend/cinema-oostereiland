@@ -33,7 +33,7 @@ if ( has_block( 'indrukwekkend/header-achtergrond' ) || is_singular('films') )  
       @php do_action('get_footer') @endphp
       @include('partials.footer-cta')
       @stack('custom_footer')
-      @includeWhen(!\Illuminate\Support\Facades\View::hasSection('custom_footer'), 'partials.footer')
+      @include('partials.footer')
     </div>
     @php wp_footer() @endphp
   </body>
