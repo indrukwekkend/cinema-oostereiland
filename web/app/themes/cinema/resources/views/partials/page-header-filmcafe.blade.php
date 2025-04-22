@@ -36,8 +36,8 @@ $wrapper_classes  = 'banner site-header';
     
     <!-- Primary navigation -->
     <nav class="nav-primary">
-      @if (has_nav_menu('primary_navigation'))
-        {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
+      @if (has_nav_menu('filmcafe_top_navigation'))
+        {!! wp_nav_menu(['theme_location' => 'filmcafe_top_navigation', 'menu_class' => 'nav']) !!}
       @endif
     
       <!-- Search button -->
