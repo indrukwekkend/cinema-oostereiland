@@ -140,17 +140,15 @@ if ( function_exists( 'register_block_pattern' ) ) {
 /**
  * Register sidebars
  */
-add_action('widgets_init', function () {    
+add_action('widgets_init', function () {
     register_sidebar([
         'name'          => __('Footer', 'sage'),
-        'id'            => 'sidebar-footer'
+        'id'            => 'sidebar-footer',
     ]);
-});
 
-add_action('widgets_init', function () {    
     register_sidebar([
         'name'          => __('Filmcafe', 'sage'),
-        'id'            => 'filmcafe-footer'
+        'id'            => 'filmcafe-footer',
     ]);
 });
 
