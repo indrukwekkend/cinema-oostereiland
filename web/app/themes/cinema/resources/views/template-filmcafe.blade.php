@@ -6,6 +6,7 @@
 
 @section('content')
   @while(have_posts()) @php the_post() @endphp
+    @include('partials.page-filmcafe-transparant')
     @include('partials.content-filmcafe')
   @endwhile
 @endsection
