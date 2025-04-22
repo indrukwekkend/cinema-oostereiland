@@ -12,6 +12,9 @@ $wrapper_classes  = 'page-header';
 $wrapper_classes .= true === get_theme_mod( 'display_transparant_nav', true ) ? ' transparant' : '';
  ?>
 
+ <h1>Dit is</h1>
+ <h2>Een test</h2>
+
   <div class="<?php echo esc_attr( $wrapper_classes ); ?>">
     <?php   if ( function_exists('yoast_breadcrumb') && !is_front_page() && !is_home()  ) : ?>
       <?php yoast_breadcrumb( '<p id="breadcrumbs">','</p>' ); ?>

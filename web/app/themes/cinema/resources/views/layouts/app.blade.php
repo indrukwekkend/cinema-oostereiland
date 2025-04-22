@@ -34,10 +34,6 @@ if ( has_block( 'indrukwekkend/header-achtergrond' ) || is_singular('films') )  
       @include('partials.footer-cta')
       @include('partials.footer')
     </div>
-    @if (is_page_template('views/template-filmcafe.blade.php'))
-      @include('partials.footer-filmcafe')
-    @else
-      @include('partials.footer')
-    @endif @endphp
+    @php wp_footer() @endphp
   </body>
 </html>
