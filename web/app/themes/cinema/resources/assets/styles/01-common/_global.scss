@@ -28,14 +28,27 @@ body {
 .slick-list {
   margin-left: 60px;
   margin-right: 40px;
+
+  @media only screen and (max-width: 500px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .wp-block-indrukwekkend-all-films-grid.slides .slick-prev {
   left: 0;
+
+  @media only screen and (max-width: 500px) {
+    left: auto;
+  }
 }
 
 .wp-block-indrukwekkend-all-films-grid.slides .slick-next {
   right: 0;
+
+  @media only screen and (max-width: 500px) {
+    right: auto;
+  }
 }
 
 #page {
