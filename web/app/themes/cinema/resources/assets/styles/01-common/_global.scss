@@ -25,6 +25,19 @@ body {
   word-wrap: break-word;
 }
 
+.slick-list {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.wp-block-indrukwekkend-all-films-grid.slides .slick-prev {
+  left: 0;
+}
+
+.wp-block-indrukwekkend-all-films-grid.slides .slick-next {
+  right: 0;
+}
+
 #page {
   overflow: hidden;
 }
