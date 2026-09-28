@@ -1,0 +1,52 @@
+/**
+ * Eigen sticky-logica — onafhankelijk van GSAP/ScrollTrigger.
+ */
+
+/* Voorkom dat theme-regel `.cta-bar { bottom: 70% }` de fixed balk uitrekt. */
+.single-films #cta-bar.is-pinned {
+	position: fixed !important;
+	top: 0 !important;
+	left: 0 !important;
+	right: 0 !important;
+	bottom: auto !important;
+	height: auto !important;
+	max-height: none !important;
+	z-index: 100;
+	margin: 0 !important;
+}
+
+.single-films #cta-bar.is-pinned.active {
+	background-color: #eee8e2;
+	padding-bottom: 30px;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+.single-films .cta-bar-placeholder {
+	display: none;
+	width: 100%;
+	pointer-events: none;
+}
+
+.single-films #cta-bar {
+	transition: background-color 0.25s ease;
+}
+
+.single-films #cta-bar .cta-bar__content h1,
+.single-films #cta-bar .cta-bar__content h2,
+.single-films #cta-bar .film-info {
+	transition: color 0.25s ease, font-size 0.25s ease;
+}
+
+.single-films #cta-bar.is-pinned .cta-bar__content {
+	color: #2d3676;
+}
+
+/* GSAP pin-spacer mag clicks niet blokkeren */
+.single-films .pin-spacer {
+	pointer-events: none !important;
+}
+
+.single-films .pin-spacer #cta-bar {
+	pointer-events: auto !important;
+}

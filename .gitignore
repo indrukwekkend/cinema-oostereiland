@@ -3,7 +3,16 @@ web/app/plugins/*
 !web/app/plugins/.gitkeep
 web/app/mu-plugins/*/
 !web/app/plugins/gravityforms/
+!web/app/plugins/cinema-cta-bar-fix/
 web/app/plugins/advanced-custom-fields-pro/
+# Lokale rommel / grote archives niet committen
+.DS_Store
+**/.DS_Store
+Film-blokken-main/
+Film-blokken-main.zip
+films/
+ticketlab.zip
+ticketlab-frontend.zip
 web/app/upgrade
 web/app/languages
 web/app/themes/twentytwentythree

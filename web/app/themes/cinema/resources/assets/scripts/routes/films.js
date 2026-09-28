@@ -58,15 +58,20 @@ export default {
       //   toggleClass: {targets: '#cta-bar', className: 'active'}, 
       // });
 
-      ScrollTrigger.create({
-        trigger: '#cta-bar',
-        start: 'top top',
-        endTrigger: 'html',
-        //top verplaatsen naar beneden, krijg je marge, maar naar boven plaatsen van de stop gaat wel goed!
-        end: 'bottom -9000px top',
-        toggleClass: { targets: '#cta-bar', className: 'active' },
-        // markers: true,
-      });
+      // CTA sticky wordt afgehandeld door plugin cinema-cta-bar-fix
+      // (GSAP pin + theme `bottom: 70%` gaven conflicten bij omhoog/omlaag scrollen).
+      // const ctaBar = document.getElementById('cta-bar');
+      // if (ctaBar) {
+      //   ScrollTrigger.create({
+      //     trigger: '#cta-bar',
+      //     start: 'top top',
+      //     endTrigger: 'html',
+      //     end: 'bottom -9000px top',
+      //     pin: '#cta-bar',
+      //     pinSpacing: true,
+      //     toggleClass: { targets: '#cta-bar', className: 'active' },
+      //   });
+      // }
 
       // ScrollTrigger.create({
       //   trigger: '#cta-bar',

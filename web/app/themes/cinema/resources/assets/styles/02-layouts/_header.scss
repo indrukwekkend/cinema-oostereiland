@@ -188,14 +188,9 @@
   &.active {
     background-color: $navigation-background;
     z-index: 100;
-    position: fixed;
     padding-bottom: 10px;
     padding-left: 2rem;
     padding-right: 2rem;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: auto;
     margin-left: auto;
     margin-right: auto;
 
@@ -265,13 +260,6 @@
     }
 
     &.active {
-      .cta-bar__content {
-        h1 {
-          color: $brand-primary;
-          font-size: 2em;
-        }
-      }
-
       &.smaller {
         max-height: 200px !important;
       }
