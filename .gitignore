@@ -4,13 +4,17 @@ web/app/plugins/*
 web/app/mu-plugins/*/
 !web/app/plugins/gravityforms/
 !web/app/plugins/cinema-cta-bar-fix/
+!web/app/plugins/films/
+web/app/plugins/films/vendor/
+web/app/plugins/films/node_modules/
+web/app/plugins/films/testbestanden/
 web/app/plugins/advanced-custom-fields-pro/
 # Lokale rommel / grote archives niet committen
 .DS_Store
 **/.DS_Store
 Film-blokken-main/
 Film-blokken-main.zip
-films/
+/films/
 ticketlab.zip
 ticketlab-frontend.zip
 web/app/upgrade

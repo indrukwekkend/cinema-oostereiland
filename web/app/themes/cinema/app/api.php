@@ -185,34 +185,43 @@ class FilmsApi {
         // haal alle shows op die bij deze film horen:
         $shows = get_option( $refTable );
 
+        // Alleen ingeplande + gepubliceerde voorstellingen (Ticketlab scheduled + visible).
+        if ( function_exists( 'ticketlab_filter_public_shows' ) ) {
+          $shows = ticketlab_filter_public_shows( $shows );
+        }
+
         // bewerk de Array shows zodat deze geschikt is voor de API:
         if ($shows) {
            // change the show eventid to the url of the event:
-           $i = 0;
+           $public_shows = array();
           foreach($shows as $key => $show) {
+            if ( $key === 'status' || ! is_array( $show ) ) {
+              continue;
+            }
 
-            // remove the @id and @type from the array:
-            unset($shows[$i]['@id']);
-            unset($shows[$i]['@type']);
-            unset($shows[$i]['creationdate']);
-            unset($shows[$i]['scheduled']);
-            unset($shows[$i]['pauselength']);
-            unset($shows[$i]['locationid']);
-            unset($shows[$i]['leaderlength']);
-            unset($shows[$i]['seating']);
-            unset($shows[$i]['eventid']);
+            // Extra guard als helper nog niet geladen is.
+            $scheduled = isset( $show['scheduled'] ) ? strtoupper( (string) $show['scheduled'] ) : '';
+            $visible   = isset( $show['visible'] ) ? strtoupper( (string) $show['visible'] ) : '';
+            if ( ( $scheduled !== '' || $visible !== '' ) && ( $scheduled !== 'Y' || $visible !== 'Y' ) ) {
+              continue;
+            }
 
             $events = array("events", "/");
             $eventnummer = str_replace($events, "",  $show['eventid'] );
-            $shows[$key]['eventid'] = $eventnummer;
 
             $location = array("locations", "/");
             $zaalnummer = str_replace( $location, "", $show['locationid'] );
             $zaalnummer = intval($zaalnummer) - 1;
-            $shows[$key]['zaalnummer'] = $zaalnummer;
-            
-            $i++;
+
+            $public_shows[] = array(
+              'datetime'   => $show['datetime'] ?? null,
+              'eventid'    => $eventnummer,
+              'zaalnummer' => $zaalnummer,
+              'scheduled'  => $show['scheduled'] ?? null,
+              'visible'    => $show['visible'] ?? null,
+            );
           }
+          $shows = $public_shows;
         }
 
         // genereer de output:

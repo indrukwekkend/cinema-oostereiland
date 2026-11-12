@@ -132,6 +132,21 @@ Zie §8 “Deploy zonder build”.
 
 ---
 
+## 5a. Ticketlab: scheduled + visible
+
+Ticketlab toont voorstellingen alleen als **beide** `Y` zijn:
+
+- `scheduled` = ingepland (o.a. met prijsschema)
+- `visible` = gepubliceerd
+
+Implementatie:
+
+- Queryfilters in `TicketlabCurl` (`scheduled=Y&visible=Y`)
+- Extra PHP-filter via `src/lib/ticketlab-shows.php` (ook bij gecachte options)
+- REST output in `web/app/themes/cinema/app/api.php` filtert hier ook op
+
+Na deploy: agenda-import/cron opnieuw laten lopen zodat caches (`tickets_*`, `agenda`) verversen.
+
 ## 5. Plugin: CPT Films (`films` / Film-blokken)
 
 ### Wat doet hij?
