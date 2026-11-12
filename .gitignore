@@ -45,3 +45,12 @@ web/.htaccess
 wp-cli.local.yml
 auth.*
 auth.json
+# Films plugin: alleen geselecteerde bestanden in deze repo; rest via Film-blokken
+web/app/plugins/films/**
+!web/app/plugins/films/plugin.php
+!web/app/plugins/films/src/
+!web/app/plugins/films/src/**
+web/app/plugins/films/src/**/node_modules/
+web/app/plugins/films/vendor/
+web/app/plugins/films/testbestanden/
+web/app/plugins/films/log/
